@@ -1,0 +1,5 @@
+os: osx
+language: objective-c
+xcode_project: spendsterIOS.xcodeproj # path to your xcodeproj folder
+xcode_scheme: spendsterIOS
+xcode_sdk: iphonesimulator8.4
