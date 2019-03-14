@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C126DF4A1945D54F7E2249B /* Pods_spendsterIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1CEF53A6DD5959E114C762 /* Pods_spendsterIOS.framework */; };
 		2B770D62223803C60066A72C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D61223803C60066A72C /* AppDelegate.swift */; };
 		2B770D64223803C60066A72C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D63223803C60066A72C /* ViewController.swift */; };
 		2B770D67223803C60066A72C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D65223803C60066A72C /* Main.storyboard */; };
 		2B770D69223803C80066A72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D68223803C80066A72C /* Assets.xcassets */; };
 		2B770D6C223803C80066A72C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D6A223803C80066A72C /* LaunchScreen.storyboard */; };
 		2B770D77223803C80066A72C /* spendsterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D76223803C80066A72C /* spendsterIOSTests.swift */; };
+		2BB16571223AB852000D193F /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656D223AB851000D193F /* Income.swift */; };
+		2BB16572223AB852000D193F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656E223AB851000D193F /* Category.swift */; };
+		2BB16573223AB852000D193F /* Expence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656F223AB851000D193F /* Expence.swift */; };
+		2BB16574223AB852000D193F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB16570223AB851000D193F /* User.swift */; };
+		F0DC3BAD55460349346920C9 /* Pods_spendsterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1CEF53A6DD5959E114C762 /* Pods_spendsterIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spendsterIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D5E223803C60066A72C /* spendsterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spendsterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D61223803C60066A72C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B770D63223803C60066A72C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +43,15 @@
 		2B770D72223803C80066A72C /* spendsterIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spendsterIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D76223803C80066A72C /* spendsterIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spendsterIOSTests.swift; sourceTree = "<group>"; };
 		2B770D78223803C80066A72C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB1656D223AB851000D193F /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
+		2BB1656E223AB851000D193F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2BB1656F223AB851000D193F /* Expence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expence.swift; sourceTree = "<group>"; };
+		2BB16570223AB851000D193F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spendsterIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD6C80BB5D4FF7859246A73 /* Pods-spendsterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.debug.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7A6583FC17C8D45667DB5807 /* Pods-spendsterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.release.xcconfig"; sourceTree = "<group>"; };
+		8015695075BBEFAB914EC069 /* Pods-spendsterIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOSTests.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOSTests/Pods-spendsterIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C9E78408EE4C572B8526F2D8 /* Pods-spendsterIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-spendsterIOSTests/Pods-spendsterIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C126DF4A1945D54F7E2249B /* Pods_spendsterIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0DC3BAD55460349346920C9 /* Pods_spendsterIOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +80,8 @@
 				2B770D60223803C60066A72C /* spendsterIOS */,
 				2B770D75223803C80066A72C /* spendsterIOSTests */,
 				2B770D5F223803C60066A72C /* Products */,
+				9D40B9C79D552976003D9E11 /* Pods */,
+				CA17EA1B7E7594EEF898E5F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +97,10 @@
 		2B770D60223803C60066A72C /* spendsterIOS */ = {
 			isa = PBXGroup;
 			children = (
+				2BB1656E223AB851000D193F /* Category.swift */,
+				2BB1656F223AB851000D193F /* Expence.swift */,
+				2BB1656D223AB851000D193F /* Income.swift */,
+				2BB16570223AB851000D193F /* User.swift */,
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2B770D63223803C60066A72C /* ViewController.swift */,
 				2B770D65223803C60066A72C /* Main.storyboard */,
@@ -96,6 +120,27 @@
 			path = spendsterIOSTests;
 			sourceTree = "<group>";
 		};
+		9D40B9C79D552976003D9E11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AD6C80BB5D4FF7859246A73 /* Pods-spendsterIOS.debug.xcconfig */,
+				7A6583FC17C8D45667DB5807 /* Pods-spendsterIOS.release.xcconfig */,
+				C9E78408EE4C572B8526F2D8 /* Pods-spendsterIOSTests.debug.xcconfig */,
+				8015695075BBEFAB914EC069 /* Pods-spendsterIOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA17EA1B7E7594EEF898E5F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A1CEF53A6DD5959E114C762 /* Pods_spendsterIOS.framework */,
+				397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B770D7B223803C80066A72C /* Build configuration list for PBXNativeTarget "spendsterIOS" */;
 			buildPhases = (
+				A7394DBA9754000D28597E97 /* [CP] Check Pods Manifest.lock */,
 				2B770D5A223803C60066A72C /* Sources */,
 				2B770D5B223803C60066A72C /* Frameworks */,
 				2B770D5C223803C60066A72C /* Resources */,
+				494B4A05B8867FBFD76C0CF8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +167,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B770D7E223803C80066A72C /* Build configuration list for PBXNativeTarget "spendsterIOSTests" */;
 			buildPhases = (
+				2E098A0E582E249BB8F991D0 /* [CP] Check Pods Manifest.lock */,
 				2B770D6E223803C80066A72C /* Sources */,
 				2B770D6F223803C80066A72C /* Frameworks */,
 				2B770D70223803C80066A72C /* Resources */,
@@ -192,13 +240,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E098A0E582E249BB8F991D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-spendsterIOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		494B4A05B8867FBFD76C0CF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7394DBA9754000D28597E97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-spendsterIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B770D5A223803C60066A72C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2B770D64223803C60066A72C /* ViewController.swift in Sources */,
+				2BB16571223AB852000D193F /* Income.swift in Sources */,
+				2BB16574223AB852000D193F /* User.swift in Sources */,
+				2BB16573223AB852000D193F /* Expence.swift in Sources */,
 				2B770D62223803C60066A72C /* AppDelegate.swift in Sources */,
+				2BB16572223AB852000D193F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +479,7 @@
 		};
 		2B770D7C223803C80066A72C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AD6C80BB5D4FF7859246A73 /* Pods-spendsterIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -375,6 +497,7 @@
 		};
 		2B770D7D223803C80066A72C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A6583FC17C8D45667DB5807 /* Pods-spendsterIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +515,7 @@
 		};
 		2B770D7F223803C80066A72C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E78408EE4C572B8526F2D8 /* Pods-spendsterIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -412,6 +536,7 @@
 		};
 		2B770D80223803C80066A72C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8015695075BBEFAB914EC069 /* Pods-spendsterIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
