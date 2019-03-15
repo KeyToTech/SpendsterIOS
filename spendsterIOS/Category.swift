@@ -9,11 +9,11 @@
 import Foundation
 
 class Category {
-    let ID : Int
-    let name : String
-    let type : Bool
-    let createdDate : Date
-    init(id : Int, name : String, type: Bool, date: Date) {
+    private let ID: Int
+    private let name: String
+    private let type: Bool
+    private let createdDate: Date
+    init(id: Int, name: String, type: Bool, date: Date) {
         self.ID = id
         self.name = name
         self.type = type

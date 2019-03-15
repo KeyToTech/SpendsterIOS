@@ -9,10 +9,10 @@
 import Foundation
 
 class Expence {
-    let ID : Int
-    let amount : Float
-    let createdDate : Date
-    init(id : Int, amount : Float, date : Date) {
+    private let ID: Int
+    private let amount: Float
+    private let createdDate: Date
+    init(id: Int, amount: Float, date: Date) {
         self.ID = id
         self.amount = amount
         self.createdDate = date
