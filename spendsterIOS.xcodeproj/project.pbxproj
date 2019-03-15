@@ -128,7 +128,6 @@
 				C9E78408EE4C572B8526F2D8 /* Pods-spendsterIOSTests.debug.xcconfig */,
 				8015695075BBEFAB914EC069 /* Pods-spendsterIOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,6 +147,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B770D7B223803C80066A72C /* Build configuration list for PBXNativeTarget "spendsterIOS" */;
 			buildPhases = (
+				2BBACF26223BD68B005D64D3 /* ShellScript */,
 				A7394DBA9754000D28597E97 /* [CP] Check Pods Manifest.lock */,
 				2B770D5A223803C60066A72C /* Sources */,
 				2B770D5B223803C60066A72C /* Frameworks */,
@@ -241,6 +241,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BBACF26223BD68B005D64D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		2E098A0E582E249BB8F991D0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.keytotech.spendsterIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
