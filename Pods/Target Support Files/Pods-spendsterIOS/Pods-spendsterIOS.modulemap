@@ -1,0 +1,6 @@
+framework module Pods_spendsterIOS {
+  umbrella header "Pods-spendsterIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
