@@ -9,12 +9,12 @@
 import Foundation
 
 class User {
-    let ID : Int
-    var username : String
-    var password : String
-    var balance : Float
-    let createdDate : Date
-    init(id : Int, username : String, password : String, balance : Float, date : Date) {
+    private let ID: Int
+    private let username: String
+    private var password: String
+    private var balance: Float
+    let createdDate: Date
+    init(id: Int, username: String, password: String, balance: Float, date: Date) {
         self.ID = id
         self.username = username
         self.password = password
