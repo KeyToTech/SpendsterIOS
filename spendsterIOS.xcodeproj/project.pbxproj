@@ -97,12 +97,9 @@
 		2B770D60223803C60066A72C /* spendsterIOS */ = {
 			isa = PBXGroup;
 			children = (
+				2B7A0A60223F91E300D12DA6 /* Data */,
 				2BB8F969223BF63A00671465 /* LoginScreenViewController.swift */,
 				2B770D65223803C60066A72C /* Main.storyboard */,
-				2BB1656E223AB851000D193F /* Category.swift */,
-				2BB1656F223AB851000D193F /* Expence.swift */,
-				2BB1656D223AB851000D193F /* Income.swift */,
-				2BB16570223AB851000D193F /* User.swift */,
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2B770D68223803C80066A72C /* Assets.xcassets */,
 				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
@@ -118,6 +115,17 @@
 				2B770D78223803C80066A72C /* Info.plist */,
 			);
 			path = spendsterIOSTests;
+			sourceTree = "<group>";
+		};
+		2B7A0A60223F91E300D12DA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2BB1656E223AB851000D193F /* Category.swift */,
+				2BB1656F223AB851000D193F /* Expence.swift */,
+				2BB1656D223AB851000D193F /* Income.swift */,
+				2BB16570223AB851000D193F /* User.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		9D40B9C79D552976003D9E11 /* Pods */ = {
