@@ -12,8 +12,14 @@ class LoginScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        let storyboard = UIStoryboard(name: "WelcomeScreen", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+            present(walkthroughViewController, animated: true, completion: nil )
+        }
     }
     
 

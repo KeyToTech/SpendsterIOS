@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0C126DF4A1945D54F7E2249B /* Pods_spendsterIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1CEF53A6DD5959E114C762 /* Pods_spendsterIOS.framework */; };
+		2B25E55F224BC12800FB0E4C /* CornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25E55E224BC12800FB0E4C /* CornerButton.swift */; };
+		2B26C3F12247DE9C00EF86DA /* Karla-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3ED2247DE9C00EF86DA /* Karla-BoldItalic.ttf */; };
+		2B26C3F22247DE9C00EF86DA /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3EE2247DE9C00EF86DA /* Karla-Italic.ttf */; };
+		2B26C3F32247DE9C00EF86DA /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */; };
+		2B26C3F42247DE9C00EF86DA /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */; };
+		2B35ACEC2243F04700BEC2E5 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */; };
 		2B770D62223803C60066A72C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D61223803C60066A72C /* AppDelegate.swift */; };
 		2B770D67223803C60066A72C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D65223803C60066A72C /* Main.storyboard */; };
 		2B770D69223803C80066A72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D68223803C80066A72C /* Assets.xcassets */; };
 		2B770D6C223803C80066A72C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D6A223803C80066A72C /* LaunchScreen.storyboard */; };
 		2B770D77223803C80066A72C /* spendsterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D76223803C80066A72C /* spendsterIOSTests.swift */; };
+		2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */; };
+		2B8DF28222450F6E007C395E /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */; };
+		2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */; };
 		2BB16571223AB852000D193F /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656D223AB851000D193F /* Income.swift */; };
 		2BB16572223AB852000D193F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656E223AB851000D193F /* Category.swift */; };
 		2BB16573223AB852000D193F /* Expence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656F223AB851000D193F /* Expence.swift */; };
@@ -33,6 +42,12 @@
 
 /* Begin PBXFileReference section */
 		0A1CEF53A6DD5959E114C762 /* Pods_spendsterIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spendsterIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B25E55E224BC12800FB0E4C /* CornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButton.swift; sourceTree = "<group>"; };
+		2B26C3ED2247DE9C00EF86DA /* Karla-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2B26C3EE2247DE9C00EF86DA /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
+		2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
+		2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
+		2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		2B770D5E223803C60066A72C /* spendsterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spendsterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D61223803C60066A72C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B770D66223803C60066A72C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +57,9 @@
 		2B770D72223803C80066A72C /* spendsterIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spendsterIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D76223803C80066A72C /* spendsterIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spendsterIOSTests.swift; sourceTree = "<group>"; };
 		2B770D78223803C80066A72C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		2BB1656D223AB851000D193F /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
 		2BB1656E223AB851000D193F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2BB1656F223AB851000D193F /* Expence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expence.swift; sourceTree = "<group>"; };
@@ -74,6 +92,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B26C3EC2247DE4300EF86DA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */,
+				2B26C3ED2247DE9C00EF86DA /* Karla-BoldItalic.ttf */,
+				2B26C3EE2247DE9C00EF86DA /* Karla-Italic.ttf */,
+				2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2B770D55223803C60066A72C = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +128,17 @@
 			children = (
 				2B7A0A60223F91E300D12DA6 /* Data */,
 				2BB8F969223BF63A00671465 /* LoginScreenViewController.swift */,
+				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
 				2B770D65223803C60066A72C /* Main.storyboard */,
+				2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */,
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2B770D68223803C80066A72C /* Assets.xcassets */,
 				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
 				2B770D6D223803C80066A72C /* Info.plist */,
+				2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */,
+				2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */,
+				2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */,
+				2B26C3EC2247DE4300EF86DA /* Fonts */,
 			);
 			path = spendsterIOS;
 			sourceTree = "<group>";
@@ -234,6 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B770D6C223803C80066A72C /* LaunchScreen.storyboard in Resources */,
+				2B35ACEC2243F04700BEC2E5 /* WelcomeScreen.storyboard in Resources */,
+				2B26C3F22247DE9C00EF86DA /* Karla-Italic.ttf in Resources */,
+				2B26C3F42247DE9C00EF86DA /* Karla-Bold.ttf in Resources */,
+				2B26C3F12247DE9C00EF86DA /* Karla-BoldItalic.ttf in Resources */,
+				2B26C3F32247DE9C00EF86DA /* Karla-Regular.ttf in Resources */,
 				2B770D69223803C80066A72C /* Assets.xcassets in Resources */,
 				2B770D67223803C60066A72C /* Main.storyboard in Resources */,
 			);
@@ -341,6 +381,10 @@
 			files = (
 				2BB8F96A223BF63A00671465 /* LoginScreenViewController.swift in Sources */,
 				2BB16571223AB852000D193F /* Income.swift in Sources */,
+				2B25E55F224BC12800FB0E4C /* CornerButton.swift in Sources */,
+				2B8DF28222450F6E007C395E /* WalkthroughPageViewController.swift in Sources */,
+				2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */,
+				2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,
 				2BB16573223AB852000D193F /* Expence.swift in Sources */,
 				2B770D62223803C60066A72C /* AppDelegate.swift in Sources */,

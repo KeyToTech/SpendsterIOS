@@ -1,0 +1,77 @@
+//
+//  WalkthroughViewController.swift
+//  spendsterIOS
+//
+//  Created by Dmytro Holovko on 3/22/19.
+//  Copyright © 2019 KeyToTech. All rights reserved.
+//
+
+import UIKit
+
+class WalkthroughViewController: UIViewController, WalkthroughPageViewControllerDelegate {
+    var walkthroughPageViewController: WalkthroughPageViewController?
+    @IBOutlet var signupStackView: UIStackView! {
+        didSet {
+            signupStackView.isHidden = true
+        }
+    }
+    @IBOutlet weak var signUpTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var signUpHeigthCinstraint: NSLayoutConstraint!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var skipButton: UIButton!
+    @IBOutlet var pageControl: UIPageControl!
+    @IBAction func nextButtonPressed (sender: UIButton) {
+        if let index = walkthroughPageViewController?.currentIndex {
+            switch index {
+            case 0...1 :
+                walkthroughPageViewController?.forwardPage()
+            case 2 :
+                dismiss(animated: true, completion: nil)
+            default: break
+            }
+        }
+        updateUI()
+    }
+    @IBAction func skipButtonPressed (sender: UIButton) {
+    }
+    func updateUI() {
+        if let index = walkthroughPageViewController?.currentIndex {
+            switch index {
+            case 0...1 :
+                hideSignUpBar()
+            case 2 :
+                showSignUpBar()
+            default: break
+            }
+            pageControl.currentPage = index
+        }
+    }
+    func didUpdatePageIndex(currentIndex: Int) {
+        updateUI()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideSignUpBar()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination
+        if let pageViewController = destination as? WalkthroughPageViewController {
+            walkthroughPageViewController = pageViewController
+            walkthroughPageViewController?.walkthroughDelegate = self
+        }
+    }
+    func hideSignUpBar() {
+        nextButton.isHidden = false
+        skipButton.isHidden = false
+        signupStackView.isHidden = true
+        signUpHeigthCinstraint.constant = 16
+        signUpTopConstraint.constant = 0
+    }
+    func showSignUpBar() {
+        nextButton.isHidden = true
+        skipButton.isHidden = true
+        signupStackView.isHidden = false
+        signUpHeigthCinstraint.constant = 116
+        signUpTopConstraint.constant = 40
+    }
+}
