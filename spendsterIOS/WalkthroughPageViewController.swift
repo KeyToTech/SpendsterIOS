@@ -39,6 +39,11 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
 
         return contentViewController(at: index)
     }
+    func lastPage() {
+        for _ in self.currentIndex...pageText.count-2 {
+            self.forwardPage()
+        }
+    }
     // swiftlint:enable force_cast
     func contentViewController(at index: Int) -> WalkthroughContentViewController? {
         if index < 0 || index > pageText.count-1 {

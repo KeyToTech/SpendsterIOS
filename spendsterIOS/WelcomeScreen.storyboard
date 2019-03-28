@@ -27,19 +27,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGO-6S-tXb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="535.66666666666663"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="557"/>
                                 <connections>
                                     <segue destination="mwJ-6p-naq" kind="embed" id="iBA-1S-LSL"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uon-lw-mF6">
-                                <rect key="frame" x="0.0" y="535.66666666666663" width="414" height="200.33333333333337"/>
+                                <rect key="frame" x="0.0" y="557" width="414" height="179"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="xsI-yO-Hzv" userLabel="pageControl">
-                                        <rect key="frame" x="40" y="-12.666666666666629" width="335" height="37"/>
+                                        <rect key="frame" x="40" y="-34" width="335" height="37"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHx-fO-rwF">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="33" id="MUY-c9-iTw"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="13"/>
                                                 <state key="normal" title="SKIP">
                                                     <color key="titleColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,6 +58,9 @@
                                             </pageControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="420-cG-a1i">
                                                 <rect key="frame" x="302" y="0.0" width="33" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="33" id="JgD-Pp-S8J"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="13"/>
                                                 <state key="normal" title="NEXT">
                                                     <color key="titleColor" red="0.19215686274509802" green="0.81960784313725488" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,13 +76,15 @@
                                             <constraint firstAttribute="bottom" secondItem="fHx-fO-rwF" secondAttribute="bottom" id="N2P-L7-7Z2"/>
                                             <constraint firstAttribute="bottom" secondItem="420-cG-a1i" secondAttribute="bottom" id="W3i-O4-Sry"/>
                                             <constraint firstAttribute="trailing" secondItem="420-cG-a1i" secondAttribute="trailing" id="WPH-ak-xXs"/>
+                                            <constraint firstItem="420-cG-a1i" firstAttribute="leading" secondItem="PYa-35-6io" secondAttribute="trailing" constant="115" id="chT-h3-5F6"/>
                                             <constraint firstAttribute="bottom" secondItem="PYa-35-6io" secondAttribute="bottom" id="gPy-Af-Fe3"/>
                                             <constraint firstItem="420-cG-a1i" firstAttribute="top" secondItem="xsI-yO-Hzv" secondAttribute="top" id="h5c-y5-Huj"/>
+                                            <constraint firstItem="PYa-35-6io" firstAttribute="leading" secondItem="fHx-fO-rwF" secondAttribute="trailing" constant="115" id="kQd-7z-hQ3"/>
                                             <constraint firstItem="fHx-fO-rwF" firstAttribute="top" secondItem="xsI-yO-Hzv" secondAttribute="top" id="waC-7c-oUF"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="no3-lV-VgD">
-                                        <rect key="frame" x="20" y="64.333333333333371" width="374" height="116"/>
+                                        <rect key="frame" x="20" y="43" width="374" height="116"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1m-rn-9zZ" customClass="CornerButton" customModule="spendsterIOS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -169,7 +177,7 @@
                             <constraint firstItem="uon-lw-mF6" firstAttribute="bottom" secondItem="qV4-WL-eEp" secondAttribute="bottom" id="OE2-59-aJ8"/>
                             <constraint firstItem="PGO-6S-tXb" firstAttribute="leading" secondItem="qV4-WL-eEp" secondAttribute="leading" id="RHn-fu-eiE"/>
                             <constraint firstItem="uon-lw-mF6" firstAttribute="leading" secondItem="qV4-WL-eEp" secondAttribute="leading" id="USs-64-6a5"/>
-                            <constraint firstItem="uon-lw-mF6" firstAttribute="height" secondItem="qV4-WL-eEp" secondAttribute="height" multiplier="0.28" id="au5-1o-40u"/>
+                            <constraint firstItem="uon-lw-mF6" firstAttribute="height" secondItem="qV4-WL-eEp" secondAttribute="height" multiplier="0.25" id="au5-1o-40u"/>
                             <constraint firstItem="uon-lw-mF6" firstAttribute="trailing" secondItem="qV4-WL-eEp" secondAttribute="trailing" id="rrO-jn-I3o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qV4-WL-eEp"/>

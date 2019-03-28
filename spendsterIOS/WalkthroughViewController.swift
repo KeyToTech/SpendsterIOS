@@ -33,6 +33,8 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
         updateUI()
     }
     @IBAction func skipButtonPressed (sender: UIButton) {
+        walkthroughPageViewController?.lastPage()
+        updateUI()
     }
     func updateUI() {
         if let index = walkthroughPageViewController?.currentIndex {
