@@ -20,6 +20,12 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var skipButton: UIButton!
     @IBOutlet var pageControl: UIPageControl!
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        if let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpScreenViewController {
+            present(signUpViewController, animated: true, completion: nil )
+        }
+    }
     @IBAction func nextButtonPressed (sender: UIButton) {
         if let index = walkthroughPageViewController?.currentIndex {
             switch index {

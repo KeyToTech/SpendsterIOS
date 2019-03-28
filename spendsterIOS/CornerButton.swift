@@ -58,7 +58,8 @@ import UIKit
         }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable
+    var cornerRadius: CGFloat {
         set {
             layer.cornerRadius = newValue
         }
