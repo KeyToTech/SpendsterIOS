@@ -14,13 +14,9 @@ protocol WalkthroughPageViewControllerDelegate: class {
 
 class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
-    
     let pageSubheadings = ["Welcome to Budget Planner", "Save money with ease", ""]
-    
     let pageText = ["Take control of your money\nand save them by tracking your expenses", "Easily create budgets, and see our\nsuggestions based on your spending", "Take control of your money\nand save them by tracking your expenses."]
-    
     let pageImages = ["Illustration", "hand-pork", "illustration-3"]
-    
     var currentIndex = 0
     
     override func viewDidLoad() {
@@ -30,6 +26,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         delegate = self
         createFirstWalkthroughScreen()
     }
+    
     func createFirstWalkthroughScreen() {
         if let startingViewController = contentViewController(at: 0) {
             setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil )
@@ -45,11 +42,13 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         index -= 1
         return contentViewController(at: index)
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         var index = getCurrentContentIndex(viewController)
         index += 1
         return contentViewController(at: index)
     }
+    
     func contentViewController(at index: Int) -> WalkthroughContentViewController? {
         if index < 0 || index > pageText.count-1 {
             return nil
@@ -65,6 +64,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         }
         return nil
     }
+    
     func goTolastPage() {
         for _ in self.currentIndex...pageText.count-2 {
             self.forwardPage()
@@ -77,6 +77,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
             setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
         }
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if completed {
             if let contentViewController = pageViewController.viewControllers?.first as? WalkthroughContentViewController {
@@ -85,14 +86,4 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
