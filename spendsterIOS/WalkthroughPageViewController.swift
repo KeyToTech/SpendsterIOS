@@ -14,10 +14,15 @@ protocol WalkthroughPageViewControllerDelegate: class {
 
 class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
+    
     let pageSubheadings = ["Welcome to Budget Planner", "Save money with ease", ""]
+    
     let pageText = ["Take control of your money\nand save them by tracking your expenses", "Easily create budgets, and see our\nsuggestions based on your spending", "Take control of your money\nand save them by tracking your expenses."]
+    
     let pageImages = ["Illustration", "hand-pork", "illustration-3"]
+    
     var currentIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // set data source and deligate to self
