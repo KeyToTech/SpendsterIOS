@@ -103,6 +103,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		2B5B8A67224F907B00F5724C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2B770D65223803C60066A72C /* Main.storyboard */,
+				2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */,
+				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
+				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
+				2BB8F969223BF63A00671465 /* LoginScreenViewController.swift */,
+				2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */,
+				2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */,
+				2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */,
+				2B770D68223803C80066A72C /* Assets.xcassets */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		2B770D55223803C60066A72C = {
 			isa = PBXGroup;
 			children = (
@@ -126,18 +142,10 @@
 		2B770D60223803C60066A72C /* spendsterIOS */ = {
 			isa = PBXGroup;
 			children = (
+				2B5B8A67224F907B00F5724C /* Presentation */,
 				2B7A0A60223F91E300D12DA6 /* Data */,
-				2BB8F969223BF63A00671465 /* LoginScreenViewController.swift */,
-				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
-				2B770D65223803C60066A72C /* Main.storyboard */,
-				2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */,
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
-				2B770D68223803C80066A72C /* Assets.xcassets */,
-				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
 				2B770D6D223803C80066A72C /* Info.plist */,
-				2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */,
-				2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */,
-				2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */,
 				2B26C3EC2247DE4300EF86DA /* Fonts */,
 			);
 			path = spendsterIOS;
