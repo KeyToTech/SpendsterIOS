@@ -26,7 +26,7 @@
 		2BB16572223AB852000D193F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656E223AB851000D193F /* Category.swift */; };
 		2BB16573223AB852000D193F /* Expence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656F223AB851000D193F /* Expence.swift */; };
 		2BB16574223AB852000D193F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB16570223AB851000D193F /* User.swift */; };
-		2BB8F96A223BF63A00671465 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8F969223BF63A00671465 /* LoginScreenViewController.swift */; };
+		2BB8F96A223BF63A00671465 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */; };
 		F0DC3BAD55460349346920C9 /* Pods_spendsterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,7 @@
 		2BB1656E223AB851000D193F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2BB1656F223AB851000D193F /* Expence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expence.swift; sourceTree = "<group>"; };
 		2BB16570223AB851000D193F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2BB8F969223BF63A00671465 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spendsterIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6C80BB5D4FF7859246A73 /* Pods-spendsterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.debug.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7A6583FC17C8D45667DB5807 /* Pods-spendsterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,17 +106,33 @@
 		2B5B8A67224F907B00F5724C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				2B770D65223803C60066A72C /* Main.storyboard */,
-				2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */,
+				2B7104632252128600F61C37 /* ElementsView */,
+				2B71046222520F8400F61C37 /* WelcomeScreen */,
 				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
-				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
-				2BB8F969223BF63A00671465 /* LoginScreenViewController.swift */,
-				2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */,
-				2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */,
-				2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */,
+				2B770D65223803C60066A72C /* Main.storyboard */,
+				2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */,
 				2B770D68223803C80066A72C /* Assets.xcassets */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2B71046222520F8400F61C37 /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */,
+				2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */,
+				2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */,
+				2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		2B7104632252128600F61C37 /* ElementsView */ = {
+			isa = PBXGroup;
+			children = (
+				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
+			);
+			path = ElementsView;
 			sourceTree = "<group>";
 		};
 		2B770D55223803C60066A72C = {
@@ -387,7 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB8F96A223BF63A00671465 /* LoginScreenViewController.swift in Sources */,
+				2BB8F96A223BF63A00671465 /* HomeScreenViewController.swift in Sources */,
 				2BB16571223AB852000D193F /* Income.swift in Sources */,
 				2B25E55F224BC12800FB0E4C /* CornerButton.swift in Sources */,
 				2B8DF28222450F6E007C395E /* WalkthroughPageViewController.swift in Sources */,
