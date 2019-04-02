@@ -98,5 +98,4 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
         signUpHeigthCinstraint.constant = 116
         signUpTopConstraint.constant = 40
     }
-    
 }

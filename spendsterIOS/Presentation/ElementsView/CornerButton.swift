@@ -67,12 +67,25 @@ import UIKit
         }
     }
     
-    //MARK: - Gradient
+    override class var layerClass: AnyClass {
+        return CAGradientLayer.self
+    }
     
-    override class var layerClass: AnyClass { return CAGradientLayer.self }
-    private var gradientLayer: CAGradientLayer { return layer as! CAGradientLayer }
-    @IBInspectable var color1: UIColor = .white { didSet { updateColors() } }
-    @IBInspectable var color2: UIColor = .white  { didSet { updateColors() } }
+    private var gradientLayer: CAGradientLayer {
+        return layer as! CAGradientLayer
+    }
+    
+    @IBInspectable var color1: UIColor = .white {
+        didSet {
+            updateColors()
+        }
+    }
+    
+    @IBInspectable var color2: UIColor = .white {
+        didSet {
+            updateColors()
+        }
+    }
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
