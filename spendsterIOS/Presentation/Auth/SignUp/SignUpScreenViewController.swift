@@ -37,6 +37,6 @@ class SignUpScreenViewController: UIViewController, AuthView {
         self.passwordTextField.text = ""
         self.rePasswordTextField.text = ""
         errorMessage.isHidden = true
-        self.presenter = SignUpPresenter(model: SignUpMockUser(), view: self)
+        self.presenter = SignUpPresenter(model: SignUpMock(), view: self)
     }
 }

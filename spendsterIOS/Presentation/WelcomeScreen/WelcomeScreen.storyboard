@@ -146,6 +146,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginButtonPressed:" destination="C5T-Wn-x5G" eventType="touchUpInside" id="Qby-V0-wOd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

@@ -29,6 +29,13 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
         }
     }
     
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        if let loginScreenViewController = storyboard.instantiateViewController(withIdentifier: "LoginScreenViewController") as? LoginScreenViewController {
+            present(loginScreenViewController, animated: true, completion: nil )
+        }
+    }
+    
     @IBAction func nextButtonPressed (sender: UIButton) {
         if let index = walkthroughPageViewController?.currentIndex {
             switch index {

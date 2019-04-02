@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SignUpMockUser: SignUpModel {
+class SignUpMock: SignUpModel {
     func makeSingUp(email: String, password: String) -> Bool {
         return true
     }
