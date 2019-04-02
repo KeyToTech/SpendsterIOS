@@ -152,6 +152,7 @@
 		2B770D60223803C60066A72C /* spendsterIOS */ = {
 			isa = PBXGroup;
 			children = (
+				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2BBB79B122536670006ABC2A /* Presentation */,
 				2B7A0A60223F91E300D12DA6 /* Data */,
 				2B26C3EC2247DE4300EF86DA /* Fonts */,
@@ -188,7 +189,6 @@
 				2BBB79B2225367A6006ABC2A /* Auth */,
 				2B770D65223803C60066A72C /* Main.storyboard */,
 				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
-				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */,
 				2B770D68223803C80066A72C /* Assets.xcassets */,
 			);
