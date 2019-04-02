@@ -10,7 +10,6 @@ import UIKit
 
 class WalkthroughViewController: UIViewController, WalkthroughPageViewControllerDelegate {
     var walkthroughPageViewController: WalkthroughPageViewController?
-
     @IBOutlet weak var signUpTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var signUpHeigthCinstraint: NSLayoutConstraint!
     @IBOutlet var nextButton: UIButton!
@@ -21,7 +20,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
             signupStackView.isHidden = true
         }
     }
-    
+
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         if let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpScreenViewController {
@@ -35,7 +34,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
             present(loginScreenViewController, animated: true, completion: nil )
         }
     }
-    
+
     @IBAction func nextButtonPressed (sender: UIButton) {
         if let index = walkthroughPageViewController?.currentIndex {
             switch index {
@@ -50,7 +49,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
     }
     
     @IBAction func skipButtonPressed (sender: UIButton) {
-        walkthroughPageViewController?.lastPage()
+        walkthroughPageViewController?.goTolastPage()
         updateUI()
     }
     

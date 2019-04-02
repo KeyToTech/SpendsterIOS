@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 protocol WalkthroughPageViewControllerDelegate: class {
     func didUpdatePageIndex(currentIndex: Int)
 }
@@ -23,31 +24,31 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         // set data source and deligate to self
         dataSource = self
         delegate = self
-        //create first walkthrough screen
+        createFirstWalkthroughScreen()
+    }
+    
+    func createFirstWalkthroughScreen() {
         if let startingViewController = contentViewController(at: 0) {
             setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil )
         }
     }
     // swiftlint:disable force_cast
+    func getCurrentContentIndex(_ viewController: UIViewController) -> Int {
+        return (viewController as! WalkthroughContentViewController).index
+    }
+    // swiftlint:enable force_cast
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        var index = (viewController as! WalkthroughContentViewController).index
+        var index = getCurrentContentIndex(viewController)
         index -= 1
         return contentViewController(at: index)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        var index = (viewController as! WalkthroughContentViewController).index
+        var index = getCurrentContentIndex(viewController)
         index += 1
-
         return contentViewController(at: index)
     }
-    
-    func lastPage() {
-        for _ in self.currentIndex...pageText.count-2 {
-            self.forwardPage()
-        }
-    }
-    // swiftlint:enable force_cast
+
     func contentViewController(at index: Int) -> WalkthroughContentViewController? {
         if index < 0 || index > pageText.count-1 {
             return nil
@@ -62,6 +63,12 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
             return pageContentViewController
         }
         return nil
+    }
+    
+    func goTolastPage() {
+        for _ in self.currentIndex...pageText.count-2 {
+            self.forwardPage()
+        }
     }
 
     func forwardPage() {

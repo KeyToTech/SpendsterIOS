@@ -129,6 +129,38 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		2B5B8A67224F907B00F5724C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2B7104632252128600F61C37 /* ElementsView */,
+				2B71046222520F8400F61C37 /* WelcomeScreen */,
+				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
+				2B770D65223803C60066A72C /* Main.storyboard */,
+				2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */,
+				2B770D68223803C80066A72C /* Assets.xcassets */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2B71046222520F8400F61C37 /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */,
+				2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */,
+				2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */,
+				2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		2B7104632252128600F61C37 /* ElementsView */ = {
+			isa = PBXGroup;
+			children = (
+				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
+			);
+			path = ElementsView;
+			sourceTree = "<group>";
+		};
 		2B770D55223803C60066A72C = {
 			isa = PBXGroup;
 			children = (
