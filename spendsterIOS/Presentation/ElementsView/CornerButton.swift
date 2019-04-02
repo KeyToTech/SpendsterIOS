@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 @IBDesignable class CornerButton: UIButton {
-    
     @IBInspectable
     var shadowRadius: CGFloat {
         get {
@@ -68,12 +67,10 @@ import UIKit
         }
     }
     
-    
+    //MARK: - Gradient
     
     override class var layerClass: AnyClass { return CAGradientLayer.self }
-
     private var gradientLayer: CAGradientLayer { return layer as! CAGradientLayer }
-    
     @IBInspectable var color1: UIColor = .white { didSet { updateColors() } }
     @IBInspectable var color2: UIColor = .white  { didSet { updateColors() } }
     

@@ -12,5 +12,4 @@ protocol SignUpValidation {
     func isEmailValid(email: String) -> Bool
     func isPasswordValid(password: String) -> Bool
     func isPasswordsMatch(password: String, rePassword: String) -> Bool
-
 }

@@ -10,22 +10,25 @@ import UIKit
 
 class WalkthroughViewController: UIViewController, WalkthroughPageViewControllerDelegate {
     var walkthroughPageViewController: WalkthroughPageViewController?
-    @IBOutlet var signupStackView: UIStackView! {
-        didSet {
-            signupStackView.isHidden = true
-        }
-    }
+
     @IBOutlet weak var signUpTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var signUpHeigthCinstraint: NSLayoutConstraint!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var skipButton: UIButton!
     @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet var signupStackView: UIStackView! {
+        didSet {
+            signupStackView.isHidden = true
+        }
+    }
+    
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         if let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpScreenViewController {
             present(signUpViewController, animated: true, completion: nil )
         }
     }
+    
     @IBAction func nextButtonPressed (sender: UIButton) {
         if let index = walkthroughPageViewController?.currentIndex {
             switch index {
@@ -38,10 +41,12 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
         }
         updateUI()
     }
+    
     @IBAction func skipButtonPressed (sender: UIButton) {
         walkthroughPageViewController?.lastPage()
         updateUI()
     }
+    
     func updateUI() {
         if let index = walkthroughPageViewController?.currentIndex {
             switch index {
@@ -54,13 +59,16 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
             pageControl.currentPage = index
         }
     }
+    
     func didUpdatePageIndex(currentIndex: Int) {
         updateUI()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideSignUpBar()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination
         if let pageViewController = destination as? WalkthroughPageViewController {
@@ -68,6 +76,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
             walkthroughPageViewController?.walkthroughDelegate = self
         }
     }
+    
     func hideSignUpBar() {
         nextButton.isHidden = false
         skipButton.isHidden = false
@@ -75,6 +84,7 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
         signUpHeigthCinstraint.constant = 16
         signUpTopConstraint.constant = 0
     }
+    
     func showSignUpBar() {
         nextButton.isHidden = true
         skipButton.isHidden = true
@@ -82,4 +92,5 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
         signUpHeigthCinstraint.constant = 116
         signUpTopConstraint.constant = 40
     }
+    
 }

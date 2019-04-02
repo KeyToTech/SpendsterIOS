@@ -19,11 +19,13 @@ class WalkthroughContentViewController: UIViewController {
             subheadingLabel.numberOfLines = 0
         }
     }
+    
     @IBOutlet var contentTextLabel: UILabel! {
         didSet {
             contentTextLabel.numberOfLines = 0
         }
     }
+    
     @IBOutlet var contentImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()

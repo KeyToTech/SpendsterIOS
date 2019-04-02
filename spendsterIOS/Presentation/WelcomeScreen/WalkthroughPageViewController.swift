@@ -17,6 +17,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     let pageText = ["Take control of your money\nand save them by tracking your expenses", "Easily create budgets, and see our\nsuggestions based on your spending", "Take control of your money\nand save them by tracking your expenses."]
     let pageImages = ["Illustration", "hand-pork", "illustration-3"]
     var currentIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // set data source and deligate to self
@@ -33,12 +34,14 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         index -= 1
         return contentViewController(at: index)
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! WalkthroughContentViewController).index
         index += 1
 
         return contentViewController(at: index)
     }
+    
     func lastPage() {
         for _ in self.currentIndex...pageText.count-2 {
             self.forwardPage()
@@ -67,6 +70,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
             setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
         }
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if completed {
             if let contentViewController = pageViewController.viewControllers?.first as? WalkthroughContentViewController {
@@ -75,14 +79,4 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
