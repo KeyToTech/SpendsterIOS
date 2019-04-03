@@ -1,3 +1,6 @@
+disabled_rules:
+  trailing_whitespace
+  
 identifier_name:
   min_length: 
     error: 2
@@ -9,4 +12,3 @@ excluded:
 line_length:
   - 300
   - 451
-
