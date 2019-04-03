@@ -26,7 +26,7 @@ class WalkthroughContentViewController: UIViewController {
             contentTextLabel.numberOfLines = 0
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         subheadingLabel.text = subheading

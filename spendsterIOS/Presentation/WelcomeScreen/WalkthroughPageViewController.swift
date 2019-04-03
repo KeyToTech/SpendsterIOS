@@ -48,7 +48,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         index += 1
         return contentViewController(at: index)
     }
-    
+
     func contentViewController(at index: Int) -> WalkthroughContentViewController? {
         if index < 0 || index > pageText.count-1 {
             return nil
