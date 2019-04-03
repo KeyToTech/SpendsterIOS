@@ -19,9 +19,9 @@ class LoginPresenter {
     }
     
     func login(email: String, password: String) {
-        if !AuthValidator(textField: email).isEmailValid() {
+        if !EmailValidation(email: email).validate() {
             self.view.showError(message: "Incorrect form of e-mail, try again")
-        } else if !AuthValidator(textField: password).isPasswordValid() {
+        } else if !PasswordValidation(password: password).validate() {
             self.view.showError(message: "Incorrect form of password, try again")
         } else if model.makeLogin(email: email, password: password) {
             self.view.goToHomeScreen()
