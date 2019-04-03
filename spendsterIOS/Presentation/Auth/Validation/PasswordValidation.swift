@@ -8,7 +8,7 @@
 
 import Foundation
 class PasswordValidation: Validation {
-    let password: String
+    private let password: String
     
     init(password: String) {
         self.password = password

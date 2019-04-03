@@ -9,7 +9,7 @@
 import Foundation
 
 class EmailValidation: Validation {
-    let email: String
+    private let email: String
     
     init(email: String) {
         self.email = email
