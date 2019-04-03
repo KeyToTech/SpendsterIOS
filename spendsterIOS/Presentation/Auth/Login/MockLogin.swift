@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginMock: LoginModel {
+class MockLogin: LoginModel {
     func makeLogin(email: String, password: String) -> Bool {
         return true
     }

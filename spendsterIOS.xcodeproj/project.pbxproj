@@ -16,6 +16,7 @@
 		2B26C3F32247DE9C00EF86DA /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */; };
 		2B26C3F42247DE9C00EF86DA /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */; };
 		2B35ACEC2243F04700BEC2E5 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */; };
+		2B4A06E62254D382007B914B /* AuthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06E52254D382007B914B /* AuthValidator.swift */; };
 		2B770D62223803C60066A72C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D61223803C60066A72C /* AppDelegate.swift */; };
 		2B770D67223803C60066A72C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D65223803C60066A72C /* Main.storyboard */; };
 		2B770D69223803C80066A72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D68223803C80066A72C /* Assets.xcassets */; };
@@ -25,10 +26,9 @@
 		2B8DF28222450F6E007C395E /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */; };
 		2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */; };
 		2B9E771F2252580100D7640A /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E771B2252580000D7640A /* SignUpModel.swift */; };
-		2B9E77202252580100D7640A /* SignUpValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E771C2252580100D7640A /* SignUpValidation.swift */; };
 		2B9E77222252580100D7640A /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E771E2252580100D7640A /* SignUpPresenter.swift */; };
 		2B9E77242252591E00D7640A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E77232252591E00D7640A /* AuthView.swift */; };
-		2B9E77262252623A00D7640A /* SignUpMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E77252252623A00D7640A /* SignUpMock.swift */; };
+		2B9E77262252623A00D7640A /* MockSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E77252252623A00D7640A /* MockSignUp.swift */; };
 		2BB16571223AB852000D193F /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656D223AB851000D193F /* Income.swift */; };
 		2BB16572223AB852000D193F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656E223AB851000D193F /* Category.swift */; };
 		2BB16573223AB852000D193F /* Expence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656F223AB851000D193F /* Expence.swift */; };
@@ -36,10 +36,9 @@
 		2BB8F96A223BF63A00671465 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */; };
 		2BBB79B4225367BA006ABC2A /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB79B3225367BA006ABC2A /* SignUpScreenViewController.swift */; };
 		2BE26AD9225372E60070EF24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */; };
-		2BE26ADB225373EB0070EF24 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADA225373EB0070EF24 /* LoginValidation.swift */; };
 		2BE26ADD2253740C0070EF24 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADC2253740C0070EF24 /* LoginModel.swift */; };
 		2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADE225374280070EF24 /* LoginPresenter.swift */; };
-		2BE26AE1225374500070EF24 /* LoginMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26AE0225374500070EF24 /* LoginMock.swift */; };
+		2BE26AE1225374500070EF24 /* MockLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26AE0225374500070EF24 /* MockLogin.swift */; };
 		F0DC3BAD55460349346920C9 /* Pods_spendsterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +62,7 @@
 		2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
 		2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
+		2B4A06E52254D382007B914B /* AuthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidator.swift; sourceTree = "<group>"; };
 		2B770D5E223803C60066A72C /* spendsterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spendsterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D61223803C60066A72C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B770D66223803C60066A72C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,10 +76,9 @@
 		2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		2B9E771B2252580000D7640A /* SignUpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
-		2B9E771C2252580100D7640A /* SignUpValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpValidation.swift; sourceTree = "<group>"; };
 		2B9E771E2252580100D7640A /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		2B9E77232252591E00D7640A /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		2B9E77252252623A00D7640A /* SignUpMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMock.swift; sourceTree = "<group>"; };
+		2B9E77252252623A00D7640A /* MockSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignUp.swift; sourceTree = "<group>"; };
 		2BB1656D223AB851000D193F /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
 		2BB1656E223AB851000D193F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2BB1656F223AB851000D193F /* Expence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expence.swift; sourceTree = "<group>"; };
@@ -87,10 +86,9 @@
 		2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		2BBB79B3225367BA006ABC2A /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
-		2BE26ADA225373EB0070EF24 /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		2BE26ADC2253740C0070EF24 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		2BE26ADE225374280070EF24 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		2BE26AE0225374500070EF24 /* LoginMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMock.swift; sourceTree = "<group>"; };
+		2BE26AE0225374500070EF24 /* MockLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLogin.swift; sourceTree = "<group>"; };
 		397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spendsterIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6C80BB5D4FF7859246A73 /* Pods-spendsterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.debug.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7A6583FC17C8D45667DB5807 /* Pods-spendsterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,38 +125,6 @@
 				2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		2B5B8A67224F907B00F5724C /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				2B7104632252128600F61C37 /* ElementsView */,
-				2B71046222520F8400F61C37 /* WelcomeScreen */,
-				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
-				2B770D65223803C60066A72C /* Main.storyboard */,
-				2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */,
-				2B770D68223803C80066A72C /* Assets.xcassets */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		2B71046222520F8400F61C37 /* WelcomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */,
-				2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */,
-				2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */,
-				2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */,
-			);
-			path = WelcomeScreen;
-			sourceTree = "<group>";
-		};
-		2B7104632252128600F61C37 /* ElementsView */ = {
-			isa = PBXGroup;
-			children = (
-				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
-			);
-			path = ElementsView;
 			sourceTree = "<group>";
 		};
 		2B770D55223803C60066A72C = {
@@ -234,6 +200,7 @@
 				2BE26AD6225372650070EF24 /* SignUp */,
 				2B9E77232252591E00D7640A /* AuthView.swift */,
 				2B09A13B224D1A1400F7A042 /* Auth.storyboard */,
+				2B4A06E52254D382007B914B /* AuthValidator.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -263,9 +230,8 @@
 			children = (
 				2BBB79B3225367BA006ABC2A /* SignUpScreenViewController.swift */,
 				2B9E771E2252580100D7640A /* SignUpPresenter.swift */,
-				2B9E771C2252580100D7640A /* SignUpValidation.swift */,
 				2B9E771B2252580000D7640A /* SignUpModel.swift */,
-				2B9E77252252623A00D7640A /* SignUpMock.swift */,
+				2B9E77252252623A00D7640A /* MockSignUp.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -275,9 +241,8 @@
 			children = (
 				2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */,
 				2BE26ADE225374280070EF24 /* LoginPresenter.swift */,
-				2BE26ADA225373EB0070EF24 /* LoginValidation.swift */,
 				2BE26ADC2253740C0070EF24 /* LoginModel.swift */,
-				2BE26AE0225374500070EF24 /* LoginMock.swift */,
+				2BE26AE0225374500070EF24 /* MockLogin.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -509,13 +474,12 @@
 				2B9E77242252591E00D7640A /* AuthView.swift in Sources */,
 				2B9E771F2252580100D7640A /* SignUpModel.swift in Sources */,
 				2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */,
-				2B9E77262252623A00D7640A /* SignUpMock.swift in Sources */,
-				2B9E77202252580100D7640A /* SignUpValidation.swift in Sources */,
+				2B9E77262252623A00D7640A /* MockSignUp.swift in Sources */,
 				2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */,
-				2BE26AE1225374500070EF24 /* LoginMock.swift in Sources */,
+				2BE26AE1225374500070EF24 /* MockLogin.swift in Sources */,
+				2B4A06E62254D382007B914B /* AuthValidator.swift in Sources */,
 				2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,
-				2BE26ADB225373EB0070EF24 /* LoginValidation.swift in Sources */,
 				2BB16573223AB852000D193F /* Expence.swift in Sources */,
 				2B770D62223803C60066A72C /* AppDelegate.swift in Sources */,
 				2B9E77222252580100D7640A /* SignUpPresenter.swift in Sources */,

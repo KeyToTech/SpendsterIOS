@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginPresenter: LoginValidation {
+class LoginPresenter {
 
     let view: AuthView
     let model: LoginModel
@@ -19,24 +19,14 @@ class LoginPresenter: LoginValidation {
     }
     
     func login(email: String, password: String) {
-        if !isEmailValid(email: email) {
+        if !AuthValidator(textField: email).isEmailValid() {
             self.view.showError(message: "Incorrect form of e-mail, try again")
-        } else if !isPasswordValid(password: password) {
+        } else if !AuthValidator(textField: password).isPasswordValid() {
             self.view.showError(message: "Incorrect form of password, try again")
         } else if model.makeLogin(email: email, password: password) {
             self.view.goToHomeScreen()
-        } else {view.showError(message: "Your email/password combination does not match a Spendster account")}
-    }
-    
-    func isEmailValid(email: String) -> Bool {
-        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailFormat)
-        return emailPredicate.evaluate(with: email)
-    }
-    
-    func isPasswordValid(password: String) -> Bool {
-        let passwordFormat = "[A-Z0-9a-z._%+-]{8,24}"
-        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordFormat)
-        return passwordPredicate.evaluate(with: password)
+        } else {
+            self.view.showError(message: "Your email/password combination does not match a Spendster account")
+        }
     }
 }

@@ -23,7 +23,7 @@ class LoginScreenViewController: UIViewController, AuthView {
         self.emailTextField.text = ""
         self.passwordTextField.text = ""
         errorMessage.isHidden = true
-        self.presenter = LoginPresenter(model: LoginMock(), view: self)
+        self.presenter = LoginPresenter(model: MockLogin(), view: self)
     }
     
     func showError(message: String) {
