@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol SignUpModel {
-    func makeSingUp(email: String, password: String) -> Bool
+    func makeSingUp(email: String, password: String) -> Single<User>
 }

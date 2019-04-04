@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
 class SignUpPresenter {
+    let disposeBag = DisposeBag()
     let model: SignUpModel
     let view: AuthView
     
@@ -25,7 +27,17 @@ class SignUpPresenter {
         } else if !(password == rePassword) {
             self.view.showError(message: "Passwords don't match, try again")
         } else {
-            self.view.goToHomeScreen()
+            model.makeSingUp(email: email, password: password)
+                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                .observeOn(MainScheduler.instance)
+                .subscribe { user in
+                    if user != nil {
+                        self.view.goToHomeScreen()
+                    } else {
+                        self.view.showError(message: "You can't login now")
+                    }
+                }
+                .disposed(by: disposeBag)
         }
     }
 }

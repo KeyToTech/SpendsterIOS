@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 class LoginPresenter {
 
     let view: AuthView
     let model: LoginModel
+    let disposeBag = DisposeBag()
     
     init(model: LoginModel, view: AuthView) {
         self.view = view
@@ -23,10 +25,18 @@ class LoginPresenter {
             self.view.showError(message: "Incorrect form of e-mail, try again")
         } else if !PasswordValidation(password: password).validate() {
             self.view.showError(message: "Incorrect form of password, try again")
-        } else if model.makeLogin(email: email, password: password) {
-            self.view.goToHomeScreen()
         } else {
-            self.view.showError(message: "Your email/password combination does not match a Spendster account")
+            model.makeLogin(email: email, password: password)
+                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                .observeOn(MainScheduler.instance)
+                .subscribe { user in
+                    if user != nil {
+                        self.view.goToHomeScreen()
+                    } else {
+                        self.view.showError(message: "You can't login now")
+                    }
+                }
+                .disposed(by: disposeBag)
         }
     }
 }
