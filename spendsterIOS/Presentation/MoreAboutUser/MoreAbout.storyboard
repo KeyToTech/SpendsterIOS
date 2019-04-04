@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
+        </array>
+        <array key="Karla-Regular.ttf">
+            <string>Karla-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--More About Screen View Controller-->
+        <scene sceneID="TIM-kC-PEr">
+            <objects>
+                <viewController storyboardIdentifier="MoreAboutScreenViewController" id="60P-ar-UT4" customClass="MoreAboutScreenViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhZ-0A-lx9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUb-pW-KZ5" customClass="ShadowView" customModule="spendsterIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More About You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4i-nE-EVt">
+                                        <rect key="frame" x="126" y="19" width="119" height="19"/>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="y4i-nE-EVt" secondAttribute="bottom" constant="18" id="2jP-Op-0pj"/>
+                                    <constraint firstAttribute="trailing" secondItem="y4i-nE-EVt" secondAttribute="trailing" constant="130" id="8Ac-iI-VuJ"/>
+                                    <constraint firstItem="y4i-nE-EVt" firstAttribute="top" secondItem="RUb-pW-KZ5" secondAttribute="top" constant="19" id="L6E-kq-w6W"/>
+                                    <constraint firstItem="y4i-nE-EVt" firstAttribute="leading" secondItem="RUb-pW-KZ5" secondAttribute="leading" constant="126" id="xsB-kC-9xT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IQ0-51-rhd">
+                                <rect key="frame" x="12" y="597" width="350" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9P-5Y-Xn6" customClass="CornerButton" customModule="spendsterIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
+                                        <color key="backgroundColor" red="0.42745098040000001" green="0.89019607840000003" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="167" id="PtF-uR-sWi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="22"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Maybe later">
+                                            <color key="titleColor" red="0.42745098040000001" green="0.89019607840000003" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfW-TT-3Kg" customClass="CornerButton" customModule="spendsterIOS" customModuleProvider="target">
+                                        <rect key="frame" x="183" y="0.0" width="167" height="50"/>
+                                        <color key="backgroundColor" red="0.42745098040000001" green="0.89019607840000003" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="167" id="Cm1-i6-wYk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="22"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.19215686269999999" green="0.81960784310000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                                <color key="value" red="0.19215686269999999" green="0.81960784310000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                                <color key="value" red="0.42745098040000001" green="0.89019607840000003" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="n9P-5Y-Xn6" secondAttribute="bottom" id="2My-X9-qh6"/>
+                                    <constraint firstAttribute="trailing" secondItem="QfW-TT-3Kg" secondAttribute="trailing" id="7ll-L2-W2G"/>
+                                    <constraint firstItem="QfW-TT-3Kg" firstAttribute="top" secondItem="IQ0-51-rhd" secondAttribute="top" id="8Rs-Ph-FZP"/>
+                                    <constraint firstItem="QfW-TT-3Kg" firstAttribute="width" secondItem="n9P-5Y-Xn6" secondAttribute="width" id="CYG-Bt-MBE"/>
+                                    <constraint firstAttribute="bottom" secondItem="QfW-TT-3Kg" secondAttribute="bottom" id="Ijy-o1-ks4"/>
+                                    <constraint firstItem="n9P-5Y-Xn6" firstAttribute="top" secondItem="IQ0-51-rhd" secondAttribute="top" id="Ls7-Qn-YUq"/>
+                                    <constraint firstAttribute="height" constant="50" id="QyV-e0-DIS"/>
+                                    <constraint firstItem="n9P-5Y-Xn6" firstAttribute="leading" secondItem="IQ0-51-rhd" secondAttribute="leading" id="S2W-VA-r8U"/>
+                                    <constraint firstAttribute="width" constant="350" id="jcg-ez-HCW"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Oo-g5-DZA">
+                                <rect key="frame" x="102" y="111" width="171" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload your profile picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCE-8U-HSS">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNo-eb-gi6">
+                                        <rect key="frame" x="18.5" y="24.5" width="134" height="133"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dmytryk" translatesAutoresizingMaskIntoConstraints="NO" id="RPz-Dq-E0T" customClass="CornerImage" customModule="spendsterIOS" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="24" width="84" height="84"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="84" id="WhT-mL-ilE"/>
+                                                    <constraint firstAttribute="width" constant="84" id="pIV-dn-kPz"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="42"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-K4-BiL" customClass="CornerButton" customModule="spendsterIOS" customModuleProvider="target">
+                                                <rect key="frame" x="76" y="75" width="38" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="AUP-FO-HtW"/>
+                                                    <constraint firstAttribute="width" constant="38" id="L9I-zY-iG7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="39"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="19"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                                        <color key="value" red="0.53333333333333333" green="0.64313725490196072" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                                        <color key="value" red="0.45490196078431372" green="0.31764705882352939" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="RPz-Dq-E0T" firstAttribute="top" secondItem="GNo-eb-gi6" secondAttribute="top" constant="24" id="IpM-mm-Jqg"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Bu-K4-BiL" secondAttribute="trailing" constant="20" id="PYx-bo-O1U"/>
+                                            <constraint firstAttribute="bottom" secondItem="RPz-Dq-E0T" secondAttribute="bottom" constant="25" id="agN-ET-9N6"/>
+                                            <constraint firstAttribute="bottom" secondItem="5Bu-K4-BiL" secondAttribute="bottom" constant="20" id="cEK-qz-mrE"/>
+                                            <constraint firstItem="RPz-Dq-E0T" firstAttribute="leading" secondItem="GNo-eb-gi6" secondAttribute="leading" constant="25" id="jYG-Fk-cqW"/>
+                                            <constraint firstAttribute="trailing" secondItem="RPz-Dq-E0T" secondAttribute="trailing" constant="25" id="zeS-TS-qu3"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Btw, you look like fat ass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arS-pN-k9G">
+                                        <rect key="frame" x="18" y="165.5" width="135" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uf1-YV-6gs" firstAttribute="trailing" secondItem="2Oo-g5-DZA" secondAttribute="trailing" constant="102" id="6fh-k4-bRh"/>
+                            <constraint firstItem="Uf1-YV-6gs" firstAttribute="bottom" secondItem="IQ0-51-rhd" secondAttribute="bottom" constant="20" id="OHm-MD-l8s"/>
+                            <constraint firstItem="IQ0-51-rhd" firstAttribute="leading" secondItem="Uf1-YV-6gs" secondAttribute="leading" constant="12" id="SRq-hD-fe0"/>
+                            <constraint firstItem="RUb-pW-KZ5" firstAttribute="trailing" secondItem="Uf1-YV-6gs" secondAttribute="trailing" id="l2c-g0-RTZ"/>
+                            <constraint firstItem="Uf1-YV-6gs" firstAttribute="trailing" secondItem="IQ0-51-rhd" secondAttribute="trailing" constant="13" id="lCD-SS-cfU"/>
+                            <constraint firstItem="2Oo-g5-DZA" firstAttribute="leading" secondItem="Uf1-YV-6gs" secondAttribute="leading" constant="102" id="nbX-hX-96z"/>
+                            <constraint firstItem="2Oo-g5-DZA" firstAttribute="top" secondItem="RUb-pW-KZ5" secondAttribute="bottom" constant="35" id="pcA-t5-6BX"/>
+                            <constraint firstItem="RUb-pW-KZ5" firstAttribute="top" secondItem="Uf1-YV-6gs" secondAttribute="top" id="wq3-U3-AhC"/>
+                            <constraint firstItem="RUb-pW-KZ5" firstAttribute="leading" secondItem="Uf1-YV-6gs" secondAttribute="leading" id="yfB-ne-PSD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uf1-YV-6gs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VmP-3V-TLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="67"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dmytryk" width="720" height="720"/>
+    </resources>
+</document>

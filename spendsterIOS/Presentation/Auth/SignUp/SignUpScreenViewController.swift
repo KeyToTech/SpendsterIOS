@@ -25,9 +25,9 @@ class SignUpScreenViewController: UIViewController, AuthView {
     }
     
     func goToHomeScreen() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
-            present(homeScreenViewController, animated: true, completion: nil )
+        let storyboard = UIStoryboard(name: "MoreAbout", bundle: nil)
+        if let moreAboutScreenViewController = storyboard.instantiateViewController(withIdentifier: "MoreAboutScreenViewController") as? MoreAboutScreenViewController {
+            present(moreAboutScreenViewController, animated: true, completion: nil )
         }
     }
 
