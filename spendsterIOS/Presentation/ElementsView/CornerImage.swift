@@ -15,6 +15,8 @@ import UIKit
     var cornerRadius: CGFloat {
         set {
             layer.cornerRadius = newValue
+            layer.masksToBounds = true
+            
         }
         get {
             return layer.cornerRadius

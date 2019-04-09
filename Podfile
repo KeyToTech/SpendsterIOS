@@ -6,7 +6,7 @@ target 'spendsterIOS' do
   use_frameworks!
   pod 'Alamofire', '~> 5.0.0-beta.3'
   pod 'SwiftLint'
-
+  pod ''
   # Pods for spendsterIOS
 
   target 'spendsterIOSTests' do

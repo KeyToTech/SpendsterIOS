@@ -162,14 +162,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-K4-BiL" customClass="CornerButton" customModule="spendsterIOS" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-K4-BiL" customClass="CornerButton" customModule="spendsterIOS" customModuleProvider="target">
                                                 <rect key="frame" x="76" y="75" width="38" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="AUP-FO-HtW"/>
                                                     <constraint firstAttribute="width" constant="38" id="L9I-zY-iG7"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="39"/>
-                                                <state key="normal" title="+">
+                                                <state key="normal" image="camera">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -186,6 +185,9 @@
                                                         <color key="value" red="0.45490196078431372" green="0.31764705882352939" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="chooseButtonPressed:" destination="60P-ar-UT4" eventType="touchUpInside" id="cCi-hx-jVt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -221,6 +223,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uf1-YV-6gs"/>
                     </view>
+                    <connections>
+                        <outlet property="profileImage" destination="RPz-Dq-E0T" id="eQn-Wq-Yxb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmP-3V-TLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,6 +233,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="20" height="17.5"/>
         <image name="dmytryk" width="720" height="720"/>
     </resources>
 </document>

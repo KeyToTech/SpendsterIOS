@@ -8,12 +8,13 @@
 
 import UIKit
 
-class HomeScreenViewController: UIViewController {
+class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewDidAppear(_ animated: Bool) {
+        
         let storyboard = UIStoryboard(name: "WelcomeScreen", bundle: nil)
         if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
             present(walkthroughViewController, animated: true, completion: nil )

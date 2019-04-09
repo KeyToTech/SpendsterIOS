@@ -37,7 +37,7 @@
 		2BB16572223AB852000D193F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656E223AB851000D193F /* Category.swift */; };
 		2BB16573223AB852000D193F /* Expence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1656F223AB851000D193F /* Expence.swift */; };
 		2BB16574223AB852000D193F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB16570223AB851000D193F /* User.swift */; };
-		2BB8F96A223BF63A00671465 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */; };
+		2BB8F96A223BF63A00671465 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8F969223BF63A00671465 /* SplashViewController.swift */; };
 		2BBB79B4225367BA006ABC2A /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB79B3225367BA006ABC2A /* SignUpScreenViewController.swift */; };
 		2BCBC400225608B300135AEB /* MoreAboutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBC3FF225608B300135AEB /* MoreAboutScreenViewController.swift */; };
 		2BE26AD9225372E60070EF24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */; };
@@ -92,7 +92,7 @@
 		2BB1656E223AB851000D193F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2BB1656F223AB851000D193F /* Expence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expence.swift; sourceTree = "<group>"; };
 		2BB16570223AB851000D193F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		2BB8F969223BF63A00671465 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2BBB79B3225367BA006ABC2A /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		2BCBC3FF225608B300135AEB /* MoreAboutScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutScreenViewController.swift; sourceTree = "<group>"; };
 		2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 				2BBB79B2225367A6006ABC2A /* Auth */,
 				2B770D65223803C60066A72C /* Main.storyboard */,
 				2B770D6A223803C80066A72C /* LaunchScreen.storyboard */,
-				2BB8F969223BF63A00671465 /* HomeScreenViewController.swift */,
+				2BB8F969223BF63A00671465 /* SplashViewController.swift */,
 				2B770D68223803C80066A72C /* Assets.xcassets */,
 			);
 			path = Presentation;
@@ -497,7 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */,
-				2BB8F96A223BF63A00671465 /* HomeScreenViewController.swift in Sources */,
+				2BB8F96A223BF63A00671465 /* SplashViewController.swift in Sources */,
 				2BB16571223AB852000D193F /* Income.swift in Sources */,
 				2B4A06EB2254EBF8007B914B /* Validation.swift in Sources */,
 				2BE26AD9225372E60070EF24 /* LoginScreenViewController.swift in Sources */,
