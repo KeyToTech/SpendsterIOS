@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol LoginModel {
-    func makeLogin(email: String, password: String) -> Bool
+    func makeLogin(email: String, password: String) -> Single<User>
 }
