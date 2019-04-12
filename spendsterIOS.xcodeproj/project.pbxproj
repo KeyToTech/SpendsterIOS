@@ -26,6 +26,8 @@
 		2B770D69223803C80066A72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D68223803C80066A72C /* Assets.xcassets */; };
 		2B770D6C223803C80066A72C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D6A223803C80066A72C /* LaunchScreen.storyboard */; };
 		2B770D77223803C80066A72C /* spendsterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D76223803C80066A72C /* spendsterIOSTests.swift */; };
+		2B8322272256395A00747D36 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8322262256395A00747D36 /* RxCocoa.framework */; };
+		2B8322292256395A00747D36 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8322282256395A00747D36 /* RxSwift.framework */; };
 		2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */; };
 		2B8DF28222450F6E007C395E /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */; };
 		2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */; };
@@ -81,6 +83,8 @@
 		2B770D72223803C80066A72C /* spendsterIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spendsterIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D76223803C80066A72C /* spendsterIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spendsterIOSTests.swift; sourceTree = "<group>"; };
 		2B770D78223803C80066A72C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8322262256395A00747D36 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8322282256395A00747D36 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8322272256395A00747D36 /* RxCocoa.framework in Frameworks */,
+				2B8322292256395A00747D36 /* RxSwift.framework in Frameworks */,
 				0C126DF4A1945D54F7E2249B /* Pods_spendsterIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +188,6 @@
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2BBB79B122536670006ABC2A /* Presentation */,
 				2B7A0A60223F91E300D12DA6 /* Data */,
-				2B26C3EC2247DE4300EF86DA /* Fonts */,
 				2B770D6D223803C80066A72C /* Info.plist */,
 			);
 			path = spendsterIOS;
@@ -212,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				2B4A06F12254F6B4007B914B /* MoreAboutUser */,
+				2B26C3EC2247DE4300EF86DA /* Fonts */,
 				2BBB79BA22536877006ABC2A /* ElementsView */,
 				2BBB79B922536829006ABC2A /* WelcomeScreen */,
 				2BBB79B2225367A6006ABC2A /* Auth */,
@@ -292,6 +298,8 @@
 		CA17EA1B7E7594EEF898E5F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B8322262256395A00747D36 /* RxCocoa.framework */,
+				2B8322282256395A00747D36 /* RxSwift.framework */,
 				0A1CEF53A6DD5959E114C762 /* Pods_spendsterIOS.framework */,
 				397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */,
 			);
@@ -305,8 +313,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B770D7B223803C80066A72C /* Build configuration list for PBXNativeTarget "spendsterIOS" */;
 			buildPhases = (
-				2BBACF26223BD68B005D64D3 /* ShellScript */,
 				A7394DBA9754000D28597E97 /* [CP] Check Pods Manifest.lock */,
+				2BBACF26223BD68B005D64D3 /* ShellScript */,
 				2B770D5A223803C60066A72C /* Sources */,
 				2B770D5B223803C60066A72C /* Frameworks */,
 				2B770D5C223803C60066A72C /* Resources */,
@@ -454,13 +462,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
