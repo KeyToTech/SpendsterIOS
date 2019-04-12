@@ -19,18 +19,18 @@ class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDe
     }
 
     @IBAction func laterButtonPressed(_ sender: UIButton) {
-        //TODO Go to home
+        //TODO 45-activity-home-screen
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
-        //TODO next screen presentation
+        //TODO 44-adress-screen
     }
     
     @IBAction func chooseButtonPressed(_ sender: UIButton) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in self.openCamera()}))
-        alert.addAction(UIAlertAction(title: "Choose Photo", style: .default, handler: { [weak self] _ in
-            self?.openGallary()
+        alert.addAction(UIAlertAction(title: "Choose Photo", style: .default, handler: { _ in
+            self.openGallary()
         }))
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)

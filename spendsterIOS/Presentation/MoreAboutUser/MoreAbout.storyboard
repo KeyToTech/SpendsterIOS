@@ -88,6 +88,9 @@
                                                 <size key="value" width="0.0" height="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="laterButtonPressed:" destination="60P-ar-UT4" eventType="touchUpInside" id="FTL-Rw-hxf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfW-TT-3Kg" customClass="CornerButton" customModule="spendsterIOS" customModuleProvider="target">
                                         <rect key="frame" x="183" y="0.0" width="167" height="50"/>
@@ -124,6 +127,9 @@
                                                 <color key="value" red="0.42745098040000001" green="0.89019607840000003" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="continueButtonPressed:" destination="60P-ar-UT4" eventType="touchUpInside" id="QaV-Hq-ihA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

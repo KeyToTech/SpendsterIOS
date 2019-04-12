@@ -6,7 +6,6 @@ target 'spendsterIOS' do
   use_frameworks!
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
-    # pod 'Alamofire',  '~> 5.0.0-beta.3'
     pod 'SwiftLint'
   # Pods for spendsterIOS
 

@@ -32,9 +32,6 @@ class LoginScreenViewController: UIViewController, AuthView {
     }
     
     func goToHomeScreen() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
-//            present(homeScreenViewController, animated: true, completion: nil )
-//        }
+        // TODO 45-activity-home-screen
     }
 }
