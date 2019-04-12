@@ -9,7 +9,7 @@
 import UIKit
 
 class SignUpScreenViewController: UIViewController, AuthView {
-    var presenter: SignUpPresenter? = nil
+    var presenter: SignUpPresenter?
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var rePasswordTextField: UITextField!

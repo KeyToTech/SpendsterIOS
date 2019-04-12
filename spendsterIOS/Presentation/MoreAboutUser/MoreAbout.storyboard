@@ -224,6 +224,7 @@
                         <viewLayoutGuide key="safeArea" id="Uf1-YV-6gs"/>
                     </view>
                     <connections>
+                        <outlet property="approvedMessage" destination="arS-pN-k9G" id="Vkk-QX-uNs"/>
                         <outlet property="profileImage" destination="RPz-Dq-E0T" id="eQn-Wq-Yxb"/>
                     </connections>
                 </viewController>
