@@ -19,11 +19,15 @@ class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDe
     }
 
     @IBAction func laterButtonPressed(_ sender: UIButton) {
-        //TODO 45-activity-home-screen
+        // TODO add funcrional to button (go to home screen)
+        // Home screen must be implemented
+        // https://trello.com/c/5WrSYzvP/45-activity-home-screen
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
-        //TODO 44-adress-screen
+        // TODO add funcrional to button (go to address screen)
+        // Address screen must be implemented
+        // https://trello.com/c/0QOjgjjL/44-adress-screen
     }
     
     @IBAction func chooseButtonPressed(_ sender: UIButton) {
