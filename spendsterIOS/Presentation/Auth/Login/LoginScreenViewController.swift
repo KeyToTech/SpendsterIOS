@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginScreenViewController: UIViewController, AuthView {
-    var presenter: LoginPresenter? = nil
+    var presenter: LoginPresenter?
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
@@ -32,9 +32,8 @@ class LoginScreenViewController: UIViewController, AuthView {
     }
     
     func goToHomeScreen() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
-            present(homeScreenViewController, animated: true, completion: nil )
-        }
+        // TODO add funcrional to button (go to home screen)
+        // Home screen must be implemented
+        // https://trello.com/c/5WrSYzvP/45-activity-home-screen
     }
 }
