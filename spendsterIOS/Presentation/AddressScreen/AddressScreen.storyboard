@@ -36,7 +36,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="22"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Continue">
+                                <state key="normal" title="Get Started">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -63,7 +63,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="zeh-mj-s6X" eventType="touchUpInside" id="1b2-fn-YEZ"/>
+                                    <action selector="getStartedButtonPressed:" destination="zeh-mj-s6X" eventType="touchUpInside" id="nyI-lf-UnO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZM-WH-Hfd" customClass="ShadowView" customModule="spendsterIOS" customModuleProvider="target">
@@ -110,27 +110,32 @@
                                         <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tlv-v7-vM5">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvU-Ks-uX9">
                                         <rect key="frame" x="0.0" y="66" width="335" height="46"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="lhs-IK-atx"/>
+                                            <constraint firstAttribute="height" constant="46" id="6wE-vG-L6d"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="location"/>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Tlv-v7-vM5" firstAttribute="leading" secondItem="l5w-QQ-8r5" secondAttribute="leading" id="11M-ky-FHT"/>
-                                    <constraint firstItem="Tlv-v7-vM5" firstAttribute="top" secondItem="sDx-Kc-Ndk" secondAttribute="bottom" constant="20" id="4cO-5T-1MZ"/>
+                                    <constraint firstItem="YvU-Ks-uX9" firstAttribute="leading" secondItem="l5w-QQ-8r5" secondAttribute="leading" id="DJ3-dX-lPB"/>
                                     <constraint firstItem="sDx-Kc-Ndk" firstAttribute="top" secondItem="l5w-QQ-8r5" secondAttribute="top" id="R3k-k2-Ega"/>
                                     <constraint firstAttribute="width" constant="335" id="Wuu-Ui-mIy"/>
                                     <constraint firstAttribute="trailing" secondItem="sDx-Kc-Ndk" secondAttribute="trailing" id="XCx-DN-GiL"/>
-                                    <constraint firstAttribute="bottom" secondItem="Tlv-v7-vM5" secondAttribute="bottom" id="b4a-RH-itP"/>
-                                    <constraint firstAttribute="trailing" secondItem="Tlv-v7-vM5" secondAttribute="trailing" id="dhj-E3-Vk5"/>
+                                    <constraint firstAttribute="bottom" secondItem="YvU-Ks-uX9" secondAttribute="bottom" id="dnZ-qr-1a4"/>
+                                    <constraint firstAttribute="trailing" secondItem="YvU-Ks-uX9" secondAttribute="trailing" id="nKE-AT-u2G"/>
                                     <constraint firstItem="sDx-Kc-Ndk" firstAttribute="leading" secondItem="l5w-QQ-8r5" secondAttribute="leading" id="vb1-u6-unz"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixd-SL-npl">
+                                <rect key="frame" x="20" y="228" width="85.5" height="15.5"/>
+                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="13"/>
+                                <color key="textColor" red="0.84815834580000005" green="0.036098073119999997" blue="0.02372018175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -138,6 +143,8 @@
                             <constraint firstItem="nZM-WH-Hfd" firstAttribute="trailing" secondItem="uRO-1t-YaY" secondAttribute="trailing" id="BT7-XU-OLY"/>
                             <constraint firstItem="nZM-WH-Hfd" firstAttribute="top" secondItem="uRO-1t-YaY" secondAttribute="top" id="NY6-L1-MWS"/>
                             <constraint firstItem="l5w-QQ-8r5" firstAttribute="centerX" secondItem="uRO-1t-YaY" secondAttribute="centerX" id="P8Y-hP-XYl"/>
+                            <constraint firstItem="Ixd-SL-npl" firstAttribute="top" secondItem="l5w-QQ-8r5" secondAttribute="bottom" constant="20" id="TWl-kV-NbS"/>
+                            <constraint firstItem="Ixd-SL-npl" firstAttribute="leading" secondItem="uRO-1t-YaY" secondAttribute="leading" constant="20" id="lkk-h7-YFR"/>
                             <constraint firstItem="nZM-WH-Hfd" firstAttribute="leading" secondItem="uRO-1t-YaY" secondAttribute="leading" id="nHh-Mr-r5N"/>
                             <constraint firstItem="Hyp-vf-TFq" firstAttribute="centerX" secondItem="uRO-1t-YaY" secondAttribute="centerX" id="rz2-JE-YS6"/>
                             <constraint firstItem="uRO-1t-YaY" firstAttribute="bottom" secondItem="Hyp-vf-TFq" secondAttribute="bottom" constant="20" id="ww9-V1-uLX"/>
@@ -145,8 +152,9 @@
                         <viewLayoutGuide key="safeArea" id="uRO-1t-YaY"/>
                     </view>
                     <connections>
-                        <outlet property="addressTextField" destination="Tlv-v7-vM5" id="7A3-jr-93W"/>
+                        <outlet property="errorMessage" destination="Ixd-SL-npl" id="eb8-hL-Aav"/>
                         <outlet property="nameTextField" destination="sDx-Kc-Ndk" id="7lD-Wt-rpO"/>
+                        <outlet property="phoneNumberTextField" destination="YvU-Ks-uX9" id="1uI-xi-Oiy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZN-R4-H5t" userLabel="First Responder" sceneMemberID="firstResponder"/>

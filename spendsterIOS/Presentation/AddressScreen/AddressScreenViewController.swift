@@ -8,19 +8,30 @@
 
 import UIKit
 
-class AddressScreenViewController: UIViewController {
-
-    
-    
+class AddressScreenViewController: UIViewController, AuthView {
+    var presenter: AddressScreenPresenter?
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var addressTextField: UITextField!
-    @IBAction func continueButtonPressed(_ sender: Any) {
-        // TODO 45-activity-home-screen
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var errorMessage: UILabel!
+    @IBAction func getStartedButtonPressed(_ sender: Any) {
+        self.errorMessage.isHidden = true
+        self.presenter?.makeUpdate(name: nameTextField.text!, phoneNumber: phoneNumberTextField.text!)
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.errorMessage.isHidden = true
+        self.nameTextField.text = ""
+        self.phoneNumberTextField.text = ""
+        self.presenter = AddressScreenPresenter(view: self, model: MockAddrModel())
     }
-
     
+    func showError(message: String) {
+        self.errorMessage.text = message
+        self.errorMessage.isHidden = false
+    }
+    
+    func goToHomeScreen() {
+        // TODO 45-activity-home-screen
+    }
 }
