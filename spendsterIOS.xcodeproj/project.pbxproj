@@ -14,7 +14,7 @@
 		2B248D162265CEF900423FE8 /* AddressScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D152265CEF900423FE8 /* AddressScreenViewController.swift */; };
 		2B248D182265D60900423FE8 /* AddressScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D172265D60900423FE8 /* AddressScreenPresenter.swift */; };
 		2B248D1A2265D62100423FE8 /* AddressScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D192265D62100423FE8 /* AddressScreenModel.swift */; };
-		2B248D1F2265D81D00423FE8 /* TextFiedValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D1E2265D81D00423FE8 /* TextFiedValidation.swift */; };
+		2B248D1F2265D81D00423FE8 /* TextValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D1E2265D81D00423FE8 /* TextValidation.swift */; };
 		2B248D212265E92800423FE8 /* MockAddrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D202265E92800423FE8 /* MockAddrModel.swift */; };
 		2B25E55F224BC12800FB0E4C /* CornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25E55E224BC12800FB0E4C /* CornerButton.swift */; };
 		2B26C3F12247DE9C00EF86DA /* Karla-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3ED2247DE9C00EF86DA /* Karla-BoldItalic.ttf */; };
@@ -73,7 +73,7 @@
 		2B248D152265CEF900423FE8 /* AddressScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScreenViewController.swift; sourceTree = "<group>"; };
 		2B248D172265D60900423FE8 /* AddressScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScreenPresenter.swift; sourceTree = "<group>"; };
 		2B248D192265D62100423FE8 /* AddressScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScreenModel.swift; sourceTree = "<group>"; };
-		2B248D1E2265D81D00423FE8 /* TextFiedValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFiedValidation.swift; sourceTree = "<group>"; };
+		2B248D1E2265D81D00423FE8 /* TextValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValidation.swift; sourceTree = "<group>"; };
 		2B248D202265E92800423FE8 /* MockAddrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddrModel.swift; sourceTree = "<group>"; };
 		2B25E55E224BC12800FB0E4C /* CornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButton.swift; sourceTree = "<group>"; };
 		2B26C3ED2247DE9C00EF86DA /* Karla-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		2B248D1D2265D7FC00423FE8 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
-				2B248D1E2265D81D00423FE8 /* TextFiedValidation.swift */,
+				2B248D1E2265D81D00423FE8 /* TextValidation.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -541,7 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B248D1F2265D81D00423FE8 /* TextFiedValidation.swift in Sources */,
+				2B248D1F2265D81D00423FE8 /* TextValidation.swift in Sources */,
 				2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */,
 				2BB8F96A223BF63A00671465 /* SplashViewController.swift in Sources */,
 				2BB16571223AB852000D193F /* Income.swift in Sources */,

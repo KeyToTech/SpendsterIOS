@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TextFiedValidation: Validation {
+class TextValidation: Validation {
     private let text: String
     private let pattern: String
     init (text: String, pattern: String) {
