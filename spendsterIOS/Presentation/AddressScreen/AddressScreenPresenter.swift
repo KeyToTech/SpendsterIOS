@@ -10,9 +10,9 @@ import Foundation
 import RxSwift
 
 class AddressScreenPresenter {
-    let view: AuthView
-    let model: AddressScreenModel
-    let disposeBag = DisposeBag()
+    private let view: AuthView
+    private let model: AddressScreenModel
+    private let disposeBag = DisposeBag()
     
     init(view: AuthView, model: AddressScreenModel) {
         self.view = view
@@ -20,9 +20,9 @@ class AddressScreenPresenter {
     }
     
     func makeUpdate(name: String, phoneNumber: String) {
-        if !NameValidation(name: name).validate() {
+        if !TextFiedValidation(text: name, pattern: "[A-Za-z]+\\ [A-Za-z]{1,64}").validate() {
             self.view.showError(message: "Invalid name format")
-        } else if !PhoneNumberValidation(phoneNumber: phoneNumber).validate() {
+        } else if !TextFiedValidation(text: phoneNumber, pattern: "[+]+[0-9]{12}").validate() {
             self.view.showError(message: "Invalid number format")
         } else {
             self.model.updateUser(name: name, phoneNumber: phoneNumber)

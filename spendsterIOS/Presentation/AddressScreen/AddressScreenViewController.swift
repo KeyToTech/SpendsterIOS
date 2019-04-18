@@ -9,20 +9,24 @@
 import UIKit
 
 class AddressScreenViewController: UIViewController, AuthView {
-    var presenter: AddressScreenPresenter?
+    private var presenter: AddressScreenPresenter?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
     @IBAction func getStartedButtonPressed(_ sender: Any) {
         self.errorMessage.isHidden = true
-        self.presenter?.makeUpdate(name: nameTextField.text!, phoneNumber: phoneNumberTextField.text!)
+        self.presenter?.makeUpdate(name: name(), phoneNumber: phone())
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func initDefaultUI() {
         self.errorMessage.isHidden = true
         self.nameTextField.text = ""
         self.phoneNumberTextField.text = ""
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.initDefaultUI()
         self.presenter = AddressScreenPresenter(view: self, model: MockAddrModel())
     }
     
@@ -32,6 +36,16 @@ class AddressScreenViewController: UIViewController, AuthView {
     }
     
     func goToHomeScreen() {
-        // TODO 45-activity-home-screen
+        // TODO add funcrional to button (go to home screen)
+        // Home screen must be implemented
+        // https://trello.com/c/5WrSYzvP/45-activity-home-screen
+    }
+    
+    func name() -> String {
+        return self.nameTextField.text!
+    }
+    
+    func phone() -> String {
+        return self.phoneNumberTextField.text!
     }
 }

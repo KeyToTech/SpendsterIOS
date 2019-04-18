@@ -8,6 +8,19 @@
 
 import Foundation
 
+class TextFiedValidation: Validation {
+    private let text: String
+    private let pattern: String
+    init (text: String, pattern: String) {
+        self.text = text
+        self.pattern = pattern
+    }
+    
+    func validate() -> Bool {
+        return NSPredicate(format: "SELF MATCHES %@", self.pattern).evaluate(with: self.text)
+    }
+}
+
 class NameValidation: Validation {
     private let name: String
     init (name: String) {
