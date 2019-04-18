@@ -20,16 +20,3 @@ class TextFiedValidation: Validation {
         return NSPredicate(format: "SELF MATCHES %@", self.pattern).evaluate(with: self.text)
     }
 }
-
-class NameValidation: Validation {
-    private let name: String
-    init (name: String) {
-        self.name = name
-    }
-    
-    func validate() -> Bool {
-        let format = "[A-Za-z]+ [A-Za-z]"
-        let predicate = NSPredicate(format: "SELF MATCHES %@", format)
-        return predicate.evaluate(with: self.name)
-    }
-}
