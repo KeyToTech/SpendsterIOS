@@ -7,6 +7,7 @@ target 'spendsterIOS' do
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
     pod 'SwiftLint'
+    pod 'Parchment'
   # Pods for spendsterIOS
 
   target 'spendsterIOSTests' do

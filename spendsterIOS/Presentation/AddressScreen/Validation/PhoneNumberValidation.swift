@@ -16,7 +16,7 @@ class PhoneNumberValidation: Validation {
     }
     
     func validate() -> Bool {
-        let format = "[+]{1}+[0-9]{12}"
+        let format = "[+]+[0-9]{12}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", format)
         return predicate.evaluate(with: self.phoneNumber)
     }

@@ -20,6 +20,18 @@ import UIKit
         }
     }
     
+    
+    @IBInspectable
+    var rotation: Double = 0 {
+        didSet {
+            rotateButton(rotation: rotation)
+        }
+    }
+    
+    func rotateButton(rotation: Double)  {
+        self.transform = CGAffineTransform(rotationAngle: CGFloat(.pi/2 + rotation))
+    }
+
     @IBInspectable
     var shadowOpacity: Float {
         get {

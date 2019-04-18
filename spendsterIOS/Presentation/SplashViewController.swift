@@ -19,5 +19,6 @@ class SplashViewController: UIViewController {
         if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
             present(walkthroughViewController, animated: true, completion: nil )
         }
+        
     }
 }

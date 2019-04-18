@@ -24,6 +24,14 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         if let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpScreenViewController {
+            self.skipButton.translatesAutoresizingMaskIntoConstraints = false
+            let _ = NSLayoutConstraint.init(item: self.view,
+                                                     attribute: .top,
+                                                     relatedBy: .equal,
+                                                     toItem: self.skipButton,
+                                                     attribute: .top,
+                                                     multiplier: 1.0,
+                                                     constant: 0.0).isActive = true
             present(signUpViewController, animated: true, completion: nil )
         }
     }

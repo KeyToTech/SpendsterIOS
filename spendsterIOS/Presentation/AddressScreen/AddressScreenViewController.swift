@@ -32,6 +32,9 @@ class AddressScreenViewController: UIViewController, AuthView {
     }
     
     func goToHomeScreen() {
-        // TODO 45-activity-home-screen
+        let storyboard = UIStoryboard(name: "HomeScreen", bundle: nil)
+        if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
+            present(homeScreenViewController, animated: true, completion: nil )
     }
+}
 }

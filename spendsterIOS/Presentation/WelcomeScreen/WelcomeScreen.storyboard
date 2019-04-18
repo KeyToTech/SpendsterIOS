@@ -207,7 +207,7 @@
                 <pageViewController storyboardIdentifier="WalkthroughPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="mwJ-6p-naq" customClass="WalkthroughPageViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFC-Rs-t7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-106" y="84"/>
+            <point key="canvasLocation" x="-97" y="85"/>
         </scene>
         <!--Walkthrough Content View Controller-->
         <scene sceneID="c2J-ja-lzq">

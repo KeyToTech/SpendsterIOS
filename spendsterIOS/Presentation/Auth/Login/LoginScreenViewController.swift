@@ -32,8 +32,9 @@ class LoginScreenViewController: UIViewController, AuthView {
     }
     
     func goToHomeScreen() {
-        // TODO add funcrional to button (go to home screen)
-        // Home screen must be implemented
-        // https://trello.com/c/5WrSYzvP/45-activity-home-screen
+        let storyboard = UIStoryboard(name: "HomeScreen", bundle: nil)
+        if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
+            present(homeScreenViewController, animated: true, completion: nil )
     }
+}
 }

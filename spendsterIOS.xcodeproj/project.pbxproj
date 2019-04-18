@@ -17,17 +17,26 @@
 		2B248D1F2265D81D00423FE8 /* NameValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D1E2265D81D00423FE8 /* NameValidation.swift */; };
 		2B248D212265E92800423FE8 /* MockAddrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D202265E92800423FE8 /* MockAddrModel.swift */; };
 		2B248D232265ED0B00423FE8 /* PhoneNumberValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D222265ED0B00423FE8 /* PhoneNumberValidation.swift */; };
+		2B248D2622661DCA00423FE8 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B248D2522661DCA00423FE8 /* HomeScreen.storyboard */; };
+		2B248D282266295500423FE8 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B248D272266295500423FE8 /* HomeScreenViewController.swift */; };
 		2B25E55F224BC12800FB0E4C /* CornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25E55E224BC12800FB0E4C /* CornerButton.swift */; };
 		2B26C3F12247DE9C00EF86DA /* Karla-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3ED2247DE9C00EF86DA /* Karla-BoldItalic.ttf */; };
 		2B26C3F22247DE9C00EF86DA /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3EE2247DE9C00EF86DA /* Karla-Italic.ttf */; };
 		2B26C3F32247DE9C00EF86DA /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */; };
 		2B26C3F42247DE9C00EF86DA /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */; };
 		2B35ACEC2243F04700BEC2E5 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */; };
+		2B3ED9DE2266760400C872B8 /* tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3ED9DD2266760400C872B8 /* tabbar.swift */; };
 		2B4A06EB2254EBF8007B914B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06EA2254EBF7007B914B /* Validation.swift */; };
 		2B4A06ED2254EC51007B914B /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06EC2254EC51007B914B /* EmailValidation.swift */; };
 		2B4A06EF2254ED16007B914B /* PasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06EE2254ED16007B914B /* PasswordValidation.swift */; };
 		2B4A06F32254F7BD007B914B /* MoreAbout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4A06F22254F7BC007B914B /* MoreAbout.storyboard */; };
 		2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06F42254FC38007B914B /* CornerImage.swift */; };
+		2B56002D22674EEC00020FCE /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B56002C22674EEC00020FCE /* IndexViewController.swift */; };
+		2B56002F226750B200020FCE /* CreatedConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B56002E226750B200020FCE /* CreatedConstraints.swift */; };
+		2B56003222675C9F00020FCE /* CustomPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B56003122675C9F00020FCE /* CustomPagingViewController.swift */; };
+		2B56003422675CD500020FCE /* CustomPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B56003322675CD500020FCE /* CustomPagingView.swift */; };
+		2B56003622675F1900020FCE /* HomeScreenTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B56003522675F1900020FCE /* HomeScreenTabBarController.swift */; };
+		2B5600382267661800020FCE /* ActivityNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5600372267661800020FCE /* ActivityNavigationController.swift */; };
 		2B770D62223803C60066A72C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D61223803C60066A72C /* AppDelegate.swift */; };
 		2B770D67223803C60066A72C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D65223803C60066A72C /* Main.storyboard */; };
 		2B770D69223803C80066A72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D68223803C80066A72C /* Assets.xcassets */; };
@@ -53,6 +62,7 @@
 		2BE26ADD2253740C0070EF24 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADC2253740C0070EF24 /* LoginModel.swift */; };
 		2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADE225374280070EF24 /* LoginPresenter.swift */; };
 		2BE26AE1225374500070EF24 /* MockLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26AE0225374500070EF24 /* MockLogin.swift */; };
+		2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF40B1222674A660076D50B /* ActivityViewController.swift */; };
 		F0DC3BAD55460349346920C9 /* Pods_spendsterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,17 +87,26 @@
 		2B248D1E2265D81D00423FE8 /* NameValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidation.swift; sourceTree = "<group>"; };
 		2B248D202265E92800423FE8 /* MockAddrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddrModel.swift; sourceTree = "<group>"; };
 		2B248D222265ED0B00423FE8 /* PhoneNumberValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberValidation.swift; sourceTree = "<group>"; };
+		2B248D2522661DCA00423FE8 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
+		2B248D272266295500423FE8 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		2B25E55E224BC12800FB0E4C /* CornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButton.swift; sourceTree = "<group>"; };
 		2B26C3ED2247DE9C00EF86DA /* Karla-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-BoldItalic.ttf"; sourceTree = "<group>"; };
 		2B26C3EE2247DE9C00EF86DA /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
 		2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
 		2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
+		2B3ED9DD2266760400C872B8 /* tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbar.swift; sourceTree = "<group>"; };
 		2B4A06EA2254EBF7007B914B /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		2B4A06EC2254EC51007B914B /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		2B4A06EE2254ED16007B914B /* PasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
 		2B4A06F22254F7BC007B914B /* MoreAbout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreAbout.storyboard; sourceTree = "<group>"; };
 		2B4A06F42254FC38007B914B /* CornerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerImage.swift; sourceTree = "<group>"; };
+		2B56002C22674EEC00020FCE /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		2B56002E226750B200020FCE /* CreatedConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedConstraints.swift; sourceTree = "<group>"; };
+		2B56003122675C9F00020FCE /* CustomPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPagingViewController.swift; sourceTree = "<group>"; };
+		2B56003322675CD500020FCE /* CustomPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPagingView.swift; sourceTree = "<group>"; };
+		2B56003522675F1900020FCE /* HomeScreenTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTabBarController.swift; sourceTree = "<group>"; };
+		2B5600372267661800020FCE /* ActivityNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityNavigationController.swift; sourceTree = "<group>"; };
 		2B770D5E223803C60066A72C /* spendsterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spendsterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D61223803C60066A72C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B770D66223803C60066A72C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +136,7 @@
 		2BE26ADC2253740C0070EF24 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		2BE26ADE225374280070EF24 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		2BE26AE0225374500070EF24 /* MockLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLogin.swift; sourceTree = "<group>"; };
+		2BF40B1222674A660076D50B /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spendsterIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6C80BB5D4FF7859246A73 /* Pods-spendsterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.debug.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7A6583FC17C8D45667DB5807 /* Pods-spendsterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +188,21 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
+		2B248D2422661D8A00423FE8 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2B56003022675C3F00020FCE /* Activity */,
+				2B248D2522661DCA00423FE8 /* HomeScreen.storyboard */,
+				2B56003522675F1900020FCE /* HomeScreenTabBarController.swift */,
+				2B248D272266295500423FE8 /* HomeScreenViewController.swift */,
+				2B56002C22674EEC00020FCE /* IndexViewController.swift */,
+				2B56002E226750B200020FCE /* CreatedConstraints.swift */,
+				2B56003122675C9F00020FCE /* CustomPagingViewController.swift */,
+				2B56003322675CD500020FCE /* CustomPagingView.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		2B26C3EC2247DE4300EF86DA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +231,15 @@
 				2BCBC3FF225608B300135AEB /* MoreAboutScreenViewController.swift */,
 			);
 			path = MoreAboutUser;
+			sourceTree = "<group>";
+		};
+		2B56003022675C3F00020FCE /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				2BF40B1222674A660076D50B /* ActivityViewController.swift */,
+				2B5600372267661800020FCE /* ActivityNavigationController.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		2B770D55223803C60066A72C = {
@@ -252,6 +296,7 @@
 		2BBB79B122536670006ABC2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2B248D2422661D8A00423FE8 /* HomeScreen */,
 				2B248D102265CE2F00423FE8 /* AddressScreen */,
 				2B4A06F12254F6B4007B914B /* MoreAboutUser */,
 				2B26C3EC2247DE4300EF86DA /* Fonts */,
@@ -295,6 +340,7 @@
 				2B09A13D224D255800F7A042 /* ShadowView.swift */,
 				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
 				2B4A06F42254FC38007B914B /* CornerImage.swift */,
+				2B3ED9DD2266760400C872B8 /* tabbar.swift */,
 			);
 			path = ElementsView;
 			sourceTree = "<group>";
@@ -437,6 +483,7 @@
 				2B26C3F32247DE9C00EF86DA /* Karla-Regular.ttf in Resources */,
 				2B770D69223803C80066A72C /* Assets.xcassets in Resources */,
 				2B770D67223803C60066A72C /* Main.storyboard in Resources */,
+				2B248D2622661DCA00423FE8 /* HomeScreen.storyboard in Resources */,
 				2B248D142265CEBA00423FE8 /* AddressScreen.storyboard in Resources */,
 				2B4A06F32254F7BD007B914B /* MoreAbout.storyboard in Resources */,
 			);
@@ -500,6 +547,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -507,6 +555,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -545,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B248D1F2265D81D00423FE8 /* NameValidation.swift in Sources */,
+				2B248D282266295500423FE8 /* HomeScreenViewController.swift in Sources */,
 				2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */,
 				2BB8F96A223BF63A00671465 /* SplashViewController.swift in Sources */,
 				2BB16571223AB852000D193F /* Income.swift in Sources */,
@@ -554,23 +604,31 @@
 				2B8DF28222450F6E007C395E /* WalkthroughPageViewController.swift in Sources */,
 				2B248D212265E92800423FE8 /* MockAddrModel.swift in Sources */,
 				2BE26ADD2253740C0070EF24 /* LoginModel.swift in Sources */,
+				2B56003422675CD500020FCE /* CustomPagingView.swift in Sources */,
 				2B09A13E224D255900F7A042 /* ShadowView.swift in Sources */,
+				2B56003622675F1900020FCE /* HomeScreenTabBarController.swift in Sources */,
 				2B248D232265ED0B00423FE8 /* PhoneNumberValidation.swift in Sources */,
+				2B3ED9DE2266760400C872B8 /* tabbar.swift in Sources */,
 				2B9E77242252591E00D7640A /* AuthView.swift in Sources */,
 				2BCBC400225608B300135AEB /* MoreAboutScreenViewController.swift in Sources */,
 				2B9E771F2252580100D7640A /* SignUpModel.swift in Sources */,
 				2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */,
 				2B9E77262252623A00D7640A /* MockSignUp.swift in Sources */,
+				2B56003222675C9F00020FCE /* CustomPagingViewController.swift in Sources */,
+				2B56002D22674EEC00020FCE /* IndexViewController.swift in Sources */,
 				2B248D1A2265D62100423FE8 /* AddressScreenModel.swift in Sources */,
 				2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */,
+				2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */,
 				2B4A06ED2254EC51007B914B /* EmailValidation.swift in Sources */,
 				2BE26AE1225374500070EF24 /* MockLogin.swift in Sources */,
 				2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */,
 				2B4A06EF2254ED16007B914B /* PasswordValidation.swift in Sources */,
+				2B5600382267661800020FCE /* ActivityNavigationController.swift in Sources */,
 				2B248D182265D60900423FE8 /* AddressScreenPresenter.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,
 				2BB16573223AB852000D193F /* Expence.swift in Sources */,
 				2B770D62223803C60066A72C /* AppDelegate.swift in Sources */,
+				2B56002F226750B200020FCE /* CreatedConstraints.swift in Sources */,
 				2B9E77222252580100D7640A /* SignUpPresenter.swift in Sources */,
 				2B248D162265CEF900423FE8 /* AddressScreenViewController.swift in Sources */,
 				2BBB79B4225367BA006ABC2A /* SignUpScreenViewController.swift in Sources */,

@@ -15,7 +15,7 @@ class NameValidation: Validation {
     }
     
     func validate() -> Bool {
-        let format = "[A-Za-z]+ [A-Za-z]"
+        let format = "[A-Za-z]+\\ [A-Za-z]"
         let predicate = NSPredicate(format: "SELF MATCHES %@", format)
         return predicate.evaluate(with: self.name)
     }
