@@ -9,20 +9,24 @@
 import UIKit
 
 class AddressScreenViewController: UIViewController, AuthView {
-    var presenter: AddressScreenPresenter?
+    private var presenter: AddressScreenPresenter?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
     @IBAction func getStartedButtonPressed(_ sender: Any) {
         self.errorMessage.isHidden = true
-        self.presenter?.makeUpdate(name: nameTextField.text!, phoneNumber: phoneNumberTextField.text!)
+        self.presenter?.makeUpdate(name: name(), phoneNumber: phone())
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func initDefaultUI() {
         self.errorMessage.isHidden = true
         self.nameTextField.text = ""
         self.phoneNumberTextField.text = ""
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.initDefaultUI()
         self.presenter = AddressScreenPresenter(view: self, model: MockAddrModel())
     }
     
@@ -35,6 +39,15 @@ class AddressScreenViewController: UIViewController, AuthView {
         let storyboard = UIStoryboard(name: "HomeScreen", bundle: nil)
         if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
             present(homeScreenViewController, animated: true, completion: nil )
+    	}
     }
-}
+    
+    func name() -> String {
+        return self.nameTextField.text!
+    }
+    
+    func phone() -> String {
+        return self.phoneNumberTextField.text!
+>>>>>>> feature/sp-44-address-screen
+    }
 }

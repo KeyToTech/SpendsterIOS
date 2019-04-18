@@ -16,7 +16,7 @@ class User {
     private let name: String?
     private var password: String?
     private var balance: Float?
-    let createdDate: Date?
+    private let createdDate: Date?
     init(id: Int, username: String, email: String, password: String, balance: Float, date: Date, name: String, phone: String) {
         self.ID = id
         self.username = username
