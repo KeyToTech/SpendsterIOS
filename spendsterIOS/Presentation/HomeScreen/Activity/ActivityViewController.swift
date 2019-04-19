@@ -8,8 +8,6 @@
 import UIKit
 import Parchment
 
-
-
 class ActivityViewController: UIViewController {
     
     let pagingViewController = CustomPagingViewController(viewControllers: [IndexViewController(index: 0),
@@ -17,7 +15,6 @@ class ActivityViewController: UIViewController {
                                                                            IndexViewController(index: 2),
                                                                            IndexViewController(index: 3),
                                                                            IndexViewController(index: 4)])
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

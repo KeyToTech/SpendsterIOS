@@ -48,6 +48,5 @@ class AddressScreenViewController: UIViewController, AuthView {
     
     func phone() -> String {
         return self.phoneNumberTextField.text!
->>>>>>> feature/sp-44-address-screen
     }
 }

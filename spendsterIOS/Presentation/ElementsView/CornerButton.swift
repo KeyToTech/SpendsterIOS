@@ -20,7 +20,6 @@ import UIKit
         }
     }
     
-    
     @IBInspectable
     var rotation: Double = 0 {
         didSet {
@@ -28,7 +27,7 @@ import UIKit
         }
     }
     
-    func rotateButton(rotation: Double)  {
+    func rotateButton(rotation: Double) {
         self.transform = CGAffineTransform(rotationAngle: CGFloat(.pi/2 + rotation))
     }
 
