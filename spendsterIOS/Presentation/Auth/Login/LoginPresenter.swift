@@ -20,6 +20,10 @@ class LoginPresenter {
         self.model = model
     }
     
+    func makeRecord() {
+        UserDefaults.standard.set(true, forKey: "alreadyLoggedIn")
+    }
+    
     func login(email: String, password: String) {
         if !EmailValidation(email: email).validate() {
             self.view.showError(message: "Incorrect form of e-mail, try again")
@@ -31,6 +35,7 @@ class LoginPresenter {
                 .observeOn(MainScheduler.instance)
                 .subscribe { user in
                     if user != nil {
+                        self.makeRecord()
                         self.view.goToHomeScreen()
                     } else {
                         self.view.showError(message: "You can't login now")
