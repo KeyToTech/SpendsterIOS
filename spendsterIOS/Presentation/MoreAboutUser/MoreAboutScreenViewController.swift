@@ -19,16 +19,13 @@ class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDe
     }
 
     @IBAction func laterButtonPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "HomeScreen", bundle: nil)
-        if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
-            present(homeScreenViewController, animated: true, completion: nil )
-        }
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "AddressScreen", bundle: nil)
         if let addressScreenViewController = storyboard.instantiateViewController(withIdentifier: "AddressScreenViewController") as? AddressScreenViewController {
-            present(addressScreenViewController, animated: true, completion: nil )
+            self.navigationController?.pushViewController(addressScreenViewController, animated: true)
         }
     }
     

@@ -21,7 +21,7 @@
         <!--Sign Up Screen View Controller-->
         <scene sceneID="XJa-qg-tWB">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="3Qm-bC-wbh" customClass="SignUpScreenViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpScreenViewController" id="3Qm-bC-wbh" customClass="SignUpScreenViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gr5-ft-hve">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
