@@ -8,15 +8,9 @@
 
 import UIKit
 
-class HomeScreenViewController: UIViewController, ActivityNavigationControllerDelegate {
-    func didUpdatePageHeading() {
-        self.headerLabel.text = "Activity"
-    }
-    
-    @IBOutlet weak var headerLabel: UILabel!
+class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
 }

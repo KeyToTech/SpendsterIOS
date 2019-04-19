@@ -18,7 +18,6 @@ class ActivityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         pagingViewController.borderOptions = .hidden
         pagingViewController.menuBackgroundColor = .clear
         pagingViewController.indicatorColor = UIColor(red: 49/255, green: 209/255, blue: 158/255, alpha: 1)
