@@ -35,13 +35,27 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mux-Fl-bZP">
+                                        <rect key="frame" x="20" y="13" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="426-wf-956"/>
+                                            <constraint firstAttribute="width" constant="30" id="KJI-N0-XDR"/>
+                                        </constraints>
+                                        <state key="normal" image="back-2"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="3Qm-bC-wbh" eventType="touchUpInside" id="24S-By-kRZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="fvl-RO-f2y" firstAttribute="leading" secondItem="P9A-c1-UvZ" secondAttribute="leading" constant="126" id="2rK-Vv-ccQ"/>
+                                    <constraint firstItem="Mux-Fl-bZP" firstAttribute="leading" secondItem="P9A-c1-UvZ" secondAttribute="leading" constant="20" id="G6Y-Sw-UZl"/>
                                     <constraint firstAttribute="height" constant="56" id="N6X-Zm-JQR"/>
                                     <constraint firstAttribute="trailing" secondItem="fvl-RO-f2y" secondAttribute="trailing" constant="126" id="dpt-Oc-ZtK"/>
+                                    <constraint firstItem="Mux-Fl-bZP" firstAttribute="top" secondItem="P9A-c1-UvZ" secondAttribute="top" constant="13" id="p23-Wm-ox3"/>
                                     <constraint firstItem="fvl-RO-f2y" firstAttribute="top" secondItem="P9A-c1-UvZ" secondAttribute="top" constant="19" id="tWk-Sx-aIo"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mux-Fl-bZP" secondAttribute="bottom" constant="13" id="znd-JT-IjC"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -270,11 +284,25 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLp-wM-0Tg">
+                                        <rect key="frame" x="20" y="13" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="TFd-tt-1MC"/>
+                                            <constraint firstAttribute="width" constant="30" id="eAP-8f-kpX"/>
+                                        </constraints>
+                                        <state key="normal" image="back-2"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="LwO-eN-h1L" eventType="touchUpInside" id="Ruj-RB-XdE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="aLp-wM-0Tg" firstAttribute="top" secondItem="LFF-P7-cH3" secondAttribute="top" constant="13" id="C1D-Ed-wHj"/>
+                                    <constraint firstItem="aLp-wM-0Tg" firstAttribute="leading" secondItem="LFF-P7-cH3" secondAttribute="leading" constant="20" id="GPn-9V-Yx7"/>
                                     <constraint firstItem="rDl-pD-vh5" firstAttribute="top" secondItem="LFF-P7-cH3" secondAttribute="top" constant="19" id="ShS-SJ-6ac"/>
                                     <constraint firstAttribute="trailing" secondItem="rDl-pD-vh5" secondAttribute="trailing" constant="130" id="bju-Ux-aBL"/>
+                                    <constraint firstAttribute="bottom" secondItem="aLp-wM-0Tg" secondAttribute="bottom" constant="13" id="cy1-uO-Cvl"/>
                                     <constraint firstAttribute="height" constant="56" id="iCj-XF-qjd"/>
                                     <constraint firstItem="rDl-pD-vh5" firstAttribute="leading" secondItem="LFF-P7-cH3" secondAttribute="leading" constant="130" id="weJ-0q-Noe"/>
                                 </constraints>
@@ -329,4 +357,7 @@
             <point key="canvasLocation" x="433" y="154"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back-2" width="85" height="85"/>
+    </resources>
 </document>

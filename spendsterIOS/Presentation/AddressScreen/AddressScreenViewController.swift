@@ -13,6 +13,9 @@ class AddressScreenViewController: UIViewController, AuthView {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func getStartedButtonPressed(_ sender: Any) {
         self.errorMessage.isHidden = true
         self.presenter?.makeUpdate(name: name(), phoneNumber: phone())

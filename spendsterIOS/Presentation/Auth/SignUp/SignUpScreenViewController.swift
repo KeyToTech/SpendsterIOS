@@ -14,6 +14,11 @@ class SignUpScreenViewController: UIViewController, AuthView {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var rePasswordTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func continueButtonPressed(_ sender: Any) {
         errorMessage.isHidden = true
         presenter?.signUp(email: emailTextField.text!, password: passwordTextField.text!, rePassword: rePasswordTextField.text!)

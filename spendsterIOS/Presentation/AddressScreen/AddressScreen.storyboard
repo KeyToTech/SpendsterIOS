@@ -79,9 +79,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uth-ot-dxL">
+                                        <rect key="frame" x="20" y="13" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="CUf-p3-1Es"/>
+                                            <constraint firstAttribute="width" constant="30" id="IDz-46-gMF"/>
+                                        </constraints>
+                                        <state key="normal" image="back-2"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="zeh-mj-s6X" eventType="touchUpInside" id="4wx-AP-Abm"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="uth-ot-dxL" firstAttribute="leading" secondItem="nZM-WH-Hfd" secondAttribute="leading" constant="20" id="VvH-92-ikg"/>
+                                    <constraint firstAttribute="bottom" secondItem="uth-ot-dxL" secondAttribute="bottom" constant="13" id="cze-N6-pNv"/>
+                                    <constraint firstItem="uth-ot-dxL" firstAttribute="top" secondItem="nZM-WH-Hfd" secondAttribute="top" constant="13" id="nud-ib-mBa"/>
                                     <constraint firstItem="Jti-uv-gD0" firstAttribute="centerY" secondItem="nZM-WH-Hfd" secondAttribute="centerY" id="r6V-T3-X4z"/>
                                     <constraint firstAttribute="height" constant="56" id="wDJ-1X-3li"/>
                                     <constraint firstItem="Jti-uv-gD0" firstAttribute="centerX" secondItem="nZM-WH-Hfd" secondAttribute="centerX" id="yt4-GH-c29"/>
@@ -162,4 +176,7 @@
             <point key="canvasLocation" x="8" y="126"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back-2" width="85" height="85"/>
+    </resources>
 </document>

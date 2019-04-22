@@ -13,6 +13,11 @@ class LoginScreenViewController: UIViewController, AuthView {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func continueButtonPressed(_ sender: Any) {
         errorMessage.isHidden = true
         presenter?.login(email: emailTextField.text!, password: passwordTextField.text!)
