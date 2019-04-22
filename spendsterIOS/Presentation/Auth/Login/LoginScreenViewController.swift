@@ -20,7 +20,7 @@ class LoginScreenViewController: UIViewController, AuthView {
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         errorMessage.isHidden = true
-        presenter?.login(email: emailTextField.text!, password: passwordTextField.text!)
+        presenter?.login(email: self.email(), password: self.password())
     }
     
     override func viewDidLoad() {
@@ -41,6 +41,13 @@ class LoginScreenViewController: UIViewController, AuthView {
         if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
             self.navigationController?.pushViewController(homeScreenViewController, animated: true)
         }
-        
+    }
+    
+    func email() -> String {
+        return self.emailTextField.text!
+    }
+    
+    func password() -> String {
+        return self.passwordTextField.text!
     }
 }

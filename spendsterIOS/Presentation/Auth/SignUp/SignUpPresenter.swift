@@ -23,10 +23,12 @@ class SignUpPresenter {
         UserDefaults.standard.set(true, forKey: "alreadyLoggedIn")
     }
     
-    func signUp(email: String, password: String, rePassword: String) {
-        if !EmailValidation(email: email).validate() {
+    func signUp(email: String, username: String, password: String, rePassword: String) {
+        if !TextValidation(text: email, pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}").validate() {
             self.view.showError(message: "Incorrect form of e-mail, try again")
-        } else if !PasswordValidation(password: password).validate() {
+        } else if !TextValidation(text: username, pattern: "[A-Z0-9a-z._%+-]").validate() {
+            self.view.showError(message: "Incorrect form of username, try again")
+        } else if !TextValidation(text: password, pattern: "[A-Z0-9a-z._%+-]{8,24}").validate() {
             self.view.showError(message: "Incorrect form of password, try again")
         } else if !(password == rePassword) {
             self.view.showError(message: "Passwords don't match, try again")

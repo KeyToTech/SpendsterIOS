@@ -26,8 +26,6 @@
 		2B35ACEC2243F04700BEC2E5 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */; };
 		2B3ED9DE2266760400C872B8 /* tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3ED9DD2266760400C872B8 /* tabbar.swift */; };
 		2B4A06EB2254EBF8007B914B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06EA2254EBF7007B914B /* Validation.swift */; };
-		2B4A06ED2254EC51007B914B /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06EC2254EC51007B914B /* EmailValidation.swift */; };
-		2B4A06EF2254ED16007B914B /* PasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06EE2254ED16007B914B /* PasswordValidation.swift */; };
 		2B4A06F32254F7BD007B914B /* MoreAbout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4A06F22254F7BC007B914B /* MoreAbout.storyboard */; };
 		2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06F42254FC38007B914B /* CornerImage.swift */; };
 		2B56002D22674EEC00020FCE /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B56002C22674EEC00020FCE /* IndexViewController.swift */; };
@@ -93,8 +91,6 @@
 		2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		2B3ED9DD2266760400C872B8 /* tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbar.swift; sourceTree = "<group>"; };
 		2B4A06EA2254EBF7007B914B /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		2B4A06EC2254EC51007B914B /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
-		2B4A06EE2254ED16007B914B /* PasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
 		2B4A06F22254F7BC007B914B /* MoreAbout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreAbout.storyboard; sourceTree = "<group>"; };
 		2B4A06F42254FC38007B914B /* CornerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerImage.swift; sourceTree = "<group>"; };
 		2B56002C22674EEC00020FCE /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
@@ -163,7 +159,6 @@
 		2B248D102265CE2F00423FE8 /* AddressScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2B248D1D2265D7FC00423FE8 /* Validation */,
 				2B248D152265CEF900423FE8 /* AddressScreenViewController.swift */,
 				2B248D172265D60900423FE8 /* AddressScreenPresenter.swift */,
 				2B248D192265D62100423FE8 /* AddressScreenModel.swift */,
@@ -171,14 +166,6 @@
 				2B248D132265CEBA00423FE8 /* AddressScreen.storyboard */,
 			);
 			path = AddressScreen;
-			sourceTree = "<group>";
-		};
-		2B248D1D2265D7FC00423FE8 /* Validation */ = {
-			isa = PBXGroup;
-			children = (
-				2B248D1E2265D81D00423FE8 /* TextValidation.swift */,
-			);
-			path = Validation;
 			sourceTree = "<group>";
 		};
 		2B248D2422661D8A00423FE8 /* HomeScreen */ = {
@@ -209,8 +196,7 @@
 		2B4A06F02254EE95007B914B /* Validation */ = {
 			isa = PBXGroup;
 			children = (
-				2B4A06EE2254ED16007B914B /* PasswordValidation.swift */,
-				2B4A06EC2254EC51007B914B /* EmailValidation.swift */,
+				2B248D1E2265D81D00423FE8 /* TextValidation.swift */,
 				2B4A06EA2254EBF7007B914B /* Validation.swift */,
 			);
 			path = Validation;
@@ -608,10 +594,8 @@
 				2B248D1A2265D62100423FE8 /* AddressScreenModel.swift in Sources */,
 				2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */,
 				2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */,
-				2B4A06ED2254EC51007B914B /* EmailValidation.swift in Sources */,
 				2BE26AE1225374500070EF24 /* MockLogin.swift in Sources */,
 				2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */,
-				2B4A06EF2254ED16007B914B /* PasswordValidation.swift in Sources */,
 				2B248D182265D60900423FE8 /* AddressScreenPresenter.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,
 				2BB16573223AB852000D193F /* Expence.swift in Sources */,

@@ -200,6 +200,7 @@
                         <outlet property="errorMessage" destination="QsX-j2-xAc" id="mHb-3C-PXK"/>
                         <outlet property="passwordTextField" destination="Ga3-FF-pcl" id="5id-L4-6Xr"/>
                         <outlet property="rePasswordTextField" destination="msi-yc-3to" id="EyN-Gl-5J1"/>
+                        <outlet property="usernameTextField" destination="MYj-1h-yUs" id="0Cu-b4-Zvu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eN-Bi-kfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
