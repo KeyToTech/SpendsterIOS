@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="d41-Vd-qfJ">
-                                <rect key="frame" x="20" y="96" width="335" height="178"/>
+                                <rect key="frame" x="20" y="96" width="335" height="244"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZV-Cx-Btr">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="46"/>
@@ -121,8 +121,17 @@
                                         <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-FF-pcl">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYj-1h-yUs">
                                         <rect key="frame" x="0.0" y="66" width="335" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="8fd-Fx-30C"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-FF-pcl">
+                                        <rect key="frame" x="0.0" y="132" width="335" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="YcU-6Z-5x2"/>
                                         </constraints>
@@ -131,7 +140,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Retype Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msi-yc-3to">
-                                        <rect key="frame" x="0.0" y="132" width="335" height="46"/>
+                                        <rect key="frame" x="0.0" y="198" width="335" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="5dd-bi-G37"/>
                                         </constraints>
@@ -141,12 +150,15 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="178" id="IiM-3m-a9S"/>
+                                    <constraint firstItem="MYj-1h-yUs" firstAttribute="top" secondItem="mZV-Cx-Btr" secondAttribute="bottom" constant="20" id="6mp-Nu-lOt"/>
+                                    <constraint firstAttribute="trailing" secondItem="MYj-1h-yUs" secondAttribute="trailing" id="Svb-0U-gOS"/>
+                                    <constraint firstItem="Ga3-FF-pcl" firstAttribute="top" secondItem="MYj-1h-yUs" secondAttribute="bottom" constant="20" id="YOx-v6-wBe"/>
+                                    <constraint firstItem="MYj-1h-yUs" firstAttribute="leading" secondItem="d41-Vd-qfJ" secondAttribute="leading" id="gFd-yG-8qn"/>
                                     <constraint firstAttribute="width" constant="335" id="t9b-xG-s5P"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsX-j2-xAc">
-                                <rect key="frame" x="20" y="294" width="335" height="15.5"/>
+                                <rect key="frame" x="20" y="360" width="335" height="15.5"/>
                                 <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="13"/>
                                 <color key="textColor" red="0.84815834580000005" green="0.036098073119999997" blue="0.02372018175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -205,7 +217,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-KJ-d7x">
                                 <rect key="frame" x="20" y="96" width="335" height="112"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mfe-09-lZU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mfe-09-lZU">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="6Jg-5K-Yuv"/>
