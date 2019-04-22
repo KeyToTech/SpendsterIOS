@@ -26,7 +26,7 @@ class SignUpPresenter {
     func signUp(email: String, username: String, password: String, rePassword: String) {
         if !TextValidation(text: email, pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}").validate() {
             self.view.showError(message: "Incorrect form of e-mail, try again")
-        } else if !TextValidation(text: username, pattern: "[A-Z0-9a-z._%+-]").validate() {
+        } else if !TextValidation(text: username, pattern: "[A-Z0-9a-z]{4,16}").validate() {
             self.view.showError(message: "Incorrect form of username, try again")
         } else if !TextValidation(text: password, pattern: "[A-Z0-9a-z._%+-]{8,24}").validate() {
             self.view.showError(message: "Incorrect form of password, try again")
