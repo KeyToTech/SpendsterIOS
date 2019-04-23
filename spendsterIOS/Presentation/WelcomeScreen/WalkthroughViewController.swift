@@ -6,6 +6,7 @@
 //  Copyright © 2019 KeyToTech. All rights reserved.
 //
 
+import Alamofire
 import UIKit
 
 class WalkthroughViewController: UIViewController, WalkthroughPageViewControllerDelegate {
