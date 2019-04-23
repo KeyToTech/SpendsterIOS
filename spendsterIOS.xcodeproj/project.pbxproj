@@ -23,6 +23,7 @@
 		2B26C3F22247DE9C00EF86DA /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3EE2247DE9C00EF86DA /* Karla-Italic.ttf */; };
 		2B26C3F32247DE9C00EF86DA /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */; };
 		2B26C3F42247DE9C00EF86DA /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */; };
+		2B2D7D6C226F43E9000ADD7B /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D7D6B226F43E9000ADD7B /* SignUpModel.swift */; };
 		2B35ACEC2243F04700BEC2E5 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */; };
 		2B3ED9DE2266760400C872B8 /* tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3ED9DD2266760400C872B8 /* tabbar.swift */; };
 		2B4A06EB2254EBF8007B914B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A06EA2254EBF7007B914B /* Validation.swift */; };
@@ -42,7 +43,7 @@
 		2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */; };
 		2B8DF28222450F6E007C395E /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */; };
 		2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */; };
-		2B9E771F2252580100D7640A /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E771B2252580000D7640A /* SignUpModel.swift */; };
+		2B9E771F2252580100D7640A /* SignUpModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E771B2252580000D7640A /* SignUpModelProtocol.swift */; };
 		2B9E77222252580100D7640A /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E771E2252580100D7640A /* SignUpPresenter.swift */; };
 		2B9E77242252591E00D7640A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E77232252591E00D7640A /* AuthView.swift */; };
 		2B9E77262252623A00D7640A /* MockSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E77252252623A00D7640A /* MockSignUp.swift */; };
@@ -88,6 +89,7 @@
 		2B26C3EE2247DE9C00EF86DA /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
 		2B26C3EF2247DE9C00EF86DA /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		2B26C3F02247DE9C00EF86DA /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
+		2B2D7D6B226F43E9000ADD7B /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		2B35ACEB2243F04600BEC2E5 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		2B3ED9DD2266760400C872B8 /* tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbar.swift; sourceTree = "<group>"; };
 		2B4A06EA2254EBF7007B914B /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		2B8DF27F22450A0F007C395E /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		2B8DF28122450F6E007C395E /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		2B8DF28322451CBC007C395E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
-		2B9E771B2252580000D7640A /* SignUpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		2B9E771B2252580000D7640A /* SignUpModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpModelProtocol.swift; sourceTree = "<group>"; };
 		2B9E771E2252580100D7640A /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		2B9E77232252591E00D7640A /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		2B9E77252252623A00D7640A /* MockSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignUp.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2BBB79B122536670006ABC2A /* Presentation */,
 				2B7A0A60223F91E300D12DA6 /* Data */,
+				2BF030BD226F348E00CB5D6D /* Network */,
 				2B770D6D223803C80066A72C /* Info.plist */,
 			);
 			path = spendsterIOS;
@@ -327,8 +330,9 @@
 			children = (
 				2BBB79B3225367BA006ABC2A /* SignUpScreenViewController.swift */,
 				2B9E771E2252580100D7640A /* SignUpPresenter.swift */,
-				2B9E771B2252580000D7640A /* SignUpModel.swift */,
+				2B9E771B2252580000D7640A /* SignUpModelProtocol.swift */,
 				2B9E77252252623A00D7640A /* MockSignUp.swift */,
+				2B2D7D6B226F43E9000ADD7B /* SignUpModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -342,6 +346,13 @@
 				2BE26AE0225374500070EF24 /* MockLogin.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2BF030BD226F348E00CB5D6D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9D40B9C79D552976003D9E11 /* Pods */ = {
@@ -524,17 +535,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -586,7 +601,7 @@
 				2B3ED9DE2266760400C872B8 /* tabbar.swift in Sources */,
 				2B9E77242252591E00D7640A /* AuthView.swift in Sources */,
 				2BCBC400225608B300135AEB /* MoreAboutScreenViewController.swift in Sources */,
-				2B9E771F2252580100D7640A /* SignUpModel.swift in Sources */,
+				2B9E771F2252580100D7640A /* SignUpModelProtocol.swift in Sources */,
 				2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */,
 				2B9E77262252623A00D7640A /* MockSignUp.swift in Sources */,
 				2B56003222675C9F00020FCE /* CustomPagingViewController.swift in Sources */,
@@ -599,6 +614,7 @@
 				2B248D182265D60900423FE8 /* AddressScreenPresenter.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,
 				2BB16573223AB852000D193F /* Expence.swift in Sources */,
+				2B2D7D6C226F43E9000ADD7B /* SignUpModel.swift in Sources */,
 				2B770D62223803C60066A72C /* AppDelegate.swift in Sources */,
 				2B56002F226750B200020FCE /* ConstrainCentered.swift in Sources */,
 				2B9E77222252580100D7640A /* SignUpPresenter.swift in Sources */,

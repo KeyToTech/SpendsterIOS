@@ -11,10 +11,10 @@ import RxSwift
 
 class SignUpPresenter {
     let disposeBag = DisposeBag()
-    let model: SignUpModel
+    let model: SignUpModelProtocol
     let view: AuthView
     
-    init(model: SignUpModel, view: AuthView) {
+    init(model: SignUpModelProtocol, view: AuthView) {
         self.model = model
         self.view = view
     }

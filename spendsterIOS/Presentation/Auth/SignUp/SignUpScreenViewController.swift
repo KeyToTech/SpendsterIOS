@@ -43,12 +43,10 @@ class SignUpScreenViewController: UIViewController, AuthView {
         self.passwordTextField.text = ""
         self.rePasswordTextField.text = ""
         errorMessage.isHidden = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initDefaultUI()
-        self.presenter = SignUpPresenter(model: MockSignUp(), view: self)
+        self.presenter = SignUpPresenter(model: SignUpModel(), view: self)
     }
     
     func email() -> String {
