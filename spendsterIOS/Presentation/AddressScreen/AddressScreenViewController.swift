@@ -30,6 +30,8 @@ class AddressScreenViewController: UIViewController, AuthView {
         self.errorMessage.isHidden = true
         self.nameTextField.text = ""
         self.phoneNumberTextField.text = ""
+        self.veil.isHidden = true
+        self.whileIndicator.isHidden = true
     }
     
     override func viewDidLoad() {
