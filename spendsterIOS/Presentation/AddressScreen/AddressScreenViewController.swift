@@ -58,12 +58,12 @@ class AddressScreenViewController: UIViewController, AuthView {
     }
     
     func disableUIInteraction() {
-        interactions(enabled: false)
+        self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
     func enableUIInteraction() {
-        interactions(enabled: true)
+        self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
     }
     
