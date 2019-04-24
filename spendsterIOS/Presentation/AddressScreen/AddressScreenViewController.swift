@@ -13,6 +13,11 @@ class AddressScreenViewController: UIViewController, AuthView {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var getStartedButton: CornerButton!
+    @IBOutlet weak var veil: UIView!
+    @IBOutlet weak var whileIndicator: UIActivityIndicatorView!
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -48,5 +53,25 @@ class AddressScreenViewController: UIViewController, AuthView {
     
     func phone() -> String {
         return self.phoneNumberTextField.text!
+    }
+    
+    func disableUIInteraction() {
+        self.nameTextField.isUserInteractionEnabled = false
+        self.phoneNumberTextField.isUserInteractionEnabled = false
+        self.backButton.isUserInteractionEnabled = false
+        self.getStartedButton.isUserInteractionEnabled = false
+        self.veil.isHidden = false
+        self.whileIndicator.isHidden = false
+        self.whileIndicator.startAnimating()
+    }
+    
+    func enableUIInteraction() {
+        self.nameTextField.isUserInteractionEnabled = true
+        self.phoneNumberTextField.isUserInteractionEnabled = true
+        self.backButton.isUserInteractionEnabled = true
+        self.getStartedButton.isUserInteractionEnabled = true
+        self.veil.isHidden = true
+        self.whileIndicator.isHidden = true
+        self.whileIndicator.stopAnimating()
     }
 }

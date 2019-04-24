@@ -12,10 +12,10 @@ import RxSwift
 class LoginPresenter {
 
     let view: AuthView
-    let model: LoginModel
+    let model: LoginModelProtocol
     let disposeBag = DisposeBag()
     
-    init(model: LoginModel, view: AuthView) {
+    init(model: LoginModelProtocol, view: AuthView) {
         self.view = view
         self.model = model
     }
@@ -30,7 +30,8 @@ class LoginPresenter {
         } else if !TextValidation(text: password, pattern: "[A-Z0-9a-z._%+-]{8,24}").validate() {
             self.view.showError(message: "Incorrect form of password, try again")
         } else {
-            model.makeLogin(email: email, password: password)
+            self.view.disableUIInteraction()
+            self.model.makeLogin(email: email, password: password)
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
                 .subscribe { user in
@@ -38,6 +39,7 @@ class LoginPresenter {
                         self.makeRecord()
                         self.view.goToHomeScreen()
                     } else {
+                        self.view.enableUIInteraction()
                         self.view.showError(message: "You can't login now")
                     }
                 }

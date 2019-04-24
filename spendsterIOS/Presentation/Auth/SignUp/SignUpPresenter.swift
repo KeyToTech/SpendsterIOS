@@ -33,7 +33,8 @@ class SignUpPresenter {
         } else if !(password == rePassword) {
             self.view.showError(message: "Passwords don't match, try again")
         } else {
-            model.makeSingUp(email: email, password: password)
+            self.view.disableUIInteraction()
+            self.model.makeSingUp(email: email, username: username, password: password)
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
                 .subscribe { user in
@@ -41,6 +42,7 @@ class SignUpPresenter {
                         self.makeRecord()
                         self.view.goToHomeScreen()
                     } else {
+                        self.view.enableUIInteraction()
                         self.view.showError(message: "You can't login now")
                     }
                 }

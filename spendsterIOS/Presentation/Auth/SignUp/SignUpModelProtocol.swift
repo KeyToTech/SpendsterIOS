@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol SignUpModelProtocol {
-    func makeSingUp(email: String, password: String) -> Single<User>
+    func makeSingUp(email: String, username: String, password: String) -> Single<User>
 }

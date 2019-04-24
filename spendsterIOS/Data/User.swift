@@ -37,7 +37,11 @@ class User {
         self.init(id: nil, username: nil, email: nil, password: nil, balance: nil, date: nil, name: name, phone: phone)
     }
     
-    convenience init(balance: Float, id: Int, password: String, username: String) {
-        self.init(id: id, username: username, email: nil, password: password, balance: balance, date: nil, name: nil, phone: nil)
+    convenience init(balance: Float, id: Int, password: String, email: String) {
+        self.init(id: id, username: nil, email: email, password: password, balance: balance, date: nil, name: nil, phone: nil)
+    }
+    
+    convenience init(balance: Float, id: Int, password: String, username: String, email: String) {
+        self.init(id: id, username: username, email: email, password: password, balance: balance, date: nil, name: nil, phone: nil)
     }
 }

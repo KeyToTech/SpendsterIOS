@@ -12,12 +12,12 @@ import RxSwift
 import SwiftyJSON
 
 class SignUpModel: SignUpModelProtocol {
-    func makeSingUp(email: String, password: String) -> Single<User> {
+    func makeSingUp(email: String, username: String, password: String) -> Single<User> {
         let parameters: Parameters = [
-            "username": email, "password": password
+            "username": username, "email": email, "password": password
         ]
         return Single<User>.create { single in
-            Alamofire.request("https://spendsterapp.herokuapp.com/login",
+            Alamofire.request("https://spendsterapp.herokuapp.com/signup",
                               method: .post,
                               parameters: parameters,
                               encoding: JSONEncoding.default)
@@ -30,7 +30,8 @@ class SignUpModel: SignUpModelProtocol {
                         single(.success(User.init(balance: responseData.balance,
                                                   id: responseData.id,
                                                   password: responseData.password,
-                                                  username: responseData.username)))
+                                                  username: responseData.username,
+                                                  email: responseData.email)))
                     } else if let error = response.error {
                         single(.error(error))
                     } else {
@@ -49,6 +50,7 @@ struct SignUpError: Error {
 struct SignUpResponse: Codable {
     let balance: Float
     let id: Int
+    let email: String
     let password: String
     let username: String
 }

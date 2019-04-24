@@ -13,6 +13,10 @@ class LoginScreenViewController: UIViewController, AuthView {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var continueButton: CornerButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var veil: UIView!
+    @IBOutlet weak var whileIndicator: UIActivityIndicatorView!
     
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -23,12 +27,18 @@ class LoginScreenViewController: UIViewController, AuthView {
         presenter?.login(email: self.email(), password: self.password())
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func initDefaultUI() {
         self.emailTextField.text = ""
         self.passwordTextField.text = ""
-        errorMessage.isHidden = true
-        self.presenter = LoginPresenter(model: MockLogin(), view: self)
+        self.errorMessage.isHidden = true
+        self.veil.isHidden = true
+        self.whileIndicator.isHidden = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initDefaultUI()
+        self.presenter = LoginPresenter(model: LoginModel(), view: self)
     }
     
     func showError(message: String) {
@@ -49,5 +59,25 @@ class LoginScreenViewController: UIViewController, AuthView {
     
     func password() -> String {
         return self.passwordTextField.text!
+    }
+    
+    func disableUIInteraction() {
+        self.emailTextField.isUserInteractionEnabled = false
+        self.passwordTextField.isUserInteractionEnabled = false
+        self.continueButton.isUserInteractionEnabled = false
+        self.backButton.isUserInteractionEnabled = false
+        self.veil.isHidden = false
+        self.whileIndicator.isHidden = false
+        self.whileIndicator.startAnimating()
+    }
+    
+    func enableUIInteraction() {
+        self.emailTextField.isUserInteractionEnabled = true
+        self.passwordTextField.isUserInteractionEnabled = true
+        self.continueButton.isUserInteractionEnabled = true
+        self.backButton.isUserInteractionEnabled = true
+        self.veil.isHidden = true
+        self.whileIndicator.isHidden = true
+        self.whileIndicator.stopAnimating()
     }
 }
