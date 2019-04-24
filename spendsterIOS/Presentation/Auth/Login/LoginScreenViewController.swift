@@ -62,22 +62,21 @@ class LoginScreenViewController: UIViewController, AuthView {
     }
     
     func disableUIInteraction() {
-        self.emailTextField.isUserInteractionEnabled = false
-        self.passwordTextField.isUserInteractionEnabled = false
-        self.continueButton.isUserInteractionEnabled = false
-        self.backButton.isUserInteractionEnabled = false
-        self.veil.isHidden = false
-        self.whileIndicator.isHidden = false
+        self.interactions(enabled: true)
         self.whileIndicator.startAnimating()
     }
     
     func enableUIInteraction() {
-        self.emailTextField.isUserInteractionEnabled = true
-        self.passwordTextField.isUserInteractionEnabled = true
-        self.continueButton.isUserInteractionEnabled = true
-        self.backButton.isUserInteractionEnabled = true
-        self.veil.isHidden = true
-        self.whileIndicator.isHidden = true
+        self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
+    }
+    
+    func interactions(enabled: Bool) {
+        self.emailTextField.isUserInteractionEnabled = enabled
+        self.passwordTextField.isUserInteractionEnabled = enabled
+        self.continueButton.isUserInteractionEnabled = enabled
+        self.backButton.isUserInteractionEnabled = enabled
+        self.veil.isHidden = enabled
+        self.whileIndicator.isHidden = enabled
     }
 }

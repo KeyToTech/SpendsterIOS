@@ -58,22 +58,21 @@ class AddressScreenViewController: UIViewController, AuthView {
     }
     
     func disableUIInteraction() {
-        self.nameTextField.isUserInteractionEnabled = false
-        self.phoneNumberTextField.isUserInteractionEnabled = false
-        self.backButton.isUserInteractionEnabled = false
-        self.getStartedButton.isUserInteractionEnabled = false
-        self.veil.isHidden = false
-        self.whileIndicator.isHidden = false
+        interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
     func enableUIInteraction() {
-        self.nameTextField.isUserInteractionEnabled = true
-        self.phoneNumberTextField.isUserInteractionEnabled = true
-        self.backButton.isUserInteractionEnabled = true
-        self.getStartedButton.isUserInteractionEnabled = true
-        self.veil.isHidden = true
-        self.whileIndicator.isHidden = true
+        interactions(enabled: true)
         self.whileIndicator.stopAnimating()
+    }
+    
+    func interactions(enabled: Bool) {
+        self.nameTextField.isUserInteractionEnabled = enabled
+        self.phoneNumberTextField.isUserInteractionEnabled = enabled
+        self.backButton.isUserInteractionEnabled = enabled
+        self.getStartedButton.isUserInteractionEnabled = enabled
+        self.veil.isHidden = enabled
+        self.whileIndicator.isHidden = enabled
     }
 }
