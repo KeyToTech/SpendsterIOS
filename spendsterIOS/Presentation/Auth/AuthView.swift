@@ -9,6 +9,8 @@
 import Foundation
 
 protocol AuthView {
+    func disableUIInteraction()
+    func enableUIInteraction()
     func showError(message: String)
     func goToHomeScreen()
 }

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/holovko/Developer/spendsterIOS/spendsterIOS/Presentation/Auth/Login/LoginModel.swift">
+   </FileRef>
+   <FileRef
       location = "group:spendsterIOS.xcodeproj">
    </FileRef>
    <FileRef
