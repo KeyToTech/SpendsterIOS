@@ -20,9 +20,9 @@ class AddressScreenPresenter {
     }
     
     func makeUpdate(name: String, phoneNumber: String) {
-        if !TextValidation(text: name, pattern: "[A-Za-z]+\\ [A-Za-z]{1,64}").validate() {
+        if !TextValidation(text: name, pattern: ValidationPattern.name).validate() {
             self.view.showError(message: "Invalid name format")
-        } else if !TextValidation(text: phoneNumber, pattern: "[+]+[0-9]{12}").validate() {
+        } else if !TextValidation(text: phoneNumber, pattern: ValidationPattern.phone).validate() {
             self.view.showError(message: "Invalid number format")
         } else {
             self.view.disableUIInteraction()
