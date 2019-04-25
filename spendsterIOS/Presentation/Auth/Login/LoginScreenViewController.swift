@@ -62,7 +62,7 @@ class LoginScreenViewController: UIViewController, AuthView {
     }
     
     func disableUIInteraction() {
-        self.interactions(enabled: true)
+        self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     

@@ -17,7 +17,7 @@ class SignUpModel: SignUpModelProtocol {
             "username": username, "email": email, "password": password
         ]
         return Single<User>.create { single in
-            Alamofire.request("https://spendsterapp.herokuapp.com/signup",
+            let request = Alamofire.request("https://spendsterapp.herokuapp.com/signup",
                               method: .post,
                               parameters: parameters,
                               encoding: JSONEncoding.default)
@@ -38,7 +38,9 @@ class SignUpModel: SignUpModelProtocol {
                         single(.error(SignUpError.init(message: "")))
                     }
             }
-            return Disposables.create {}
+            return Disposables.create {
+                request.cancel()
+            }
         }
     }
 }

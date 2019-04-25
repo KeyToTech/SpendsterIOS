@@ -16,7 +16,7 @@ class LoginModel: LoginModelProtocol {
             "email": email, "password": password
         ]
         return Single<User>.create { single in
-            Alamofire.request("https://spendsterapp.herokuapp.com/login",
+            let request = Alamofire.request("https://spendsterapp.herokuapp.com/login",
                               method: .post,
                               parameters: parameters,
                               encoding: JSONEncoding.default)
@@ -33,10 +33,12 @@ class LoginModel: LoginModelProtocol {
                     } else if let error = response.error {
                         single(.error(error))
                     } else {
-                        single(.error(LoginError.init(message: "")))
+                        single(.error(LoginError.init(message: "You can't login now")))
                     }
             }
-            return Disposables.create {}
+            return Disposables.create {
+                request.cancel()
+            }
         }
     }
 }
