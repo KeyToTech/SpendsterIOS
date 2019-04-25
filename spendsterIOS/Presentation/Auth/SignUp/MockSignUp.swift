@@ -9,8 +9,8 @@
 import Foundation
 import RxSwift
 
-class MockSignUp: SignUpModel {
-    func makeSingUp(email: String, password: String) -> Single<User> {
+class MockSignUp: SignUpModelProtocol {
+    func makeSingUp(email: String, username: String, password: String) -> Single<User> {
         return Single<User>.create {single in
             single(.success(User(email: email, password: password)))
             return Disposables.create {}

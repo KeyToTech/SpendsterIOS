@@ -14,10 +14,11 @@ class User {
     private let email: String?
     private let phone: String?
     private let name: String?
-    private var password: String?
-    private var balance: Float?
+    private let password: String?
+    private let balance: Float?
     private let createdDate: Date?
-    init(id: Int, username: String, email: String, password: String, balance: Float, date: Date, name: String, phone: String) {
+    
+    init(id: Int?, username: String?, email: String?, password: String?, balance: Float?, date: Date?, name: String?, phone: String?) {
         self.ID = id
         self.username = username
         self.email = email
@@ -28,25 +29,19 @@ class User {
         self.phone  = phone
     }
     
-    init(email: String, password: String) {
-        self.email = email
-        self.password = password
-        self.ID = nil
-        self.balance = nil
-        self.username = nil
-        self.createdDate = nil
-        self.name = nil
-        self.phone  = nil
+    convenience init(email: String, password: String) {
+        self.init(id: nil, username: nil, email: email, password: password, balance: nil, date: nil, name: nil, phone: nil)
     }
     
-    init(name: String, phone: String) {
-        self.name = name
-        self.phone  = phone
-        self.email = nil
-        self.password = nil
-        self.ID = nil
-        self.balance = nil
-        self.username = nil
-        self.createdDate = nil
+    convenience init(name: String, phone: String) {
+        self.init(id: nil, username: nil, email: nil, password: nil, balance: nil, date: nil, name: name, phone: phone)
+    }
+    
+    convenience init(balance: Float, id: Int, password: String, email: String) {
+        self.init(id: id, username: nil, email: email, password: password, balance: balance, date: nil, name: nil, phone: nil)
+    }
+    
+    convenience init(balance: Float, id: Int, password: String, username: String, email: String) {
+        self.init(id: id, username: username, email: email, password: password, balance: balance, date: nil, name: nil, phone: nil)
     }
 }

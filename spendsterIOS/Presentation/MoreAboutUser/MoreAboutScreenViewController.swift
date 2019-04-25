@@ -18,10 +18,6 @@ class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDe
         self.approvedMessage.isHidden = true
     }
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     @IBAction func laterButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

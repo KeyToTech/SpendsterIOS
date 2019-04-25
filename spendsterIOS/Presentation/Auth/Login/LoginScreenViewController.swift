@@ -13,6 +13,10 @@ class LoginScreenViewController: UIViewController, AuthView {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var continueButton: CornerButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var veil: UIView!
+    @IBOutlet weak var whileIndicator: UIActivityIndicatorView!
     
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -20,15 +24,21 @@ class LoginScreenViewController: UIViewController, AuthView {
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         errorMessage.isHidden = true
-        presenter?.login(email: emailTextField.text!, password: passwordTextField.text!)
+        presenter?.login(email: self.email(), password: self.password())
+    }
+    
+    func initDefaultUI() {
+        self.emailTextField.text = ""
+        self.passwordTextField.text = ""
+        self.errorMessage.isHidden = true
+        self.veil.isHidden = true
+        self.whileIndicator.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.emailTextField.text = ""
-        self.passwordTextField.text = ""
-        errorMessage.isHidden = true
-        self.presenter = LoginPresenter(model: MockLogin(), view: self)
+        initDefaultUI()
+        self.presenter = LoginPresenter(model: LoginModel(), view: self)
     }
     
     func showError(message: String) {
@@ -41,6 +51,32 @@ class LoginScreenViewController: UIViewController, AuthView {
         if let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController {
             self.navigationController?.pushViewController(homeScreenViewController, animated: true)
         }
-        
+    }
+    
+    func email() -> String {
+        return self.emailTextField.text!
+    }
+    
+    func password() -> String {
+        return self.passwordTextField.text!
+    }
+    
+    func disableUIInteraction() {
+        self.interactions(enabled: false)
+        self.whileIndicator.startAnimating()
+    }
+    
+    func enableUIInteraction() {
+        self.interactions(enabled: true)
+        self.whileIndicator.stopAnimating()
+    }
+    
+    func interactions(enabled: Bool) {
+        self.emailTextField.isUserInteractionEnabled = enabled
+        self.passwordTextField.isUserInteractionEnabled = enabled
+        self.continueButton.isUserInteractionEnabled = enabled
+        self.backButton.isUserInteractionEnabled = enabled
+        self.veil.isHidden = enabled
+        self.whileIndicator.isHidden = enabled
     }
 }

@@ -150,14 +150,32 @@
                                 <color key="textColor" red="0.84815834580000005" green="0.036098073119999997" blue="0.02372018175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgx-sa-OSF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Zg1-D8-04q">
+                                        <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                        <color key="color" red="0.19215686269999999" green="0.81960784310000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.71808609189999995" alpha="0.29218132409999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Zg1-D8-04q" firstAttribute="centerX" secondItem="Wgx-sa-OSF" secondAttribute="centerX" id="Vh5-VE-kSR"/>
+                                    <constraint firstItem="Zg1-D8-04q" firstAttribute="centerY" secondItem="Wgx-sa-OSF" secondAttribute="centerY" id="aDU-oW-zy7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="l5w-QQ-8r5" firstAttribute="top" secondItem="nZM-WH-Hfd" secondAttribute="bottom" constant="20" id="1HX-pW-EAe"/>
                             <constraint firstItem="nZM-WH-Hfd" firstAttribute="trailing" secondItem="uRO-1t-YaY" secondAttribute="trailing" id="BT7-XU-OLY"/>
+                            <constraint firstItem="Wgx-sa-OSF" firstAttribute="trailing" secondItem="uRO-1t-YaY" secondAttribute="trailing" id="JjQ-qK-fep"/>
+                            <constraint firstItem="Wgx-sa-OSF" firstAttribute="leading" secondItem="uRO-1t-YaY" secondAttribute="leading" id="LxO-NR-0F0"/>
                             <constraint firstItem="nZM-WH-Hfd" firstAttribute="top" secondItem="uRO-1t-YaY" secondAttribute="top" id="NY6-L1-MWS"/>
                             <constraint firstItem="l5w-QQ-8r5" firstAttribute="centerX" secondItem="uRO-1t-YaY" secondAttribute="centerX" id="P8Y-hP-XYl"/>
                             <constraint firstItem="Ixd-SL-npl" firstAttribute="top" secondItem="l5w-QQ-8r5" secondAttribute="bottom" constant="20" id="TWl-kV-NbS"/>
+                            <constraint firstItem="Wgx-sa-OSF" firstAttribute="top" secondItem="5QI-kw-qG4" secondAttribute="top" id="Z5Z-nD-DYL"/>
+                            <constraint firstItem="Wgx-sa-OSF" firstAttribute="bottom" secondItem="uRO-1t-YaY" secondAttribute="bottom" id="k7p-gw-QVi"/>
                             <constraint firstItem="Ixd-SL-npl" firstAttribute="leading" secondItem="uRO-1t-YaY" secondAttribute="leading" constant="20" id="lkk-h7-YFR"/>
                             <constraint firstItem="nZM-WH-Hfd" firstAttribute="leading" secondItem="uRO-1t-YaY" secondAttribute="leading" id="nHh-Mr-r5N"/>
                             <constraint firstItem="Hyp-vf-TFq" firstAttribute="centerX" secondItem="uRO-1t-YaY" secondAttribute="centerX" id="rz2-JE-YS6"/>
@@ -166,9 +184,13 @@
                         <viewLayoutGuide key="safeArea" id="uRO-1t-YaY"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="uth-ot-dxL" id="FpV-Cx-5Zp"/>
                         <outlet property="errorMessage" destination="Ixd-SL-npl" id="eb8-hL-Aav"/>
+                        <outlet property="getStartedButton" destination="Hyp-vf-TFq" id="nZM-3d-bhv"/>
                         <outlet property="nameTextField" destination="sDx-Kc-Ndk" id="7lD-Wt-rpO"/>
                         <outlet property="phoneNumberTextField" destination="YvU-Ks-uX9" id="1uI-xi-Oiy"/>
+                        <outlet property="veil" destination="Wgx-sa-OSF" id="FsS-Wh-yl0"/>
+                        <outlet property="whileIndicator" destination="Zg1-D8-04q" id="tNt-eF-Jts"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZN-R4-H5t" userLabel="First Responder" sceneMemberID="firstResponder"/>

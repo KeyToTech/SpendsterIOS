@@ -20,11 +20,12 @@ class AddressScreenPresenter {
     }
     
     func makeUpdate(name: String, phoneNumber: String) {
-        if !TextValidation(text: name, pattern: "[A-Za-z]+\\ [A-Za-z]{1,64}").validate() {
+        if !TextValidation(text: name, pattern: ValidationPattern.name).validate() {
             self.view.showError(message: "Invalid name format")
-        } else if !TextValidation(text: phoneNumber, pattern: "[+]+[0-9]{12}").validate() {
+        } else if !TextValidation(text: phoneNumber, pattern: ValidationPattern.phone).validate() {
             self.view.showError(message: "Invalid number format")
         } else {
+            self.view.disableUIInteraction()
             self.model.updateUser(name: name, phoneNumber: phoneNumber)
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
@@ -32,6 +33,7 @@ class AddressScreenPresenter {
                     if user != nil {
                         self.view.goToHomeScreen()
                     } else {
+                        self.view.enableUIInteraction()
                         self.view.showError(message: "You can't update your info now")
                     }
                 }

@@ -13,6 +13,11 @@ class AddressScreenViewController: UIViewController, AuthView {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var getStartedButton: CornerButton!
+    @IBOutlet weak var veil: UIView!
+    @IBOutlet weak var whileIndicator: UIActivityIndicatorView!
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -25,6 +30,8 @@ class AddressScreenViewController: UIViewController, AuthView {
         self.errorMessage.isHidden = true
         self.nameTextField.text = ""
         self.phoneNumberTextField.text = ""
+        self.veil.isHidden = true
+        self.whileIndicator.isHidden = true
     }
     
     override func viewDidLoad() {
@@ -48,5 +55,24 @@ class AddressScreenViewController: UIViewController, AuthView {
     
     func phone() -> String {
         return self.phoneNumberTextField.text!
+    }
+    
+    func disableUIInteraction() {
+        self.interactions(enabled: false)
+        self.whileIndicator.startAnimating()
+    }
+    
+    func enableUIInteraction() {
+        self.interactions(enabled: true)
+        self.whileIndicator.stopAnimating()
+    }
+    
+    func interactions(enabled: Bool) {
+        self.nameTextField.isUserInteractionEnabled = enabled
+        self.phoneNumberTextField.isUserInteractionEnabled = enabled
+        self.backButton.isUserInteractionEnabled = enabled
+        self.getStartedButton.isUserInteractionEnabled = enabled
+        self.veil.isHidden = enabled
+        self.whileIndicator.isHidden = enabled
     }
 }

@@ -18,11 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pvK-5p-P7m">
-                                <rect key="frame" x="177" y="333" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="pvK-5p-P7m">
+                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
+                                <color key="color" red="0.19215686269999999" green="0.81960784310000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pvK-5p-P7m" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mVw-Hw-74e"/>
                             <constraint firstItem="pvK-5p-P7m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tJK-mB-C0C"/>

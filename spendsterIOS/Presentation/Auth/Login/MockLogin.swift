@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class MockLogin: LoginModel {
+class MockLogin: LoginModelProtocol {
     func makeLogin(email: String, password: String) -> Single<User> {
         return Single<User>.create {single in
             single(.success(User(email: email, password: password)))
