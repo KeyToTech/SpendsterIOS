@@ -59,6 +59,8 @@
 		2BE26ADD2253740C0070EF24 /* LoginModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADC2253740C0070EF24 /* LoginModelProtocol.swift */; };
 		2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADE225374280070EF24 /* LoginPresenter.swift */; };
 		2BE26AE1225374500070EF24 /* MockLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26AE0225374500070EF24 /* MockLogin.swift */; };
+		2BE5B9BA227B336F0012C1E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5B9B9227B336F0012C1E2 /* ProfileViewController.swift */; };
+		2BE5B9BC227DE3940012C1E2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5B9BB227DE3940012C1E2 /* GradientView.swift */; };
 		2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF40B1222674A660076D50B /* ActivityViewController.swift */; };
 		AC688BFD2271F9BC0074CB55 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC688BFC2271F9BC0074CB55 /* LoginModel.swift */; };
 		F0DC3BAD55460349346920C9 /* Pods_spendsterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */; };
@@ -131,6 +133,8 @@
 		2BE26ADC2253740C0070EF24 /* LoginModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelProtocol.swift; sourceTree = "<group>"; };
 		2BE26ADE225374280070EF24 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		2BE26AE0225374500070EF24 /* MockLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLogin.swift; sourceTree = "<group>"; };
+		2BE5B9B9227B336F0012C1E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2BE5B9BB227DE3940012C1E2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2BF40B1222674A660076D50B /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spendsterIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD6C80BB5D4FF7859246A73 /* Pods-spendsterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.debug.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 		2B248D2422661D8A00423FE8 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				2BE5B9B8227B33240012C1E2 /* Profile */,
 				2B56003022675C3F00020FCE /* Activity */,
 				2B248D2522661DCA00423FE8 /* HomeScreen.storyboard */,
 				2B248D272266295500423FE8 /* HomeScreenViewController.swift */,
@@ -252,7 +257,6 @@
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2BBB79B122536670006ABC2A /* Presentation */,
 				2B7A0A60223F91E300D12DA6 /* Data */,
-				2BF030BD226F348E00CB5D6D /* Network */,
 				2B770D6D223803C80066A72C /* Info.plist */,
 			);
 			path = spendsterIOS;
@@ -326,6 +330,7 @@
 				2B25E55E224BC12800FB0E4C /* CornerButton.swift */,
 				2B4A06F42254FC38007B914B /* CornerImage.swift */,
 				2B3ED9DD2266760400C872B8 /* tabbar.swift */,
+				2BE5B9BB227DE3940012C1E2 /* GradientView.swift */,
 			);
 			path = ElementsView;
 			sourceTree = "<group>";
@@ -354,11 +359,12 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		2BF030BD226F348E00CB5D6D /* Network */ = {
+		2BE5B9B8227B33240012C1E2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2BE5B9B9227B336F0012C1E2 /* ProfileViewController.swift */,
 			);
-			path = Network;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		9D40B9C79D552976003D9E11 /* Pods */ = {
@@ -596,6 +602,7 @@
 				2B248D282266295500423FE8 /* HomeScreenViewController.swift in Sources */,
 				2B248D1F2265D81D00423FE8 /* TextValidation.swift in Sources */,
 				2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */,
+				2BE5B9BC227DE3940012C1E2 /* GradientView.swift in Sources */,
 				2BB8F96A223BF63A00671465 /* SplashViewController.swift in Sources */,
 				2BB16571223AB852000D193F /* Income.swift in Sources */,
 				2B4A06EB2254EBF8007B914B /* Validation.swift in Sources */,
@@ -615,6 +622,7 @@
 				2B9E77262252623A00D7640A /* MockSignUp.swift in Sources */,
 				2B56003222675C9F00020FCE /* CustomPagingViewController.swift in Sources */,
 				2B56002D22674EEC00020FCE /* IndexViewController.swift in Sources */,
+				2BE5B9BA227B336F0012C1E2 /* ProfileViewController.swift in Sources */,
 				2B248D1A2265D62100423FE8 /* AddressScreenModel.swift in Sources */,
 				2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */,
 				2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */,

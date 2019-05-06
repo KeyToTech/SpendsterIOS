@@ -63,6 +63,7 @@ class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDe
         if let image = info[.editedImage] as? UIImage {
             self.profileImage.image = image
             self.approvedMessage.isHidden = false
+            UserDefaults.standard.set(image.jpegData(compressionQuality: 0.75), forKey: "profileImage")
         }
         picker.dismiss(animated: true, completion: nil)
     }

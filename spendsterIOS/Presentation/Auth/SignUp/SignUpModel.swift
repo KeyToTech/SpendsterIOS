@@ -14,19 +14,20 @@ import SwiftyJSON
 class SignUpModel: SignUpModelProtocol {
     func makeSingUp(email: String, username: String, password: String) -> Single<User> {
         let parameters: Parameters = [
-            "username": username, "email": email, "password": password
+            "username": username,
+            "email": email,
+            "password": password
         ]
         return Single<User>.create { single in
             let request = Alamofire.request("https://spendsterapp.herokuapp.com/signup",
-                              method: .post,
-                              parameters: parameters,
-                              encoding: JSONEncoding.default)
+                                            method: .post,
+                                            parameters: parameters,
+                                            encoding: JSONEncoding.default)
                 .responseJSON { response in
                     print(response)
                     if let json = response.result.value as? JSON,
                         let data = try? json.rawData(),
                         let responseData = try? JSONDecoder().decode(SignUpResponse.self, from: data) {
-                        
                         single(.success(User.init(balance: responseData.balance,
                                                   id: responseData.id,
                                                   password: responseData.password,
@@ -39,9 +40,15 @@ class SignUpModel: SignUpModelProtocol {
                     }
             }
             return Disposables.create {
+                self.makeRecord(email: email, username: username)
                 request.cancel()
+                
             }
         }
+    }
+    func makeRecord(email: String, username: String) {
+        UserDefaults.standard.set(email, forKey: "email")
+        UserDefaults.standard.set(username, forKey: "username")
     }
 }
 
