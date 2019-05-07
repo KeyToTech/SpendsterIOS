@@ -134,8 +134,8 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc6-M1-oon">
-                                                        <rect key="frame" x="54" y="20.5" width="144.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="54" y="21.5" width="137" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -343,6 +343,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xTV-ex-w6V"/>
                     </view>
+                    <connections>
+                        <outlet property="calendar" destination="Ioe-q2-5mU" id="M0E-tt-bMF"/>
+                        <outlet property="category" destination="qF2-h1-fFG" id="AoK-Vk-W5l"/>
+                        <outlet property="currency" destination="K9J-33-Q3T" id="xRL-jW-dQQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qj-kt-0Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
