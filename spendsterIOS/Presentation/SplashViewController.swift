@@ -18,10 +18,14 @@ class SplashViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if self.shouldShowOnboarding() {
-            self.presentOnboarding()
-        } else {
-            self.presentHomeScreen()
+//        if self.shouldShowOnboarding() {
+//            self.presentOnboarding()
+//        } else {
+//            self.presentHomeScreen()
+//        }
+        let storyboard = UIStoryboard(name: "Expenses", bundle: nil)
+        if let addExpensesViewController = storyboard.instantiateViewController(withIdentifier: "AddExpensesViewController") as? AddExpensesViewController {
+            present(addExpensesViewController, animated: true, completion: nil)
         }
     }
     
