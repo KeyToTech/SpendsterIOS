@@ -24,8 +24,8 @@ class SplashViewController: UIViewController {
 //            self.presentHomeScreen()
 //        }
         let storyboard = UIStoryboard(name: "Expenses", bundle: nil)
-        if let addExpensesViewController = storyboard.instantiateViewController(withIdentifier: "AddExpensesViewController") as? AddExpensesViewController {
-            present(addExpensesViewController, animated: true, completion: nil)
+        if let categorySelectViewController = storyboard.instantiateViewController(withIdentifier: "CategorySelectViewController") as? CategorySelectViewController {
+            present(categorySelectViewController, animated: true, completion: nil)
         }
     }
     

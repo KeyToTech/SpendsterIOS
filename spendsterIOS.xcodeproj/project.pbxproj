@@ -66,6 +66,8 @@
 		ACED932F2281A6B3007B6C10 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACED932E2281A6B3007B6C10 /* Expenses.storyboard */; };
 		ACED93312281B992007B6C10 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED93302281B992007B6C10 /* BorderView.swift */; };
 		ACED93332281BB92007B6C10 /* AddExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED93322281BB92007B6C10 /* AddExpensesViewController.swift */; };
+		ACF2A942228303A500CCDF1F /* CategorySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2A941228303A500CCDF1F /* CategorySelectViewController.swift */; };
+		ACF2A9462283197300CCDF1F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2A9452283197300CCDF1F /* CollectionViewCell.swift */; };
 		F0DC3BAD55460349346920C9 /* Pods_spendsterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397824CFFA03B058500885F0 /* Pods_spendsterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,8 @@
 		ACED932E2281A6B3007B6C10 /* Expenses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Expenses.storyboard; sourceTree = "<group>"; };
 		ACED93302281B992007B6C10 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		ACED93322281BB92007B6C10 /* AddExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensesViewController.swift; sourceTree = "<group>"; };
+		ACF2A941228303A500CCDF1F /* CategorySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectViewController.swift; sourceTree = "<group>"; };
+		ACF2A9452283197300CCDF1F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C9E78408EE4C572B8526F2D8 /* Pods-spendsterIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-spendsterIOSTests/Pods-spendsterIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -391,6 +395,8 @@
 			children = (
 				ACED932E2281A6B3007B6C10 /* Expenses.storyboard */,
 				ACED93322281BB92007B6C10 /* AddExpensesViewController.swift */,
+				ACF2A941228303A500CCDF1F /* CategorySelectViewController.swift */,
+				ACF2A9452283197300CCDF1F /* CollectionViewCell.swift */,
 			);
 			path = Expenses;
 			sourceTree = "<group>";
@@ -637,9 +643,11 @@
 				2B9E77242252591E00D7640A /* AuthView.swift in Sources */,
 				2BCBC400225608B300135AEB /* MoreAboutScreenViewController.swift in Sources */,
 				2B9E771F2252580100D7640A /* SignUpModelProtocol.swift in Sources */,
+				ACF2A9462283197300CCDF1F /* CollectionViewCell.swift in Sources */,
 				2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */,
 				2B9E77262252623A00D7640A /* MockSignUp.swift in Sources */,
 				2B56003222675C9F00020FCE /* CustomPagingViewController.swift in Sources */,
+				ACF2A942228303A500CCDF1F /* CategorySelectViewController.swift in Sources */,
 				2B56002D22674EEC00020FCE /* IndexViewController.swift in Sources */,
 				2BE5B9BA227B336F0012C1E2 /* ProfileViewController.swift in Sources */,
 				2B248D1A2265D62100423FE8 /* AddressScreenModel.swift in Sources */,
