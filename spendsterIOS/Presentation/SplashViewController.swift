@@ -18,15 +18,12 @@ class SplashViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-//        if self.shouldShowOnboarding() {
-//            self.presentOnboarding()
-//        } else {
-//            self.presentHomeScreen()
-//        }
-        let storyboard = UIStoryboard(name: "Expenses", bundle: nil)
-        if let categorySelectViewController = storyboard.instantiateViewController(withIdentifier: "CategorySelectViewController") as? CategorySelectViewController {
-            present(categorySelectViewController, animated: true, completion: nil)
+        if self.shouldShowOnboarding() {
+            self.presentOnboarding()
+        } else {
+            self.presentHomeScreen()
         }
+
     }
     
     func presentNavigationController(with controller: UIViewController,

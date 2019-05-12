@@ -9,14 +9,19 @@
 import Foundation
 
 class Category {
-    private let ID: Int
+    private let id: String
     private let name: String
-    private let type: Bool
-    private let createdDate: Date
-    init(id: Int, name: String, type: Bool, date: Date) {
-        self.ID = id
+    private let type: String
+    private let icon: String
+    private let createdDate: String
+    
+    var categoryName: String {get {return self.name}}
+    
+    init(id: String, name: String, type: String, icon: String, date: String) {
+        self.id = id
         self.name = name
         self.type = type
+        self.icon = icon
         self.createdDate = date
     }
 }

@@ -15,6 +15,15 @@ class HomeScreenViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: "alreadyLoggedIn")
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Expenses", bundle: nil)
+        if let addExpensesViewController = storyboard.instantiateViewController(withIdentifier: "AddExpensesViewController") as? AddExpensesViewController {
+            self.navigationController?.pushViewController(addExpensesViewController, animated: true)
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

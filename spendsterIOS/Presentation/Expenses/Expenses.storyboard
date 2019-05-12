@@ -65,6 +65,9 @@
                                                 <color key="value" red="0.42745098040000001" green="0.89019607840000003" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addTransactionButtonPressed:" destination="km2-Dx-dg6" eventType="touchUpInside" id="1Kr-kg-Nep"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnp-DT-hkC">
                                         <rect key="frame" x="20" y="20" width="47" height="14"/>
@@ -296,6 +299,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="km2-Dx-dg6" eventType="touchUpInside" id="aq3-Ag-PUa"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmQ-uI-ndN">
                                         <rect key="frame" x="255" y="72" width="100" height="24"/>
@@ -332,13 +338,31 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDo-5d-fs4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="JL9-op-DcQ">
+                                        <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                        <color key="color" red="0.19215686269999999" green="0.81960784310000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.71808609189999995" alpha="0.29218132409999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JL9-op-DcQ" firstAttribute="centerX" secondItem="RDo-5d-fs4" secondAttribute="centerX" id="VZa-jk-gV8"/>
+                                    <constraint firstItem="JL9-op-DcQ" firstAttribute="centerY" secondItem="RDo-5d-fs4" secondAttribute="centerY" id="svB-ji-boR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fak-ik-ZvO" firstAttribute="top" secondItem="XJa-NM-0AK" secondAttribute="top" id="1uC-gf-DqY"/>
                             <constraint firstItem="fak-ik-ZvO" firstAttribute="trailing" secondItem="xTV-ex-w6V" secondAttribute="trailing" id="3Eg-oQ-4Hi"/>
                             <constraint firstItem="nPL-tY-Iaq" firstAttribute="centerX" secondItem="xTV-ex-w6V" secondAttribute="centerX" id="9qB-7p-bxR"/>
+                            <constraint firstItem="xTV-ex-w6V" firstAttribute="bottom" secondItem="RDo-5d-fs4" secondAttribute="bottom" id="E9p-oe-TPC"/>
+                            <constraint firstItem="RDo-5d-fs4" firstAttribute="leading" secondItem="xTV-ex-w6V" secondAttribute="leading" id="EQ7-ko-PWh"/>
                             <constraint firstItem="nPL-tY-Iaq" firstAttribute="top" secondItem="fak-ik-ZvO" secondAttribute="bottom" constant="16" id="QZS-mU-ZKg"/>
+                            <constraint firstItem="RDo-5d-fs4" firstAttribute="top" secondItem="XJa-NM-0AK" secondAttribute="top" id="ckR-cB-YAm"/>
+                            <constraint firstAttribute="trailing" secondItem="RDo-5d-fs4" secondAttribute="trailing" id="efh-jG-lbN"/>
                             <constraint firstItem="fak-ik-ZvO" firstAttribute="leading" secondItem="xTV-ex-w6V" secondAttribute="leading" id="wmQ-cP-qwF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xTV-ex-w6V"/>
@@ -346,7 +370,15 @@
                     <connections>
                         <outlet property="calendar" destination="Ioe-q2-5mU" id="M0E-tt-bMF"/>
                         <outlet property="category" destination="qF2-h1-fFG" id="AoK-Vk-W5l"/>
+                        <outlet property="categoryLabel" destination="ZML-Hc-oIu" id="DCd-4B-YQw"/>
                         <outlet property="currency" destination="K9J-33-Q3T" id="xRL-jW-dQQ"/>
+                        <outlet property="currencyLabel" destination="c4M-gp-C1C" id="d25-mt-pCf"/>
+                        <outlet property="dateLabel" destination="tl9-GO-QEf" id="hsh-E1-ZrG"/>
+                        <outlet property="noteTextField" destination="XmV-TH-sNT" id="Fyo-KV-mKh"/>
+                        <outlet property="priceTextField" destination="RmQ-uI-ndN" id="W9Y-69-sIy"/>
+                        <outlet property="veil" destination="RDo-5d-fs4" id="DPe-Md-DNZ"/>
+                        <outlet property="whileIndicator" destination="JL9-op-DcQ" id="jDr-CG-kO1"/>
+                        <segue destination="IxU-8K-lar" kind="presentation" identifier="categorySegue" id="iGR-m4-2Nm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qj-kt-0Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -356,7 +388,7 @@
         <!--Category Select View Controller-->
         <scene sceneID="NXw-0g-4NJ">
             <objects>
-                <viewController storyboardIdentifier="CategorySelectViewController" id="IxU-8K-lar" customClass="CategorySelectViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategorySelectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IxU-8K-lar" customClass="CategorySelectViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bv3-9h-zSU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -370,15 +402,18 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="IxU-8K-lar" eventType="touchUpInside" id="hj0-PU-bwU"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXK-R0-osg">
-                                        <rect key="frame" x="20" y="67.5" width="195" height="28.5"/>
+                                        <rect key="frame" x="20" y="68" width="195" height="28"/>
                                         <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.45882352941176469" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="BXK-R0-osg" firstAttribute="leading" secondItem="zUq-D4-sK1" secondAttribute="leading" constant="20" id="DwY-93-XhB"/>
                                     <constraint firstItem="dB1-br-jWO" firstAttribute="top" secondItem="zUq-D4-sK1" secondAttribute="top" constant="14" id="Jtt-Wh-jMh"/>
@@ -456,15 +491,37 @@
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="IxU-8K-lar" id="qoZ-WD-wGF"/>
+                                            <outlet property="delegate" destination="IxU-8K-lar" id="VSr-AT-cj4"/>
+                                        </connections>
                                     </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jF5-Tf-0TB">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="520"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-Vy-OwS">
+                                                <rect key="frame" x="157.5" y="250" width="20" height="20"/>
+                                                <color key="color" red="0.19215686269999999" green="0.81960784310000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Jva-Vy-OwS" firstAttribute="centerY" secondItem="jF5-Tf-0TB" secondAttribute="centerY" id="dVD-48-LPy"/>
+                                            <constraint firstItem="Jva-Vy-OwS" firstAttribute="centerX" secondItem="jF5-Tf-0TB" secondAttribute="centerX" id="ds4-qK-zkD"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="7w8-hx-b1W" secondAttribute="trailing" constant="18" id="06M-NI-lVF"/>
+                                    <constraint firstAttribute="trailing" secondItem="jF5-Tf-0TB" secondAttribute="trailing" id="JEF-kd-S9r"/>
                                     <constraint firstItem="7w8-hx-b1W" firstAttribute="top" secondItem="rrh-Ug-hzU" secondAttribute="top" id="ReP-ba-Vfj"/>
+                                    <constraint firstAttribute="bottom" secondItem="jF5-Tf-0TB" secondAttribute="bottom" id="Svo-tn-OoL"/>
                                     <constraint firstItem="7w8-hx-b1W" firstAttribute="leading" secondItem="rrh-Ug-hzU" secondAttribute="leading" constant="18" id="cjC-Ua-duG"/>
+                                    <constraint firstItem="jF5-Tf-0TB" firstAttribute="leading" secondItem="rrh-Ug-hzU" secondAttribute="leading" id="cxd-5s-WZz"/>
                                     <constraint firstAttribute="width" constant="335" id="fcc-hf-IuS"/>
                                     <constraint firstAttribute="bottom" secondItem="7w8-hx-b1W" secondAttribute="bottom" id="kXd-0n-MMi"/>
+                                    <constraint firstItem="jF5-Tf-0TB" firstAttribute="top" secondItem="rrh-Ug-hzU" secondAttribute="top" id="qdw-w5-ITJ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -498,11 +555,13 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="7w8-hx-b1W" id="Mhh-fU-ZnV"/>
+                        <outlet property="veil" destination="jF5-Tf-0TB" id="h3r-LG-2yK"/>
+                        <outlet property="whileIndicator" destination="Jva-Vy-OwS" id="hCo-eM-xVg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GU5-36-gBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="66.11694152923539"/>
+            <point key="canvasLocation" x="129" y="66"/>
         </scene>
     </scenes>
     <resources>

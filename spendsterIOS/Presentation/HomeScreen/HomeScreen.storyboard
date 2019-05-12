@@ -493,6 +493,9 @@
                                     <constraint firstAttribute="width" constant="66" id="e3f-Bz-3Cu"/>
                                 </constraints>
                                 <state key="normal" image="Add-button"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="xW9-Pf-eHb" eventType="touchUpInside" id="CyV-Ss-frR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
