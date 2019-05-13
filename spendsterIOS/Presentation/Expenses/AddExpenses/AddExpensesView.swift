@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AddExpencesView {
+protocol AddExpensesView {
     func enableUIInteraction()
     func disableUIInteraction()
     func showError(text: String)

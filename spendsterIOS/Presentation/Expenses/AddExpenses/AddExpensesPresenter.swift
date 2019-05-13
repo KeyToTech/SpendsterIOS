@@ -9,11 +9,11 @@
 import Foundation
 import RxSwift
 
-class AddExpencesPresenter {
+class AddExpensesPresenter {
     private let bag = DisposeBag()
-    private let view: AddExpencesView
-    private let model: AddExpencesModelProtocol
-    init(view: AddExpencesView, model: AddExpencesModelProtocol) {
+    private let view: AddExpensesView
+    private let model: AddExpensesModelProtocol
+    init(view: AddExpensesView, model: AddExpensesModelProtocol) {
         self.view = view
         self.model = model
     }
@@ -28,9 +28,10 @@ class AddExpencesPresenter {
                     .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                     .observeOn(MainScheduler.instance)
                     .subscribe(onSuccess: {categories in
-                        self.view.goToHomeScreen()
-                        self.view.enableUIInteraction()},
+                        self.view.enableUIInteraction()
+                        self.view.goToHomeScreen()},
                                onError: {error in
+                        self.view.enableUIInteraction()
                         self.view.showError(text: error.localizedDescription)
                     })
                     .disposed(by: bag)

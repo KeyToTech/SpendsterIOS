@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol AddExpencesModelProtocol {
-    func addExpense(amount: Float, createdDate: String, categoryId: String, note: String) -> Single<Expence>
+protocol AddExpensesModelProtocol {
+    func addExpense(amount: Float, createdDate: String, categoryId: String, note: String) -> Single<Expense>
 }

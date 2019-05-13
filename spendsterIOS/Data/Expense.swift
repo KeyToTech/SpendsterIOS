@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Expence {
+class Expense {
     private let id: String?
     private let amount: Float
     private let createdDate: String

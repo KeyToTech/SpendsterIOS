@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="901"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQW-pj-WcR" customClass="ShadowView" customModule="spendsterIOS" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="20" width="335" height="478.5"/>
+                                                <rect key="frame" x="20" y="20" width="335" height="492.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfe-r0-pwj" customClass="GradientView" customModule="spendsterIOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="143"/>
@@ -104,7 +104,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-pg-I10">
-                                                        <rect key="frame" x="20" y="199.5" width="295" height="259"/>
+                                                        <rect key="frame" x="20" y="199.5" width="295" height="273"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kBV-WF-R4I">
                                                                 <rect key="frame" x="0.0" y="0.0" width="285.5" height="45"/>
@@ -131,7 +131,7 @@
                                                                 </state>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="yyn-XQ-tGa">
-                                                                <rect key="frame" x="0.0" y="122" width="295" height="57"/>
+                                                                <rect key="frame" x="0.0" y="122" width="295" height="57.5"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="zEW-3l-LrP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="295" height="31"/>
@@ -149,7 +149,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuH-GF-VuG">
-                                                                        <rect key="frame" x="0.0" y="31" width="220" height="26"/>
+                                                                        <rect key="frame" x="0.0" y="31" width="220" height="26.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="220" id="wHj-DG-vfg"/>
                                                                         </constraints>
@@ -157,7 +157,7 @@
                                                                             <fragment content="Manage if you want to receive updates about promotions, features or news">
                                                                                 <attributes>
                                                                                     <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <font key="NSFont" size="11" name="Karla-Regular"/>
+                                                                                    <font key="NSFont" metaFont="smallSystem"/>
                                                                                 </attributes>
                                                                             </fragment>
                                                                         </attributedString>
@@ -171,7 +171,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="p2J-vQ-fGI">
-                                                                <rect key="frame" x="0.0" y="202" width="220" height="57"/>
+                                                                <rect key="frame" x="0.0" y="202.5" width="220" height="70.5"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e74-vr-X0T">
                                                                         <rect key="frame" x="0.0" y="0.0" width="79" height="31"/>
@@ -181,7 +181,7 @@
                                                                         </state>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DT-wk-rrX">
-                                                                        <rect key="frame" x="0.0" y="31" width="220" height="26"/>
+                                                                        <rect key="frame" x="0.0" y="31" width="220" height="39.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="220" id="Os9-tR-uyf"/>
                                                                         </constraints>
@@ -189,7 +189,7 @@
                                                                             <fragment content="Add or remove categories to create full control over your expenses and categories">
                                                                                 <attributes>
                                                                                     <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    <font key="NSFont" size="11" name="Karla-Regular"/>
+                                                                                    <font key="NSFont" metaFont="smallSystem"/>
                                                                                 </attributes>
                                                                             </fragment>
                                                                         </attributedString>
@@ -236,7 +236,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zs1-zt-Lpe" customClass="ShadowView" customModule="spendsterIOS" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="518.5" width="335" height="323.5"/>
+                                                <rect key="frame" x="20" y="532.5" width="335" height="323.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Another" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbd-ky-fUa">
                                                         <rect key="frame" x="20" y="20" width="53" height="16.5"/>

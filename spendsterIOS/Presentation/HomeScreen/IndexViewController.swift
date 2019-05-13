@@ -17,17 +17,8 @@ class IndexViewController: UIViewController {
         let image = UIImage(named: "Graphic")
         let imageView = UIImageView(image: image!)
         let emptyView = UIView()
-        let emptyViewHeader = UILabel()
-        let emptyViewText = UILabel()
-        
-        emptyViewHeader.text = "You don’t have any transactions\nright now, but you can"
-        emptyViewText.text = " Start adding one by pressing\nthe plus icon from the bottom menu"
-        
-        emptyView.addSubview(emptyViewHeader)
         emptyView.addSubview(imageView)
         emptyView.constrainCentered(imageView)
-        emptyView.addSubview(emptyViewText)
-        emptyView.backgroundColor = .white
         
         view.addSubview(emptyView)
         view.constrainCentered(emptyView)

@@ -13,11 +13,15 @@ import SwiftyJSON
 
 class CategoryModel: CategoryModelProtocol {
     private let url = "https://spendsterapp.herokuapp.com/categories"
+    let headers: HTTPHeaders = [
+        "Authorization": "1234567890"
+    ]
     func fetchCategories() -> Single<[CategoryResponse]> {
         return Single<[CategoryResponse]>.create { single in
             let request = Alamofire.request(self.url,
                                             method: .get,
-                                            encoding: JSONEncoding.default)
+                                            encoding: JSONEncoding.default,
+                                            headers: self.headers)
                 .responseJSON { response in
                     print(response)
                     

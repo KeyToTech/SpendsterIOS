@@ -8,12 +8,13 @@
 
 import UIKit
 
-class AddExpensesViewController: UIViewController, CategorySelectViewControllelDelegate, AddExpencesView {
+class AddExpensesViewController: UIViewController, CategorySelectViewControllelDelegate, AddExpensesView {
+    
     var choosenCategory: String?
     var currencyType = "UAH"
     var choosenDate = ""
     
-    private var presenter: AddExpencesPresenter?
+    private var presenter: AddExpensesPresenter?
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -44,7 +45,7 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = AddExpencesPresenter.init(view: self, model: MockAddExpencesModel())
+        self.presenter = AddExpensesPresenter.init(view: self, model: AddExpensesModel())
         self.initDefaultUI()
         self.tapGestureRecognizer()
         
