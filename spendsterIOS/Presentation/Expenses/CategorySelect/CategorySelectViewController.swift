@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CategorySelectViewControllelDelegate: class {
-    func categoryChoosed(data: String?)
+    func categoryChoosed(categoryId: String?, categoryLabel: String?)
 }
 
 class CategorySelectViewController: UIViewController, CategoryView, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -55,7 +55,8 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
             let text = cell.categoryLabel.text
-            self.delegate?.categoryChoosed(data: text)
+            let categoryId = self.presenter?.category(forIndex: indexPath.row).categoryId
+            self.delegate?.categoryChoosed(categoryId: categoryId, categoryLabel: text)
             self.dismiss(animated: false, completion: nil)
         }
     }

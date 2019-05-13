@@ -8,7 +8,13 @@
 
 import UIKit
 
-class AddExpensesViewController: UIViewController, CategorySelectViewControllelDelegate {
+class AddExpensesViewController: UIViewController, CategorySelectViewControllelDelegate, AddExpencesView {
+    var choosenCategory: String?
+    var currencyType = "UAH"
+    var choosenDate = ""
+    
+    private var presenter: AddExpencesPresenter?
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -22,8 +28,9 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func addTransactionButtonPressed(_ sender: Any) {
-        
+        self.presenter?.addExpence(amount: self.amount(), createdDate: choosenDate, categoryId: choosenCategory, note: self.note())
     }
     
     func initDefaultUI() {
@@ -36,6 +43,7 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter = AddExpencesPresenter.init(view: self, model: MockAddExpencesModel())
         self.initDefaultUI()
         self.tapGestureRecognizer()
         
@@ -69,8 +77,9 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
         print("calendar tapped!!1")
     }
     
-    func categoryChoosed(data: String?) {
-        self.categoryLabel.text = data
+    func categoryChoosed(categoryId catedoryId: String?, categoryLabel: String?) {
+        self.categoryLabel.text = categoryLabel
+        self.choosenCategory = catedoryId
     }
     
     func disableUIInteraction() {
@@ -86,5 +95,21 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     func interactions(enabled: Bool) {
         self.veil.isHidden = enabled
         self.whileIndicator.isHidden = enabled
+    }
+    
+    func showError(text: String) {
+        self.errorLabel.text = text
+    }
+    
+    func goToHomeScreen() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func amount() -> String {
+        return self.priceTextField.text!
+    }
+    
+    func note() -> String {
+        return self.noteTextField.text!
     }
 }

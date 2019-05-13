@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol AddExpencesView {
+    func enableUIInteraction()
+    func disableUIInteraction()
+    func showError(text: String)
+    func goToHomeScreen()
+}

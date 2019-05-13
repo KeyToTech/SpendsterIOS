@@ -338,6 +338,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9be-2h-C4P">
+                                <rect key="frame" x="145" y="539" width="85.5" height="15.5"/>
+                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="13"/>
+                                <color key="textColor" red="0.84815834580000005" green="0.036098073119999997" blue="0.02372018175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDo-5d-fs4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -357,9 +363,11 @@
                         <constraints>
                             <constraint firstItem="fak-ik-ZvO" firstAttribute="top" secondItem="XJa-NM-0AK" secondAttribute="top" id="1uC-gf-DqY"/>
                             <constraint firstItem="fak-ik-ZvO" firstAttribute="trailing" secondItem="xTV-ex-w6V" secondAttribute="trailing" id="3Eg-oQ-4Hi"/>
+                            <constraint firstItem="9be-2h-C4P" firstAttribute="top" secondItem="nPL-tY-Iaq" secondAttribute="bottom" constant="20" id="5EZ-9T-Ay1"/>
                             <constraint firstItem="nPL-tY-Iaq" firstAttribute="centerX" secondItem="xTV-ex-w6V" secondAttribute="centerX" id="9qB-7p-bxR"/>
                             <constraint firstItem="xTV-ex-w6V" firstAttribute="bottom" secondItem="RDo-5d-fs4" secondAttribute="bottom" id="E9p-oe-TPC"/>
                             <constraint firstItem="RDo-5d-fs4" firstAttribute="leading" secondItem="xTV-ex-w6V" secondAttribute="leading" id="EQ7-ko-PWh"/>
+                            <constraint firstItem="9be-2h-C4P" firstAttribute="centerX" secondItem="xTV-ex-w6V" secondAttribute="centerX" id="OYN-iD-BBw"/>
                             <constraint firstItem="nPL-tY-Iaq" firstAttribute="top" secondItem="fak-ik-ZvO" secondAttribute="bottom" constant="16" id="QZS-mU-ZKg"/>
                             <constraint firstItem="RDo-5d-fs4" firstAttribute="top" secondItem="XJa-NM-0AK" secondAttribute="top" id="ckR-cB-YAm"/>
                             <constraint firstAttribute="trailing" secondItem="RDo-5d-fs4" secondAttribute="trailing" id="efh-jG-lbN"/>
@@ -374,11 +382,11 @@
                         <outlet property="currency" destination="K9J-33-Q3T" id="xRL-jW-dQQ"/>
                         <outlet property="currencyLabel" destination="c4M-gp-C1C" id="d25-mt-pCf"/>
                         <outlet property="dateLabel" destination="tl9-GO-QEf" id="hsh-E1-ZrG"/>
+                        <outlet property="errorLabel" destination="9be-2h-C4P" id="83e-KV-pIJ"/>
                         <outlet property="noteTextField" destination="XmV-TH-sNT" id="Fyo-KV-mKh"/>
                         <outlet property="priceTextField" destination="RmQ-uI-ndN" id="W9Y-69-sIy"/>
                         <outlet property="veil" destination="RDo-5d-fs4" id="DPe-Md-DNZ"/>
                         <outlet property="whileIndicator" destination="JL9-op-DcQ" id="jDr-CG-kO1"/>
-                        <segue destination="IxU-8K-lar" kind="presentation" identifier="categorySegue" id="iGR-m4-2Nm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qj-kt-0Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>

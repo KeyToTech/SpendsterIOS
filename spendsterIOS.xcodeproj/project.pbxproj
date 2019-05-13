@@ -62,6 +62,8 @@
 		2BCBC400225608B300135AEB /* MoreAboutScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBC3FF225608B300135AEB /* MoreAboutScreenViewController.swift */; };
 		2BCFE6EB22887A9F00522DE2 /* AddExpencesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6EA22887A9F00522DE2 /* AddExpencesPresenter.swift */; };
 		2BCFE6ED22887ACA00522DE2 /* AddExpencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6EC22887ACA00522DE2 /* AddExpencesView.swift */; };
+		2BCFE6EF22887B9B00522DE2 /* MockAddExpencesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6EE22887B9B00522DE2 /* MockAddExpencesModel.swift */; };
+		2BCFE6F122887BE000522DE2 /* AddExpencesModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6F022887BE000522DE2 /* AddExpencesModelProtocol.swift */; };
 		2BE26AD9225372E60070EF24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */; };
 		2BE26ADD2253740C0070EF24 /* LoginModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADC2253740C0070EF24 /* LoginModelProtocol.swift */; };
 		2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADE225374280070EF24 /* LoginPresenter.swift */; };
@@ -148,6 +150,8 @@
 		2BCBC3FF225608B300135AEB /* MoreAboutScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutScreenViewController.swift; sourceTree = "<group>"; };
 		2BCFE6EA22887A9F00522DE2 /* AddExpencesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpencesPresenter.swift; sourceTree = "<group>"; };
 		2BCFE6EC22887ACA00522DE2 /* AddExpencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpencesView.swift; sourceTree = "<group>"; };
+		2BCFE6EE22887B9B00522DE2 /* MockAddExpencesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddExpencesModel.swift; sourceTree = "<group>"; };
+		2BCFE6F022887BE000522DE2 /* AddExpencesModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpencesModelProtocol.swift; sourceTree = "<group>"; };
 		2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		2BE26ADC2253740C0070EF24 /* LoginModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelProtocol.swift; sourceTree = "<group>"; };
 		2BE26ADE225374280070EF24 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 				ACED93322281BB92007B6C10 /* AddExpensesViewController.swift */,
 				2BCFE6EA22887A9F00522DE2 /* AddExpencesPresenter.swift */,
 				2BCFE6EC22887ACA00522DE2 /* AddExpencesView.swift */,
+				2BCFE6EE22887B9B00522DE2 /* MockAddExpencesModel.swift */,
+				2BCFE6F022887BE000522DE2 /* AddExpencesModelProtocol.swift */,
 			);
 			path = AddExpenses;
 			sourceTree = "<group>";
@@ -676,6 +682,7 @@
 				2B56003422675CD500020FCE /* CustomPagingView.swift in Sources */,
 				2B09A13E224D255900F7A042 /* ShadowView.swift in Sources */,
 				2B5B68922270B57000302E05 /* ValidationPattern.swift in Sources */,
+				2BCFE6EF22887B9B00522DE2 /* MockAddExpencesModel.swift in Sources */,
 				2B3ED9DE2266760400C872B8 /* tabbar.swift in Sources */,
 				ACED93312281B992007B6C10 /* BorderView.swift in Sources */,
 				2B9E77242252591E00D7640A /* AuthView.swift in Sources */,
@@ -688,6 +695,7 @@
 				ACF2A942228303A500CCDF1F /* CategorySelectViewController.swift in Sources */,
 				2B56002D22674EEC00020FCE /* IndexViewController.swift in Sources */,
 				2BE5B9BA227B336F0012C1E2 /* ProfileViewController.swift in Sources */,
+				2BCFE6F122887BE000522DE2 /* AddExpencesModelProtocol.swift in Sources */,
 				2B248D1A2265D62100423FE8 /* AddressScreenModel.swift in Sources */,
 				2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */,
 				2B60289E2285C3FC00F1E159 /* CategoryModel.swift in Sources */,

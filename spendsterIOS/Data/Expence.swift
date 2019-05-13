@@ -9,12 +9,20 @@
 import Foundation
 
 class Expence {
-    private let ID: Int
+    private let id: String?
     private let amount: Float
-    private let createdDate: Date
-    init(id: Int, amount: Float, date: Date) {
-        self.ID = id
+    private let createdDate: String
+    private let categoryId: String
+    private let note: String
+    init(id: String?, amount: Float, date: String, categoryId: String, note: String) {
+        self.id = id
         self.amount = amount
         self.createdDate = date
+        self.categoryId = categoryId
+        self.note = note
+    }
+    
+    convenience init(amount: Float, date: String, categoryId: String, note: String) {
+        self.init(id: nil, amount: amount, date: date, categoryId: categoryId, note: note)
     }
 }
