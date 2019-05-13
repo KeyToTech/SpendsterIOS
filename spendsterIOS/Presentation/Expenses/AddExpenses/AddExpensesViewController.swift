@@ -34,6 +34,7 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     }
     
     func initDefaultUI() {
+        self.errorLabel.isHidden = true
         self.veil.isHidden = true
         self.whileIndicator.isHidden = true
         self.whileIndicator.stopAnimating()
@@ -70,11 +71,15 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     }
     
     @objc func currencyTapped(_ sender: UITapGestureRecognizer) {
-        print("currencyTapped tappedTEPPED YAAAY!!1")
+        // TODO
+        // add currency
+        // https://trello.com/c/EzCHVTtU/141-currency-for-expenses
     }
     
     @objc func calendarTapped(_ sender: UITapGestureRecognizer) {
-        print("calendar tapped!!1")
+        // TODO
+        // add calendar
+        // https://trello.com/c/x3Hhjg6s/140-calendar-for-expenses
     }
     
     func categoryChoosed(categoryId catedoryId: String?, categoryLabel: String?) {
@@ -99,6 +104,7 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     
     func showError(text: String) {
         self.errorLabel.text = text
+        self.errorLabel.isHidden = false
     }
     
     func goToHomeScreen() {
