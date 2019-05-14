@@ -11,11 +11,11 @@ import RxSwift
 
 class CategoryPresenter {
     private let bag = DisposeBag()
-    private let model: CategoryModelProtocol
+    private let model: CategoryModel
     private let view: CategoryView
     private let repository: CategoryRepository
     
-    init(model: CategoryModelProtocol, view: CategoryView, repository: CategoryRepository) {
+    init(model: CategoryModel, view: CategoryView, repository: CategoryRepository) {
         self.model = model
         self.view = view
         self.repository = repository

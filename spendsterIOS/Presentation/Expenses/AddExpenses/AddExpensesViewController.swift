@@ -45,7 +45,7 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = AddExpensesPresenter.init(view: self, model: AddExpensesModel())
+        self.presenter = AddExpensesPresenter.init(view: self, model: SimpleAddExpensesModel())
         self.initDefaultUI()
         self.tapGestureRecognizer()
         
@@ -98,7 +98,7 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
         self.whileIndicator.stopAnimating()
     }
     
-    func interactions(enabled: Bool) {
+    private func interactions(enabled: Bool) {
         self.veil.isHidden = enabled
         self.whileIndicator.isHidden = enabled
     }
@@ -112,11 +112,11 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
         self.navigationController?.popViewController(animated: true)
     }
     
-    func amount() -> String {
+    private func amount() -> String {
         return self.priceTextField.text!
     }
     
-    func note() -> String {
+    private func note() -> String {
         return self.noteTextField.text!
     }
 }

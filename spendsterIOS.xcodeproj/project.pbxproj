@@ -36,9 +36,9 @@
 		2B56003422675CD500020FCE /* CustomPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B56003322675CD500020FCE /* CustomPagingView.swift */; };
 		2B5B68922270B57000302E05 /* ValidationPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5B68912270B57000302E05 /* ValidationPattern.swift */; };
 		2B60289C2285C3DE00F1E159 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60289B2285C3DE00F1E159 /* CategoryPresenter.swift */; };
-		2B60289E2285C3FC00F1E159 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60289D2285C3FC00F1E159 /* CategoryModel.swift */; };
+		2B60289E2285C3FC00F1E159 /* SimpleCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60289D2285C3FC00F1E159 /* SimpleCategoryModel.swift */; };
 		2B6028A02285C42B00F1E159 /* CaregoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B60289F2285C42B00F1E159 /* CaregoryView.swift */; };
-		2B6028A22285C45500F1E159 /* CategoryModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6028A12285C45500F1E159 /* CategoryModelProtocol.swift */; };
+		2B6028A22285C45500F1E159 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6028A12285C45500F1E159 /* CategoryModel.swift */; };
 		2B770D62223803C60066A72C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770D61223803C60066A72C /* AppDelegate.swift */; };
 		2B770D67223803C60066A72C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D65223803C60066A72C /* Main.storyboard */; };
 		2B770D69223803C80066A72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B770D68223803C80066A72C /* Assets.xcassets */; };
@@ -63,7 +63,7 @@
 		2BCFE6EB22887A9F00522DE2 /* AddExpensesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6EA22887A9F00522DE2 /* AddExpensesPresenter.swift */; };
 		2BCFE6ED22887ACA00522DE2 /* AddExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6EC22887ACA00522DE2 /* AddExpensesView.swift */; };
 		2BCFE6EF22887B9B00522DE2 /* MockAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6EE22887B9B00522DE2 /* MockAddExpensesModel.swift */; };
-		2BCFE6F122887BE000522DE2 /* AddExpensesModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6F022887BE000522DE2 /* AddExpensesModelProtocol.swift */; };
+		2BCFE6F122887BE000522DE2 /* AddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFE6F022887BE000522DE2 /* AddExpensesModel.swift */; };
 		2BE26AD9225372E60070EF24 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */; };
 		2BE26ADD2253740C0070EF24 /* LoginModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADC2253740C0070EF24 /* LoginModelProtocol.swift */; };
 		2BE26ADF225374280070EF24 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE26ADE225374280070EF24 /* LoginPresenter.swift */; };
@@ -72,7 +72,7 @@
 		2BE5B9BC227DE3940012C1E2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5B9BB227DE3940012C1E2 /* GradientView.swift */; };
 		2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF40B1222674A660076D50B /* ActivityViewController.swift */; };
 		AC688BFD2271F9BC0074CB55 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC688BFC2271F9BC0074CB55 /* LoginModel.swift */; };
-		ACC353B222899F08005433FD /* AddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* AddExpensesModel.swift */; };
+		ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */; };
 		ACED932F2281A6B3007B6C10 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACED932E2281A6B3007B6C10 /* Expenses.storyboard */; };
 		ACED93312281B992007B6C10 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED93302281B992007B6C10 /* BorderView.swift */; };
 		ACED93332281BB92007B6C10 /* AddExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED93322281BB92007B6C10 /* AddExpensesViewController.swift */; };
@@ -121,9 +121,9 @@
 		2B56003322675CD500020FCE /* CustomPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPagingView.swift; sourceTree = "<group>"; };
 		2B5B68912270B57000302E05 /* ValidationPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationPattern.swift; sourceTree = "<group>"; };
 		2B60289B2285C3DE00F1E159 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
-		2B60289D2285C3FC00F1E159 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		2B60289D2285C3FC00F1E159 /* SimpleCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCategoryModel.swift; sourceTree = "<group>"; };
 		2B60289F2285C42B00F1E159 /* CaregoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaregoryView.swift; sourceTree = "<group>"; };
-		2B6028A12285C45500F1E159 /* CategoryModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModelProtocol.swift; sourceTree = "<group>"; };
+		2B6028A12285C45500F1E159 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		2B770D5E223803C60066A72C /* spendsterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spendsterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B770D61223803C60066A72C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B770D66223803C60066A72C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		2BCFE6EA22887A9F00522DE2 /* AddExpensesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensesPresenter.swift; sourceTree = "<group>"; };
 		2BCFE6EC22887ACA00522DE2 /* AddExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensesView.swift; sourceTree = "<group>"; };
 		2BCFE6EE22887B9B00522DE2 /* MockAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddExpensesModel.swift; sourceTree = "<group>"; };
-		2BCFE6F022887BE000522DE2 /* AddExpensesModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensesModelProtocol.swift; sourceTree = "<group>"; };
+		2BCFE6F022887BE000522DE2 /* AddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensesModel.swift; sourceTree = "<group>"; };
 		2BE26AD8225372E60070EF24 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		2BE26ADC2253740C0070EF24 /* LoginModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelProtocol.swift; sourceTree = "<group>"; };
 		2BE26ADE225374280070EF24 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		7A6583FC17C8D45667DB5807 /* Pods-spendsterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.release.xcconfig"; sourceTree = "<group>"; };
 		8015695075BBEFAB914EC069 /* Pods-spendsterIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOSTests.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOSTests/Pods-spendsterIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC688BFC2271F9BC0074CB55 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		ACC353B122899F08005433FD /* AddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensesModel.swift; sourceTree = "<group>"; };
+		ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddExpensesModel.swift; sourceTree = "<group>"; };
 		ACED932E2281A6B3007B6C10 /* Expenses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Expenses.storyboard; sourceTree = "<group>"; };
 		ACED93302281B992007B6C10 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		ACED93322281BB92007B6C10 /* AddExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensesViewController.swift; sourceTree = "<group>"; };
@@ -268,8 +268,8 @@
 				2BCFE6EA22887A9F00522DE2 /* AddExpensesPresenter.swift */,
 				2BCFE6EC22887ACA00522DE2 /* AddExpensesView.swift */,
 				2BCFE6EE22887B9B00522DE2 /* MockAddExpensesModel.swift */,
-				2BCFE6F022887BE000522DE2 /* AddExpensesModelProtocol.swift */,
-				ACC353B122899F08005433FD /* AddExpensesModel.swift */,
+				2BCFE6F022887BE000522DE2 /* AddExpensesModel.swift */,
+				ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */,
 			);
 			path = AddExpenses;
 			sourceTree = "<group>";
@@ -280,9 +280,9 @@
 				ACF2A9452283197300CCDF1F /* CollectionViewCell.swift */,
 				ACF2A941228303A500CCDF1F /* CategorySelectViewController.swift */,
 				2B60289B2285C3DE00F1E159 /* CategoryPresenter.swift */,
-				2B60289D2285C3FC00F1E159 /* CategoryModel.swift */,
+				2B60289D2285C3FC00F1E159 /* SimpleCategoryModel.swift */,
 				2B60289F2285C42B00F1E159 /* CaregoryView.swift */,
-				2B6028A12285C45500F1E159 /* CategoryModelProtocol.swift */,
+				2B6028A12285C45500F1E159 /* CategoryModel.swift */,
 				2B332BA0228711CA0026D256 /* CategoryRepository.swift */,
 			);
 			path = CategorySelect;
@@ -698,10 +698,10 @@
 				ACF2A942228303A500CCDF1F /* CategorySelectViewController.swift in Sources */,
 				2B56002D22674EEC00020FCE /* IndexViewController.swift in Sources */,
 				2BE5B9BA227B336F0012C1E2 /* ProfileViewController.swift in Sources */,
-				2BCFE6F122887BE000522DE2 /* AddExpensesModelProtocol.swift in Sources */,
+				2BCFE6F122887BE000522DE2 /* AddExpensesModel.swift in Sources */,
 				2B248D1A2265D62100423FE8 /* AddressScreenModel.swift in Sources */,
 				2B8DF28422451CBC007C395E /* WalkthroughViewController.swift in Sources */,
-				2B60289E2285C3FC00F1E159 /* CategoryModel.swift in Sources */,
+				2B60289E2285C3FC00F1E159 /* SimpleCategoryModel.swift in Sources */,
 				2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */,
 				2BE26AE1225374500070EF24 /* MockLogin.swift in Sources */,
 				2B60289C2285C3DE00F1E159 /* CategoryPresenter.swift in Sources */,
@@ -711,13 +711,13 @@
 				ACED93332281BB92007B6C10 /* AddExpensesViewController.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,
 				2BB16573223AB852000D193F /* Expense.swift in Sources */,
-				2B6028A22285C45500F1E159 /* CategoryModelProtocol.swift in Sources */,
+				2B6028A22285C45500F1E159 /* CategoryModel.swift in Sources */,
 				2B2D7D6C226F43E9000ADD7B /* SignUpModel.swift in Sources */,
 				2B770D62223803C60066A72C /* AppDelegate.swift in Sources */,
 				2BCFE6ED22887ACA00522DE2 /* AddExpensesView.swift in Sources */,
 				2B56002F226750B200020FCE /* ConstrainCentered.swift in Sources */,
 				AC688BFD2271F9BC0074CB55 /* LoginModel.swift in Sources */,
-				ACC353B222899F08005433FD /* AddExpensesModel.swift in Sources */,
+				ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */,
 				2B9E77222252580100D7640A /* SignUpPresenter.swift in Sources */,
 				2B248D162265CEF900423FE8 /* AddressScreenViewController.swift in Sources */,
 				2B332BA1228711CA0026D256 /* CategoryRepository.swift in Sources */,

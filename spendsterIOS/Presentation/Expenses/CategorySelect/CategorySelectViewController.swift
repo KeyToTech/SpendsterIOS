@@ -32,7 +32,7 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = CategoryPresenter.init(model: CategoryModel(), view: self, repository: CategoryRepository())
+        self.presenter = CategoryPresenter.init(model: SimpleCategoryModel(), view: self, repository: CategoryRepository())
 
     }
     
@@ -75,7 +75,7 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
         self.whileIndicator.stopAnimating()
     }
     
-    func interactions(enabled: Bool) {
+    private func interactions(enabled: Bool) {
         self.veil.isHidden = enabled
         self.collectionView.isUserInteractionEnabled = enabled
         self.whileIndicator.isHidden = enabled

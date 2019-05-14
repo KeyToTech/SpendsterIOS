@@ -12,8 +12,8 @@ import RxSwift
 class AddExpensesPresenter {
     private let bag = DisposeBag()
     private let view: AddExpensesView
-    private let model: AddExpensesModelProtocol
-    init(view: AddExpensesView, model: AddExpensesModelProtocol) {
+    private let model: AddExpensesModel
+    init(view: AddExpensesView, model: AddExpensesModel) {
         self.view = view
         self.model = model
     }
