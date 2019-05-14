@@ -27,7 +27,7 @@ class LoginScreenViewController: UIViewController, AuthView {
         presenter?.login(email: self.email(), password: self.password())
     }
     
-    func initDefaultUI() {
+    private func initDefaultUI() {
         self.emailTextField.text = ""
         self.passwordTextField.text = ""
         self.errorMessage.isHidden = true
@@ -41,8 +41,8 @@ class LoginScreenViewController: UIViewController, AuthView {
         self.presenter = LoginPresenter(model: LoginModel(), view: self)
     }
     
-    func showError(message: String) {
-        errorMessage.text = message
+    func showError(withMessage: String) {
+        errorMessage.text = withMessage
         errorMessage.isHidden = false
     }
     
@@ -53,25 +53,25 @@ class LoginScreenViewController: UIViewController, AuthView {
         }
     }
     
-    func email() -> String {
+    private func email() -> String {
         return self.emailTextField.text!
     }
     
-    func password() -> String {
+    private func password() -> String {
         return self.passwordTextField.text!
     }
     
-    func disableUIInteraction() {
+    func showLoading() {
         self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
-    func enableUIInteraction() {
+    func hideLoading() {
         self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
     }
     
-    func interactions(enabled: Bool) {
+    private func interactions(enabled: Bool) {
         self.emailTextField.isUserInteractionEnabled = enabled
         self.passwordTextField.isUserInteractionEnabled = enabled
         self.continueButton.isUserInteractionEnabled = enabled

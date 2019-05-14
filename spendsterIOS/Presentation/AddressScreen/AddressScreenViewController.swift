@@ -9,6 +9,7 @@
 import UIKit
 
 class AddressScreenViewController: UIViewController, AuthView {
+
     private var presenter: AddressScreenPresenter?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -40,8 +41,8 @@ class AddressScreenViewController: UIViewController, AuthView {
         self.presenter = AddressScreenPresenter(view: self, model: MockAddrModel())
     }
     
-    func showError(message: String) {
-        self.errorMessage.text = message
+    func showError(withMessage: String) {
+        self.errorMessage.text = withMessage
         self.errorMessage.isHidden = false
     }
     
@@ -57,17 +58,17 @@ class AddressScreenViewController: UIViewController, AuthView {
         return self.phoneNumberTextField.text!
     }
     
-    func disableUIInteraction() {
+    func showLoading() {
         self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
-    func enableUIInteraction() {
+    func hideLoading() {
         self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
     }
     
-    func interactions(enabled: Bool) {
+    private func interactions(enabled: Bool) {
         self.nameTextField.isUserInteractionEnabled = enabled
         self.phoneNumberTextField.isUserInteractionEnabled = enabled
         self.backButton.isUserInteractionEnabled = enabled

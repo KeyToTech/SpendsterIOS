@@ -8,9 +8,6 @@
 
 import Foundation
 
-protocol AddExpensesView {
-    func enableUIInteraction()
-    func disableUIInteraction()
-    func showError(text: String)
+protocol AddExpensesView: ErrorView, LoadingView {
     func goToHomeScreen()
 }

@@ -22,17 +22,17 @@ class CategoryPresenter {
     }
     
     func presentCategories() {
-        self.view.disableUIInteraction()
+        self.view.showLoading()
         self.model.fetchCategories()
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: {categories in
                 self.repository.applyCategories(categories: categories)
                 self.view.reloadData()
-                self.view.enableUIInteraction()
-//            },
-//                       onError: {error in
-//                self.showError(error: error)
+                self.view.hideLoading()
+            },
+                       onError: {error in
+                self.view.showError(withMessage: error.localizedDescription)
             })
             .disposed(by: bag)
     }

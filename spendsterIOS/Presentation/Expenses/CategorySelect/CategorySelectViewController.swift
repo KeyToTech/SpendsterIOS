@@ -13,12 +13,14 @@ protocol CategorySelectViewControllelDelegate: class {
 }
 
 class CategorySelectViewController: UIViewController, CategoryView, UICollectionViewDataSource, UICollectionViewDelegate {
+
     var selectedCategoryId: String?
     private var presenter: CategoryPresenter?
     weak var delegate: CategorySelectViewControllelDelegate?
     @IBOutlet weak var veil: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var whileIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var errorLabel: UILabel!
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -26,6 +28,7 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
     func initDefaultUI() {
         self.veil.isHidden = true
         self.whileIndicator.isHidden = true
+        self.errorLabel.isHidden = true
         self.whileIndicator.stopAnimating()
 
     }
@@ -50,8 +53,6 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
         if let label = presenter?.category(forIndex: indexPath.row).categoryName {
             cell.bind(label: label, image: "Calendar-for-light-theme")
         }
-//        cell.categoryImage.image = UIImage(named: "Calendar-for-light-theme")
-//        cell.categoryLabel.text = presenter?.category(forIndex: indexPath.row).categoryName
         return cell
     }
     
@@ -68,12 +69,17 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
         self.collectionView.reloadData()
     }
     
-    func disableUIInteraction() {
+    func showError(withMessage: String) {
+        self.errorLabel.text = withMessage
+        self.errorLabel.isHidden = false
+    }
+    
+    func showLoading() {
         self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
-    func enableUIInteraction() {
+    func hideLoading() {
         self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
     }

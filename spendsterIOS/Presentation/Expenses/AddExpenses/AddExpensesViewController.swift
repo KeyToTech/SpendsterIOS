@@ -9,7 +9,6 @@
 import UIKit
 
 class AddExpensesViewController: UIViewController, CategorySelectViewControllelDelegate, AddExpensesView {
-    
     var choosenCategory: String?
     var currencyType = "UAH"
     var choosenDate = ""
@@ -88,12 +87,12 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
         self.choosenCategory = catedoryId
     }
     
-    func disableUIInteraction() {
+    func showLoading() {
         self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
-    func enableUIInteraction() {
+    func hideLoading() {
         self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
     }
@@ -103,8 +102,8 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
         self.whileIndicator.isHidden = enabled
     }
     
-    func showError(text: String) {
-        self.errorLabel.text = text
+    func showError(withMessage: String) {
+        self.errorLabel.text = withMessage
         self.errorLabel.isHidden = false
     }
     

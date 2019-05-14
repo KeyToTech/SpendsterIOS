@@ -8,8 +8,6 @@
 
 import Foundation
 
-protocol CategoryView {
+protocol CategoryView: ErrorView, LoadingView {
     func reloadData()
-    func disableUIInteraction()
-    func enableUIInteraction()
 }

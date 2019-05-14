@@ -72,6 +72,8 @@
 		2BE5B9BC227DE3940012C1E2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5B9BB227DE3940012C1E2 /* GradientView.swift */; };
 		2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF40B1222674A660076D50B /* ActivityViewController.swift */; };
 		AC688BFD2271F9BC0074CB55 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC688BFC2271F9BC0074CB55 /* LoginModel.swift */; };
+		AC8C4D5A228AF47B007889F8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C4D59228AF47B007889F8 /* LoadingView.swift */; };
+		AC8C4D5C228AF54D007889F8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C4D5B228AF54D007889F8 /* ErrorView.swift */; };
 		ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */; };
 		ACED932F2281A6B3007B6C10 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACED932E2281A6B3007B6C10 /* Expenses.storyboard */; };
 		ACED93312281B992007B6C10 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED93302281B992007B6C10 /* BorderView.swift */; };
@@ -165,6 +167,8 @@
 		7A6583FC17C8D45667DB5807 /* Pods-spendsterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOS.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOS/Pods-spendsterIOS.release.xcconfig"; sourceTree = "<group>"; };
 		8015695075BBEFAB914EC069 /* Pods-spendsterIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spendsterIOSTests.release.xcconfig"; path = "Target Support Files/Pods-spendsterIOSTests/Pods-spendsterIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC688BFC2271F9BC0074CB55 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		AC8C4D59228AF47B007889F8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AC8C4D5B228AF54D007889F8 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddExpensesModel.swift; sourceTree = "<group>"; };
 		ACED932E2281A6B3007B6C10 /* Expenses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Expenses.storyboard; sourceTree = "<group>"; };
 		ACED93302281B992007B6C10 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
@@ -311,6 +315,7 @@
 		2B770D60223803C60066A72C /* spendsterIOS */ = {
 			isa = PBXGroup;
 			children = (
+				AC8C4D58228AEF4A007889F8 /* ControllersProtocols */,
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				2BBB79B122536670006ABC2A /* Presentation */,
 				2B7A0A60223F91E300D12DA6 /* Data */,
@@ -435,6 +440,15 @@
 				8015695075BBEFAB914EC069 /* Pods-spendsterIOSTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC8C4D58228AEF4A007889F8 /* ControllersProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				AC8C4D59228AF47B007889F8 /* LoadingView.swift */,
+				AC8C4D5B228AF54D007889F8 /* ErrorView.swift */,
+			);
+			path = ControllersProtocols;
 			sourceTree = "<group>";
 		};
 		ACED932D2281A676007B6C10 /* Expenses */ = {
@@ -672,6 +686,7 @@
 				2B248D282266295500423FE8 /* HomeScreenViewController.swift in Sources */,
 				2B248D1F2265D81D00423FE8 /* TextValidation.swift in Sources */,
 				2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */,
+				AC8C4D5A228AF47B007889F8 /* LoadingView.swift in Sources */,
 				2BE5B9BC227DE3940012C1E2 /* GradientView.swift in Sources */,
 				2BB8F96A223BF63A00671465 /* SplashViewController.swift in Sources */,
 				2B6028A02285C42B00F1E159 /* CaregoryView.swift in Sources */,
@@ -707,6 +722,7 @@
 				2B60289C2285C3DE00F1E159 /* CategoryPresenter.swift in Sources */,
 				2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */,
 				2BCFE6EB22887A9F00522DE2 /* AddExpensesPresenter.swift in Sources */,
+				AC8C4D5C228AF54D007889F8 /* ErrorView.swift in Sources */,
 				2B248D182265D60900423FE8 /* AddressScreenPresenter.swift in Sources */,
 				ACED93332281BB92007B6C10 /* AddExpensesViewController.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,

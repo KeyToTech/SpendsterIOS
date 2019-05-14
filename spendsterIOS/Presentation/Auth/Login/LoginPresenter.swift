@@ -26,11 +26,11 @@ class LoginPresenter {
     
     func login(email: String, password: String) {
         if !TextValidation(text: email, pattern: ValidationPattern.email).validate() {
-            self.view.showError(message: "Incorrect form of e-mail, try again")
+            self.view.showError(withMessage: "Incorrect form of e-mail, try again")
         } else if !TextValidation(text: password, pattern: ValidationPattern.password).validate() {
-            self.view.showError(message: "Incorrect form of password, try again")
+            self.view.showError(withMessage: "Incorrect form of password, try again")
         } else {
-            self.view.disableUIInteraction()
+            self.view.showLoading()
             self.model.makeLogin(email: email, password: password)
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
@@ -39,8 +39,8 @@ class LoginPresenter {
                         self.makeRecord()
                         self.view.goToHomeScreen()
                     } else {
-                        self.view.enableUIInteraction()
-                        self.view.showError(message: "You can't login now")
+                        self.view.hideLoading()
+                        self.view.showError(withMessage: "You can't login now")
                     }
                 }
                 .disposed(by: disposeBag)
