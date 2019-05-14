@@ -6,6 +6,7 @@
 //  Copyright © 2019 KeyToTech. All rights reserved.
 //
 
+import Alamofire
 import UIKit
 
 class WalkthroughViewController: UIViewController, WalkthroughPageViewControllerDelegate {
@@ -23,15 +24,15 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
 
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-        if let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpScreenViewController {
-            present(signUpViewController, animated: true, completion: nil )
+        if let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpScreenViewController") as? SignUpScreenViewController {
+            self.navigationController?.pushViewController(signUpViewController, animated: true)
         }
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         if let loginScreenViewController = storyboard.instantiateViewController(withIdentifier: "LoginScreenViewController") as? LoginScreenViewController {
-            present(loginScreenViewController, animated: true, completion: nil )
+            self.navigationController?.pushViewController(loginScreenViewController, animated: true)
         }
     }
 
