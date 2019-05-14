@@ -13,27 +13,22 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: CornerImage!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var email: UILabel!
-    let defaults = UserDefaults.standard
-    
     @IBAction func logoutButtonPressed(_ sender: Any) {
-        defaults.removeObject(forKey: "username")
-        defaults.removeObject(forKey: "email")
-        defaults.removeObject(forKey: "profileImage")
-        defaults.set(false, forKey: "alreadyLoggedIn")
+        UserDefaultsStorage.clear()
         dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let usernameText = defaults.value(forKey: "username") as? String {
+        if let usernameText = try? UserDefaultsStorage.readUser().userName {
             self.username.text = usernameText
         }
 
-        if let emailText = defaults.value(forKey: "email") as? String {
+        if let emailText = try? UserDefaultsStorage.readUser().userEmail {
             self.email.text = emailText
         }
 
-        if let imageData = defaults.value(forKey: "profileImage") as? Data {
+        if let imageData = UserDefaults.standard.value(forKey: "profileImage") as? Data {
             self.profileImage.image = UIImage(data: imageData)
         }
         

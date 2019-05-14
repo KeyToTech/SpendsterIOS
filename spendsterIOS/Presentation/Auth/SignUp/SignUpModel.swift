@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol SignUpModel {
-    func makeSingUp(email: String, username: String, password: String) -> Single<User>
+    func makeSingUp(email: String, username: String, password: String) -> Single<UserCodable>
 }

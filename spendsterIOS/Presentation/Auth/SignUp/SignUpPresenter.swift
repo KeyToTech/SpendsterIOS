@@ -18,10 +18,6 @@ class SignUpPresenter {
         self.model = model
         self.view = view
     }
-
-    func makeRecord() {
-        UserDefaults.standard.set(true, forKey: "alreadyLoggedIn")
-    }
     
     func signUp(email: String, username: String, password: String, rePassword: String) {
         if !TextValidation(text: email, pattern: ValidationPattern.email).validate() {
@@ -37,15 +33,15 @@ class SignUpPresenter {
             self.model.makeSingUp(email: email, username: username, password: password)
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
-                .subscribe { user in
-                    if user != nil {
-                        self.makeRecord()
-                        self.view.goToHomeScreen()
-                    } else {
+                .subscribe(onSuccess: { user in
+                    UserDefaultsStorage.saveUser(user: user)
+                    self.view.goToHomeScreen()
+                    
+                },
+                    onError: { error in
                         self.view.hideLoading()
-                        self.view.showError(withMessage: "You can't login now")
-                    }
-                }
+                        self.view.showError(withMessage: error.localizedDescription)
+                })
                 .disposed(by: disposeBag)
         }
     }

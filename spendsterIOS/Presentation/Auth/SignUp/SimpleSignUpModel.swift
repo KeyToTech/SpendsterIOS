@@ -12,27 +12,22 @@ import RxSwift
 import SwiftyJSON
 
 class SimpleSignUpModel: SignUpModel {
-    func makeSingUp(email: String, username: String, password: String) -> Single<User> {
+    func makeSingUp(email: String, username: String, password: String) -> Single<UserCodable> {
         let parameters: Parameters = [
             "username": username,
             "email": email,
             "password": password
         ]
-        return Single<User>.create { single in
+        return Single<UserCodable>.create { single in
             let request = Alamofire.request("https://spendsterapp.herokuapp.com/signup",
                                             method: .post,
                                             parameters: parameters,
                                             encoding: JSONEncoding.default)
                 .responseJSON { response in
                     print(response)
-                    if let json = response.result.value as? JSON,
-                        let data = try? json.rawData(),
-                        let responseData = try? JSONDecoder().decode(SignUpResponse.self, from: data) {
-                        single(.success(User.init(balance: responseData.balance,
-                                                  id: responseData.id,
-                                                  password: responseData.password,
-                                                  username: responseData.username,
-                                                  email: responseData.email)))
+                    if let data = response.data,
+                        let user = try? JSONDecoder().decode(UserCodable.self, from: data) {
+                        single(.success(user))
                     } else if let error = response.error {
                         single(.error(error))
                     } else {
@@ -40,15 +35,9 @@ class SimpleSignUpModel: SignUpModel {
                     }
             }
             return Disposables.create {
-                self.makeRecord(email: email, username: username)
                 request.cancel()
-                
             }
         }
-    }
-    func makeRecord(email: String, username: String) {
-        UserDefaults.standard.set(email, forKey: "email")
-        UserDefaults.standard.set(username, forKey: "username")
     }
 }
 
@@ -56,10 +45,10 @@ struct SignUpError: Error {
     let message: String
 }
 
-struct SignUpResponse: Codable {
+struct UserCodable: Codable {
     let balance: Float
-    let id: Int
+    let id: String
     let email: String
-    let password: String
+    let token: String
     let username: String
 }

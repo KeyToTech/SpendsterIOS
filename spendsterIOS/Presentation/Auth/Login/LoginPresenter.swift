@@ -34,15 +34,15 @@ class LoginPresenter {
             self.model.makeLogin(email: email, password: password)
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
-                .subscribe { user in
-                    if user != nil {
-                        self.makeRecord()
-                        self.view.goToHomeScreen()
-                    } else {
-                        self.view.hideLoading()
-                        self.view.showError(withMessage: "You can't login now")
-                    }
-                }
+                .subscribe(onSuccess: { user in
+                    UserDefaultsStorage.saveUser(user: user)
+                    self.view.goToHomeScreen()
+                    
+                },
+                           onError: { error in
+                            self.view.hideLoading()
+                            self.view.showError(withMessage: error.localizedDescription)
+                })
                 .disposed(by: disposeBag)
         }
     }

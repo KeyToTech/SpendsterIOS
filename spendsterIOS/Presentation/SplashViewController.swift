@@ -35,7 +35,7 @@ class SplashViewController: UIViewController {
     }
     
     func shouldShowOnboarding() -> Bool {
-        return !UserDefaults.standard.bool(forKey: "alreadyLoggedIn")
+        return !UserDefaultsStorage.isUserExist()
     }
     
     func presentHomeScreen() {

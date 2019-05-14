@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol LoginModel {
-    func makeLogin(email: String, password: String) -> Single<User>
+    func makeLogin(email: String, password: String) -> Single<UserCodable>
 }

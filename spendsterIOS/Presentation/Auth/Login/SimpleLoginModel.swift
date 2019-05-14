@@ -11,29 +11,25 @@ import RxSwift
 import SwiftyJSON
 
 class SimpleLoginModel: LoginModel {
-    func makeLogin(email: String, password: String) -> Single<User> {
+    func makeLogin(email: String, password: String) -> Single<UserCodable> {
         let parameters: Parameters = [
             "email": email, "password": password
         ]
-        return Single<User>.create { single in
+        return Single<UserCodable>.create { single in
             let request = Alamofire.request("https://spendsterapp.herokuapp.com/login",
-                              method: .post,
-                              parameters: parameters,
-                              encoding: JSONEncoding.default)
+                                            method: .post,
+                                            parameters: parameters,
+                                            encoding: JSONEncoding.default)
                 .responseJSON { response in
                     print(response)
-                    if let json = response.result.value as? JSON,
-                        let data = try? json.rawData(),
-                        let responseData = try? JSONDecoder().decode(SignUpResponse.self, from: data) {
-                        
-                        single(.success(User.init(balance: responseData.balance,
-                                                  id: responseData.id,
-                                                  password: responseData.password,
-                                                  email: responseData.email)))
+                    if let data = response.data,
+                        let user = try? JSONDecoder().decode(UserCodable.self, from: data) {
+                        single(.success(user))
                     } else if let error = response.error {
                         single(.error(error))
                     } else {
                         single(.error(LoginError.init(message: "You can't login now")))
+                        
                     }
             }
             return Disposables.create {
@@ -45,11 +41,4 @@ class SimpleLoginModel: LoginModel {
 
 struct LoginError: Error {
     let message: String
-}
-
-struct LoginResponse: Codable {
-    let balance: Float
-    let id: Int
-    let password: String
-    let email: String
 }
