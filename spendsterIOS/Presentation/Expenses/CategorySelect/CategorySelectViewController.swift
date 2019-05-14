@@ -47,8 +47,11 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellView", for: indexPath) as! CollectionViewCell
-        cell.categoryImage.image = UIImage(named: "Calendar-for-light-theme")
-        cell.categoryLabel.text = presenter?.category(forIndex: indexPath.row).categoryName
+        if let label = presenter?.category(forIndex: indexPath.row).categoryName {
+            cell.bind(label: label, image: "Calendar-for-light-theme")
+        }
+//        cell.categoryImage.image = UIImage(named: "Calendar-for-light-theme")
+//        cell.categoryLabel.text = presenter?.category(forIndex: indexPath.row).categoryName
         return cell
     }
     
