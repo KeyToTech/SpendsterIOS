@@ -12,10 +12,10 @@ import RxSwift
 class LoginPresenter {
 
     let view: AuthView
-    let model: LoginModelProtocol
+    let model: LoginModel
     let disposeBag = DisposeBag()
     
-    init(model: LoginModelProtocol, view: AuthView) {
+    init(model: LoginModel, view: AuthView) {
         self.view = view
         self.model = model
     }

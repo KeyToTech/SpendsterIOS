@@ -50,11 +50,11 @@ class AddressScreenViewController: UIViewController, AuthView {
         dismiss(animated: true, completion: nil)
     }
     
-    func name() -> String {
+    private func name() -> String {
         return self.nameTextField.text!
     }
     
-    func phone() -> String {
+    private func phone() -> String {
         return self.phoneNumberTextField.text!
     }
     
