@@ -9,8 +9,8 @@
 import Foundation
 
 class ProfilePresenter {
-    let view: ProfileView
-    let storage: UserStorage
+    private let view: ProfileView
+    private let storage: UserStorage
     init(view: ProfileView, storage: UserStorage) {
         self.view = view
         self.storage = storage

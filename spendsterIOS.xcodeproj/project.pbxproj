@@ -77,6 +77,8 @@
 		AC908DD7228C3D1B00510658 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DD6228C3D1B00510658 /* APIManager.swift */; };
 		AC908DD9228C449000510658 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DD8228C449000510658 /* ProfilePresenter.swift */; };
 		AC908DDB228C456D00510658 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDA228C456D00510658 /* ProfileView.swift */; };
+		AC908DDD228C551400510658 /* MoreAboutUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */; };
+		AC908DDF228C556300510658 /* MoreAboutUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDE228C556300510658 /* MoreAboutUserView.swift */; };
 		ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */; };
 		ACED932F2281A6B3007B6C10 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACED932E2281A6B3007B6C10 /* Expenses.storyboard */; };
 		ACED93312281B992007B6C10 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED93302281B992007B6C10 /* BorderView.swift */; };
@@ -175,6 +177,8 @@
 		AC908DD6228C3D1B00510658 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		AC908DD8228C449000510658 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		AC908DDA228C456D00510658 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserPresenter.swift; sourceTree = "<group>"; };
+		AC908DDE228C556300510658 /* MoreAboutUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserView.swift; sourceTree = "<group>"; };
 		ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddExpensesModel.swift; sourceTree = "<group>"; };
 		ACED932E2281A6B3007B6C10 /* Expenses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Expenses.storyboard; sourceTree = "<group>"; };
 		ACED93302281B992007B6C10 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 			children = (
 				2B4A06F22254F7BC007B914B /* MoreAbout.storyboard */,
 				2BCBC3FF225608B300135AEB /* MoreAboutScreenViewController.swift */,
+				AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */,
+				AC908DDE228C556300510658 /* MoreAboutUserView.swift */,
 			);
 			path = MoreAboutUser;
 			sourceTree = "<group>";
@@ -731,6 +737,7 @@
 				ACED93312281B992007B6C10 /* BorderView.swift in Sources */,
 				2B9E77242252591E00D7640A /* AuthView.swift in Sources */,
 				2BCBC400225608B300135AEB /* MoreAboutScreenViewController.swift in Sources */,
+				AC908DDF228C556300510658 /* MoreAboutUserView.swift in Sources */,
 				2B9E771F2252580100D7640A /* SignUpModel.swift in Sources */,
 				AC8C4D5F228B06DC007889F8 /* UserStorage.swift in Sources */,
 				ACF2A9462283197300CCDF1F /* CollectionViewCell.swift in Sources */,
@@ -752,6 +759,7 @@
 				2B248D182265D60900423FE8 /* AddressScreenPresenter.swift in Sources */,
 				ACED93332281BB92007B6C10 /* AddExpensesViewController.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,
+				AC908DDD228C551400510658 /* MoreAboutUserPresenter.swift in Sources */,
 				2BB16573223AB852000D193F /* Expense.swift in Sources */,
 				2B6028A22285C45500F1E159 /* CategoryModel.swift in Sources */,
 				2B2D7D6C226F43E9000ADD7B /* SimpleSignUpModel.swift in Sources */,
