@@ -74,6 +74,7 @@
 		AC8C4D5C228AF54D007889F8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C4D5B228AF54D007889F8 /* ErrorView.swift */; };
 		AC8C4D5F228B06DC007889F8 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C4D5E228B06DC007889F8 /* UserStorage.swift */; };
 		AC8C4D61228B07BD007889F8 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C4D60228B07BD007889F8 /* UserDefaultsStorage.swift */; };
+		AC908DD7228C3D1B00510658 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DD6228C3D1B00510658 /* APIManager.swift */; };
 		ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */; };
 		ACED932F2281A6B3007B6C10 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACED932E2281A6B3007B6C10 /* Expenses.storyboard */; };
 		ACED93312281B992007B6C10 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED93302281B992007B6C10 /* BorderView.swift */; };
@@ -169,6 +170,7 @@
 		AC8C4D5B228AF54D007889F8 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		AC8C4D5E228B06DC007889F8 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		AC8C4D60228B07BD007889F8 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		AC908DD6228C3D1B00510658 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddExpensesModel.swift; sourceTree = "<group>"; };
 		ACED932E2281A6B3007B6C10 /* Expenses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Expenses.storyboard; sourceTree = "<group>"; };
 		ACED93302281B992007B6C10 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 		2B770D60223803C60066A72C /* spendsterIOS */ = {
 			isa = PBXGroup;
 			children = (
+				AC908DD5228C3CF600510658 /* REST */,
 				2B770D6D223803C80066A72C /* Info.plist */,
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
 				AC8C4D5D228B05DF007889F8 /* UserDefaults */,
@@ -457,6 +460,14 @@
 				AC8C4D60228B07BD007889F8 /* UserDefaultsStorage.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		AC908DD5228C3CF600510658 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				AC908DD6228C3D1B00510658 /* APIManager.swift */,
+			);
+			path = REST;
 			sourceTree = "<group>";
 		};
 		ACED932D2281A676007B6C10 /* Expenses */ = {
@@ -730,6 +741,7 @@
 				2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */,
 				2BCFE6EB22887A9F00522DE2 /* AddExpensesPresenter.swift in Sources */,
 				AC8C4D5C228AF54D007889F8 /* ErrorView.swift in Sources */,
+				AC908DD7228C3D1B00510658 /* APIManager.swift in Sources */,
 				2B248D182265D60900423FE8 /* AddressScreenPresenter.swift in Sources */,
 				ACED93332281BB92007B6C10 /* AddExpensesViewController.swift in Sources */,
 				2BB16574223AB852000D193F /* User.swift in Sources */,

@@ -11,12 +11,13 @@ import RxSwift
 import SwiftyJSON
 
 class SimpleLoginModel: LoginModel {
+    private let url: String = APIManager.baseURL + APIManager.login
     func makeLogin(email: String, password: String) -> Single<UserCodable> {
         let parameters: Parameters = [
             "email": email, "password": password
         ]
         return Single<UserCodable>.create { single in
-            let request = Alamofire.request("https://spendsterapp.herokuapp.com/login",
+            let request = Alamofire.request(self.url,
                                             method: .post,
                                             parameters: parameters,
                                             encoding: JSONEncoding.default)

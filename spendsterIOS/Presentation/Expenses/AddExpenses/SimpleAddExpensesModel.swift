@@ -13,7 +13,7 @@ import SwiftyJSON
 
 class SimpleAddExpensesModel: AddExpensesModel {
     
-    private let url = "https://spendsterapp.herokuapp.com/expenses/save"
+    private let url: String = APIManager.baseURL + APIManager.saveExpense
     func addExpense(amount: Float, createdDate: String, categoryId: String, note: String) -> Single<Expense> {
         let header: HTTPHeaders = [
             "Authorization": "1234567890"

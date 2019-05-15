@@ -12,6 +12,7 @@ import RxSwift
 import SwiftyJSON
 
 class SimpleSignUpModel: SignUpModel {
+    private let url: String = APIManager.baseURL + APIManager.signUp
     func makeSingUp(email: String, username: String, password: String) -> Single<UserCodable> {
         let parameters: Parameters = [
             "username": username,
@@ -19,7 +20,7 @@ class SimpleSignUpModel: SignUpModel {
             "password": password
         ]
         return Single<UserCodable>.create { single in
-            let request = Alamofire.request("https://spendsterapp.herokuapp.com/signup",
+            let request = Alamofire.request(self.url,
                                             method: .post,
                                             parameters: parameters,
                                             encoding: JSONEncoding.default)

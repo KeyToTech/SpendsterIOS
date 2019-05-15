@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 
 class SimpleCategoryModel: CategoryModel {
-    private let url = "https://spendsterapp.herokuapp.com/categories"
+    private let url: String = APIManager.baseURL + APIManager.getCategories
     let headers: HTTPHeaders = [
         "Authorization": "1234567890"
     ]
