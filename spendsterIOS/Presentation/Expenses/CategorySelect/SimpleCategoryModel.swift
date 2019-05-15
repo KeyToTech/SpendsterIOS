@@ -29,8 +29,7 @@ class SimpleCategoryModel: CategoryModel {
                     print(response)
                     
                     if let data = response.data,
-                        let json = try? JSON(data: data) {
-                        let categories = self.deserialize(json: json)
+                        let categories = try? JSONDecoder().decode([CategoryResponse].self, from: data) {
                         single(.success(categories))
                     } else if let error = response.error {
                         single(.error(error))
@@ -42,19 +41,6 @@ class SimpleCategoryModel: CategoryModel {
                 request.cancel()
             }
         }
-    }
-    
-    func deserialize(json: JSON) -> [CategoryResponse] {
-        var list: [CategoryResponse] = []
-        let decoder = JSONDecoder()
-        for item in json.arrayValue {
-            if let data = try? item.rawData() {
-                if let responseData = try? decoder.decode(CategoryResponse.self, from: data) {
-                    list.append(responseData)
-                }
-            }
-        }
-        return list
     }
 }
 
