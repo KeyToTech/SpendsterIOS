@@ -13,11 +13,13 @@ class LoginPresenter {
 
     let view: AuthView
     let model: LoginModel
+    let storage: UserStorage
     let disposeBag = DisposeBag()
     
-    init(model: LoginModel, view: AuthView) {
+    init(model: LoginModel, view: AuthView, storage: UserStorage) {
         self.view = view
         self.model = model
+        self.storage = storage
     }
     
     func makeRecord() {
@@ -35,7 +37,7 @@ class LoginPresenter {
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
                 .subscribe(onSuccess: { user in
-                    UserDefaultsStorage.saveUser(user: user)
+                    self.storage.saveUser(user: user)
                     self.view.goToHomeScreen()
                     
                 },

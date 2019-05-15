@@ -13,10 +13,11 @@ class SignUpPresenter {
     let disposeBag = DisposeBag()
     let model: SignUpModel
     let view: AuthView
-    
-    init(model: SignUpModel, view: AuthView) {
+    let storage: UserStorage
+    init(model: SignUpModel, view: AuthView, storage: UserStorage) {
         self.model = model
         self.view = view
+        self.storage = storage
     }
     
     func signUp(email: String, username: String, password: String, rePassword: String) {
@@ -34,7 +35,7 @@ class SignUpPresenter {
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
                 .subscribe(onSuccess: { user in
-                    UserDefaultsStorage.saveUser(user: user)
+                    self.storage.saveUser(user: user)
                     self.view.goToHomeScreen()
                     
                 },

@@ -10,6 +10,8 @@ import Foundation
 import SwiftyJSON
 
 protocol UserStorage {
+    func readImageData() throws -> Data
+    func saveImage(image: UIImage)
     func isUserExist() -> Bool
     func saveUser(user: UserCodable)
     func readUser() throws -> User

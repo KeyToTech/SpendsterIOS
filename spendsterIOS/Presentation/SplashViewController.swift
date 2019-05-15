@@ -9,6 +9,7 @@
 import UIKit
 
 class SplashViewController: UIViewController {
+    private let storage = UserDefaultsStorage()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadingIndecator.startAnimating()
@@ -35,7 +36,7 @@ class SplashViewController: UIViewController {
     }
     
     func shouldShowOnboarding() -> Bool {
-        return !UserDefaultsStorage.isUserExist()
+        return !storage.isUserExist()
     }
     
     func presentHomeScreen() {

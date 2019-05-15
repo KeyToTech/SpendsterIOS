@@ -38,7 +38,7 @@ class LoginScreenViewController: UIViewController, AuthView {
     override func viewDidLoad() {
         super.viewDidLoad()
         initDefaultUI()
-        self.presenter = LoginPresenter(model: SimpleLoginModel(), view: self)
+        self.presenter = LoginPresenter(model: SimpleLoginModel(), view: self, storage: UserDefaultsStorage())
     }
     
     func showError(withMessage: String) {

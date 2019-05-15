@@ -54,7 +54,7 @@ class SignUpScreenViewController: UIViewController, AuthView {
     override func viewDidLoad() {
         super.viewDidLoad()
         initDefaultUI()
-        self.presenter = SignUpPresenter(model: SimpleSignUpModel(), view: self)
+        self.presenter = SignUpPresenter(model: SimpleSignUpModel(), view: self, storage: UserDefaultsStorage())
     }
     
     private func email() -> String {

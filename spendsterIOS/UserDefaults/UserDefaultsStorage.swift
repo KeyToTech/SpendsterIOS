@@ -9,12 +9,23 @@
 import Foundation
 import SwiftyJSON
 
-class UserDefaultsStorage {
-    static let defaults = UserDefaults.standard
-    static let userKey = "userkey"
-    static let tokenKey = "tokenkey"
+class UserDefaultsStorage: UserStorage {
+    private let defaults = UserDefaults.standard
+    private let userKey = "userkey"
+    private let imageKey = "profileImage"
     
-    class func isUserExist() -> Bool {
+    func readImageData() throws -> Data {
+        if let imageData = defaults.value(forKey: imageKey) as? Data {
+            return imageData
+        } else {
+        throw UserExsistError(message: "no user in storage")
+        }
+    }
+    
+    func saveImage(image: UIImage) {
+        defaults.set(image.jpegData(compressionQuality: 0.75), forKey: imageKey)    }
+    
+    func isUserExist() -> Bool {
         var result = true
         do {
             try _ = self.readUser()
@@ -24,13 +35,13 @@ class UserDefaultsStorage {
         return result
     }
 
-    class func saveUser(user: UserCodable) {
+    func saveUser(user: UserCodable) {
         if let data: Data = try? JSONEncoder().encode(user) {
             self.defaults.set(data, forKey: self.userKey)
         }
     }
 
-    class func readUser() throws -> User {
+    func readUser() throws -> User {
         if let data = defaults.value(forKey: self.userKey) as? Data,
             let decoded = try? JSONDecoder().decode(UserCodable.self, from: data) {
             let user = User.init(balance: decoded.balance,
@@ -44,8 +55,9 @@ class UserDefaultsStorage {
         }
     }
 
-    class func clear() {
+    func clear() {
         self.defaults.removeObject(forKey: self.userKey)
+        UserDefaults.standard.removeObject(forKey: imageKey)
     }
     
 }

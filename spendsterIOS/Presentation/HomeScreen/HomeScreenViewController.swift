@@ -12,7 +12,7 @@ class HomeScreenViewController: UIViewController {
     @IBAction func logOutButtonPressed(_ sender: Any) {
         // TODO remove loguot button from main screen and add it to profile screen
         // ticket: https://trello.com/c/ck0DDnn8/127-profile-screen
-        UserDefaultsStorage.clear()
+        UserDefaultsStorage().clear()
         dismiss(animated: true, completion: nil)
     }
     
