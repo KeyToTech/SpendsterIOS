@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol APIRequest {
-    func request(url: String) -> DataRequest
+    func request() -> DataRequest
     func parameters() -> Parameters?
     func headers() -> HTTPHeaders
 }

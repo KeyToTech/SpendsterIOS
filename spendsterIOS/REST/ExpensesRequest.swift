@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 class AddExpenseRequest: APIRequest {
+    private let url: String = APIManager.baseURL + "/expenses/save"
     private let amount: Float
     private let date: String
     private let categoryID: String
@@ -24,8 +25,8 @@ class AddExpenseRequest: APIRequest {
         self.userId = userId
     }
     
-    func request(url: String) -> DataRequest {
-        return Alamofire.request(url,
+    func request() -> DataRequest {
+        return Alamofire.request(self.url,
                                  method: .post,
                                  parameters: self.parameters(),
                                  encoding: JSONEncoding.default,

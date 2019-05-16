@@ -12,10 +12,14 @@ import Alamofire
 import SwiftyJSON
 
 class SimpleAddExpensesModel: AddExpensesModel {
-    private let url: String = APIManager.baseURL + "/categories/save"
     func addExpense(amount: Float, createdDate: String, categoryId: String, note: String, userId: String) -> Single<Expense> {        
         return Single<Expense>.create {single in
-            let request = AddExpenseRequest(amount: amount, createdDate: createdDate, categoryId: categoryId, note: note, userId: userId).request(url: self.url)
+            let request = AddExpenseRequest(amount: amount,
+                                            createdDate: createdDate,
+                                            categoryId: categoryId,
+                                            note: note,
+                                            userId: userId)
+                .request()
                 .responseJSON { response in
                     if let data = response.data,
                         let responseData = try? JSONDecoder().decode(ExpenseCodable.self, from: data) {
