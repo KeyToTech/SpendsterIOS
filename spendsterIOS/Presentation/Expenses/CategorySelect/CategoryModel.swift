@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol CategoryModel {
-    func fetchCategories() -> Single<[CategoryResponse]>
+    func fetchCategories() -> Single<[CategoryCodable]>
 }

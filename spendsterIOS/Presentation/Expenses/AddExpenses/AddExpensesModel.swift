@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol AddExpensesModel {
-    func addExpense(amount: Float, createdDate: String, categoryId: String, note: String) -> Single<Expense>
+    func addExpense(amount: Float, createdDate: String, categoryId: String, note: String, userId: String) -> Single<Expense>
 }

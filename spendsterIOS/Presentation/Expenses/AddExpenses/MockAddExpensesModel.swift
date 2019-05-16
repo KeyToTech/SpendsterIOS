@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 class MockAddExpensesModel: AddExpensesModel {
-    func addExpense(amount: Float, createdDate: String, categoryId: String, note: String) -> Single<Expense> {
+    func addExpense(amount: Float, createdDate: String, categoryId: String, note: String, userId: String) -> Single<Expense> {
         return Single<Expense>.create {single in
             let expence = Expense.init(amount: amount, date: createdDate, categoryId: categoryId, note: note)
             single(.success(expence))

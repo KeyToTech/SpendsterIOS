@@ -10,8 +10,4 @@ import Foundation
 
 class APIManager {
     static let baseURL = "https://spendsterapp.herokuapp.com"
-    static let login = "/login"
-    static let signUp = "/signup"
-    static let saveExpense = "/expenses/save"
-    static let getCategories = "/categories"
 }

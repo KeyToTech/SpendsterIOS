@@ -11,18 +11,13 @@ import RxSwift
 import SwiftyJSON
 
 class SimpleLoginModel: LoginModel {
-    private let url: String = APIManager.baseURL + APIManager.login
+    private let url: String = APIManager.baseURL + "/login"
     func makeLogin(email: String, password: String) -> Single<UserCodable> {
-        let parameters: Parameters = [
-            "email": email, "password": password
-        ]
         return Single<UserCodable>.create { single in
-            let request = Alamofire.request(self.url,
-                                            method: .post,
-                                            parameters: parameters,
-                                            encoding: JSONEncoding.default)
+            let request = LoginRequest(email: email,
+                                       password: password)
+                .request(url: self.url)
                 .responseJSON { response in
-                    print(response)
                     if let data = response.data,
                         let user = try? JSONDecoder().decode(UserCodable.self, from: data) {
                         single(.success(user))
@@ -30,7 +25,6 @@ class SimpleLoginModel: LoginModel {
                         single(.error(error))
                     } else {
                         single(.error(LoginError.init(message: "You can't login now")))
-                        
                     }
             }
             return Disposables.create {

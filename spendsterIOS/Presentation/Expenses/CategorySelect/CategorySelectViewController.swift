@@ -13,7 +13,6 @@ protocol CategorySelectViewControllelDelegate: class {
 }
 
 class CategorySelectViewController: UIViewController, CategoryView, UICollectionViewDataSource, UICollectionViewDelegate {
-
     var selectedCategoryId: String?
     private var presenter: CategoryPresenter?
     weak var delegate: CategorySelectViewControllelDelegate?
@@ -30,13 +29,11 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
         self.whileIndicator.isHidden = true
         self.errorLabel.isHidden = true
         self.whileIndicator.stopAnimating()
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = CategoryPresenter.init(model: SimpleCategoryModel(), view: self, repository: CategoryRepository())
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,12 +54,11 @@ class CategorySelectViewController: UIViewController, CategoryView, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
-            let text = cell.categoryLabel.text
-            let categoryId = self.presenter?.category(forIndex: indexPath.row).categoryId
-            self.delegate?.categoryChoosed(categoryId: categoryId, categoryLabel: text)
-            self.dismiss(animated: false, completion: nil)
-        }
+        let index = indexPath.row
+        let text = self.presenter?.category(forIndex: index).categoryName
+        let categoryId = self.presenter?.category(forIndex: index).categoryId
+        self.delegate?.categoryChoosed(categoryId: categoryId, categoryLabel: text)
+        self.dismiss(animated: false, completion: nil)
     }
     
     func reloadData() {

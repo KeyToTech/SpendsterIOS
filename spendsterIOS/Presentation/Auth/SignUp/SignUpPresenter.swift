@@ -35,9 +35,9 @@ class SignUpPresenter {
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
                 .subscribe(onSuccess: { user in
+                    self.view.hideLoading()
                     self.storage.saveUser(user: user)
                     self.view.goToHomeScreen()
-                    
                 },
                     onError: { error in
                         self.view.hideLoading()

@@ -12,37 +12,17 @@ import Alamofire
 import SwiftyJSON
 
 class SimpleAddExpensesModel: AddExpensesModel {
-    
-    private let url: String = APIManager.baseURL + APIManager.saveExpense
-    func addExpense(amount: Float, createdDate: String, categoryId: String, note: String) -> Single<Expense> {
-        let header: HTTPHeaders = [
-            "Authorization": "1234567890"
-        ]
-        // TODO
-        // make token implementation of this
-        //
-        let parameters: Parameters = [
-            "userId": "1234567rrr-8",
-            "amount": amount,
-            "note": note,
-            "categoryId": categoryId
-        ]
+    private let url: String = APIManager.baseURL + "/categories/save"
+    func addExpense(amount: Float, createdDate: String, categoryId: String, note: String, userId: String) -> Single<Expense> {        
         return Single<Expense>.create {single in
-            let request = Alamofire.request(self.url,
-                                            method: .post,
-                                            parameters: parameters,
-                                            encoding: JSONEncoding.default,
-                                            headers: header)
+            let request = AddExpenseRequest(amount: amount, createdDate: createdDate, categoryId: categoryId, note: note, userId: userId).request(url: self.url)
                 .responseJSON { response in
-                    print(response)
                     if let data = response.data,
-                        let json = try? JSON(data: data),
-                        let jsonData = try? json.rawData(),
-                        let responseData = try? JSONDecoder().decode(ExpenseResponce.self, from: jsonData) {
-                        let expense = Expense.init(amount: responseData.amount,
-                                                   date: responseData.createdDate,
-                                                   categoryId: responseData.categoryId,
-                                                   note: responseData.note)
+                        let responseData = try? JSONDecoder().decode(ExpenseCodable.self, from: data) {
+                        let expense = Expense(amount: responseData.amount,
+                                              date: responseData.createdDate,
+                                              categoryId: responseData.categoryId,
+                                              note: responseData.note)
                         single(.success(expense))
                     } else if let error = response.error {
                         single(.error(error))
@@ -55,13 +35,4 @@ class SimpleAddExpensesModel: AddExpensesModel {
             }
         }
     }
-}
-
-struct ExpenseResponce: Codable {
-    let id: String
-    let userId: String
-    let amount: Float
-    let note: String
-    let categoryId: String
-    let createdDate: String
 }

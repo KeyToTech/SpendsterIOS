@@ -14,7 +14,6 @@ class CategoryPresenter {
     private let model: CategoryModel
     private let view: CategoryView
     private let repository: CategoryRepository
-    
     init(model: CategoryModel, view: CategoryView, repository: CategoryRepository) {
         self.model = model
         self.view = view
@@ -32,16 +31,17 @@ class CategoryPresenter {
                 self.view.hideLoading()
             },
                        onError: {error in
-                self.view.showError(withMessage: error.localizedDescription)
+                        self.view.showError(withMessage: error.localizedDescription)
             })
             .disposed(by: bag)
+        
     }
     
-     func categories() -> [Category] {
-         return self.repository.categories
-     }
+    func categories() -> [Category] {
+        return self.repository.categories
+    }
     
-     func category(forIndex index: Int) -> Category {
-         return self.repository.categories[index]
-     }
+    func category(forIndex index: Int) -> Category {
+        return self.repository.categories[index]
+    }
 }

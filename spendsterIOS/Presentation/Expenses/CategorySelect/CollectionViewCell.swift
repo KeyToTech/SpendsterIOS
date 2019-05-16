@@ -15,6 +15,5 @@ class CollectionViewCell: UICollectionViewCell {
     func bind(label: String, image: String) {
         self.categoryLabel.text = label
         self.categoryImage.image = UIImage(named: image)
-        
     }
 }

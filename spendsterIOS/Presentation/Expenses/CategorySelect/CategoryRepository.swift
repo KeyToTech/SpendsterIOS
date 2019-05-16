@@ -11,7 +11,7 @@ import Foundation
 class CategoryRepository {
     var categories: [Category] = []
     
-    func applyCategories(categories: [CategoryResponse]) {
+    func applyCategories(categories: [CategoryCodable]) {
         categories.forEach { (item) in
             self.categories.append(Category.init(id: item.id,
                                                  name: item.name,

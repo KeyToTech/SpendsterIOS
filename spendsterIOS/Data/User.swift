@@ -21,6 +21,7 @@ class User {
     
     public var userName: String? {get {return self.username}}
     public var userEmail: String? {get {return self.email}}
+    public var userId: String? {get {return self.ID}}
     
     init(id: String?, username: String?, email: String?, password: String?, balance: Float?, date: Date?, name: String?, phone: String?, token: String?) {
         self.ID = id

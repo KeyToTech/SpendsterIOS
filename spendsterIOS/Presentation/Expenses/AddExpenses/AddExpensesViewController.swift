@@ -44,19 +44,16 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = AddExpensesPresenter.init(view: self, model: SimpleAddExpensesModel())
+        self.presenter = AddExpensesPresenter.init(view: self, model: SimpleAddExpensesModel(), storage: UserDefaultsStorage())
         self.initDefaultUI()
         self.tapGestureRecognizer()
-        
     }
     
     func tapGestureRecognizer() {
         let categoryTap = UITapGestureRecognizer(target: self, action: #selector(self.categoryTapped(_:)))
         self.category.addGestureRecognizer(categoryTap)
-        
         let currencyTap = UITapGestureRecognizer(target: self, action: #selector(self.currencyTapped(_:)))
         self.currency.addGestureRecognizer(currencyTap)
-        
         let calendarTap = UITapGestureRecognizer(target: self, action: #selector(self.calendarTapped(_:)))
         self.calendar.addGestureRecognizer(calendarTap)
     }
@@ -66,7 +63,6 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
         if let categorySelectViewController = storyboard.instantiateViewController(withIdentifier: "CategorySelectViewController") as? CategorySelectViewController {
             categorySelectViewController.delegate = self
             self.present(categorySelectViewController, animated: false, completion: nil)
-            
         }
     }
     
