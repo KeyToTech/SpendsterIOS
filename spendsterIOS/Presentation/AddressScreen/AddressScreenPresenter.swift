@@ -31,6 +31,7 @@ class AddressScreenPresenter {
                 .observeOn(MainScheduler.instance)
                 .subscribe { user in
                     if user != nil {
+                        self.view.hideLoading()
                         self.view.goToHomeScreen()
                     } else {
                         self.view.hideLoading()

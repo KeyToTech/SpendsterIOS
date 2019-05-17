@@ -15,7 +15,6 @@ class MockAddExpensesModel: AddExpensesModel {
             let expence = Expense.init(amount: amount, date: createdDate, categoryId: categoryId, note: note)
             single(.success(expence))
             return Disposables.create {
-                
             }
         }
     }

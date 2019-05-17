@@ -12,13 +12,12 @@ import RxSwift
 import SwiftyJSON
 
 class SimpleSignUpModel: SignUpModel {
-    private let url: String = APIManager.baseURL + "/signup"
     func makeSingUp(email: String, username: String, password: String) -> Single<UserCodable> {
         return Single<UserCodable>.create { single in
             let request = SignUpRequest(email: email,
                                         username: username,
                                         password: password)
-                .request(url: self.url)
+                .request()
                 .responseJSON { response in
                     if let data = response.data,
                         let user = try? JSONDecoder().decode(UserCodable.self, from: data) {
@@ -26,7 +25,7 @@ class SimpleSignUpModel: SignUpModel {
                     } else if let error = response.error {
                         single(.error(error))
                     } else {
-                        single(.error(SignUpError.init(message: "You can't login now")))
+                        single(.error(ResponseParseError(message: "You can't singn up now")))
                     }
             }
             return Disposables.create {
@@ -34,8 +33,4 @@ class SimpleSignUpModel: SignUpModel {
             }
         }
     }
-}
-
-struct SignUpError: Error {
-    let message: String
 }

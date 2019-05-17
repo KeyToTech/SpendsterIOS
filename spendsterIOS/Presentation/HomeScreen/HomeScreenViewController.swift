@@ -20,7 +20,6 @@ class HomeScreenViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Expenses", bundle: nil)
         if let addExpensesViewController = storyboard.instantiateViewController(withIdentifier: "AddExpensesViewController") as? AddExpensesViewController {
             self.navigationController?.pushViewController(addExpensesViewController, animated: true)
-            
         }
     }
     

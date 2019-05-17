@@ -10,8 +10,9 @@ import Foundation
 import Alamofire
 
 class CategoryListRequest: APIRequest {
-    func request(url: String) -> DataRequest {
-        return Alamofire.request(url,
+    private let url: String = APIManager.baseURL + "/categories"
+    func request() -> DataRequest {
+        return Alamofire.request(self.url,
                                  method: .get,
                                  encoding: JSONEncoding.default,
                                  headers: self.headers())

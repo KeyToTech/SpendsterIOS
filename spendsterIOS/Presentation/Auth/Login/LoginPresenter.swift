@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 class LoginPresenter {
-
+    
     let view: AuthView
     let model: LoginModel
     let storage: UserStorage

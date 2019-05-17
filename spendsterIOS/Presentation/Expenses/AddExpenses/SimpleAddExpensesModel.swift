@@ -31,7 +31,7 @@ class SimpleAddExpensesModel: AddExpensesModel {
                     } else if let error = response.error {
                         single(.error(error))
                     } else {
-                        single(.error(CategoryError(message: "Can't add expence now")))
+                        single(.error(ResponseParseError(message: "Can't add expence now")))
                     }
             }
             return Disposables.create {

@@ -11,12 +11,11 @@ import RxSwift
 import SwiftyJSON
 
 class SimpleLoginModel: LoginModel {
-    private let url: String = APIManager.baseURL + "/login"
     func makeLogin(email: String, password: String) -> Single<UserCodable> {
         return Single<UserCodable>.create { single in
             let request = LoginRequest(email: email,
                                        password: password)
-                .request(url: self.url)
+                .request()
                 .responseJSON { response in
                     if let data = response.data,
                         let user = try? JSONDecoder().decode(UserCodable.self, from: data) {
@@ -24,7 +23,7 @@ class SimpleLoginModel: LoginModel {
                     } else if let error = response.error {
                         single(.error(error))
                     } else {
-                        single(.error(LoginError.init(message: "You can't login now")))
+                        single(.error(ResponseParseError(message: "You can't login now")))
                     }
             }
             return Disposables.create {
@@ -32,8 +31,4 @@ class SimpleLoginModel: LoginModel {
             }
         }
     }
-}
-
-struct LoginError: Error {
-    let message: String
 }

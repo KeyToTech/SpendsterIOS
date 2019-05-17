@@ -12,10 +12,10 @@ import Alamofire
 import SwiftyJSON
 
 class SimpleCategoryModel: CategoryModel {
-    private let url: String = APIManager.baseURL + "/categories"
     func fetchCategories() -> Single<[CategoryCodable]> {
         return Single<[CategoryCodable]>.create { single in
-            let request = CategoryListRequest().request(url: self.url)
+            let request = CategoryListRequest()
+                .request()
                 .responseJSON { response in
                     if let data = response.data,
                         let categories = try? JSONDecoder().decode([CategoryCodable].self, from: data) {
@@ -23,7 +23,7 @@ class SimpleCategoryModel: CategoryModel {
                     } else if let error = response.error {
                         single(.error(error))
                     } else {
-                        single(.error(CategoryError.init(message: "Can't load categories")))
+                        single(.error(ResponseParseError(message: "Can't load categories")))
                     }
             }
             return Disposables.create {
@@ -31,8 +31,4 @@ class SimpleCategoryModel: CategoryModel {
             }
         }
     }
-}
-
-struct CategoryError: Error {
-    let message: String
 }

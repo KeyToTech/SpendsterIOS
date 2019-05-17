@@ -13,7 +13,6 @@ class UserDefaultsStorage: UserStorage {
     private let defaults = UserDefaults.standard
     private let userKey = "userkey"
     private let imageKey = "profileImage"
-    
     func readImageData() throws -> Data {
         if let imageData = defaults.value(forKey: imageKey) as? Data {
             return imageData
@@ -59,9 +58,4 @@ class UserDefaultsStorage: UserStorage {
         self.defaults.removeObject(forKey: self.userKey)
         UserDefaults.standard.removeObject(forKey: imageKey)
     }
-    
-}
-
-struct UserExsistError: Error {
-    let message: String
 }

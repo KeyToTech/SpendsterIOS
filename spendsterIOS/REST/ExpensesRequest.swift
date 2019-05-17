@@ -16,7 +16,6 @@ class AddExpenseRequest: APIRequest {
     private let categoryID: String
     private let note: String
     private let userId: String
-    
     init(amount: Float, createdDate: String, categoryId: String, note: String, userId: String) {
         self.amount = amount
         self.date = createdDate

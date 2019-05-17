@@ -87,6 +87,8 @@
 		AC908DDB228C456D00510658 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDA228C456D00510658 /* ProfileView.swift */; };
 		AC908DDD228C551400510658 /* MoreAboutUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */; };
 		AC908DDF228C556300510658 /* MoreAboutUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDE228C556300510658 /* MoreAboutUserView.swift */; };
+		ACB2E54D228EEFCA0017B093 /* ResponseParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */; };
+		ACB2E54F228EEFEF0017B093 /* UserExsistError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */; };
 		ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */; };
 		ACED932F2281A6B3007B6C10 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACED932E2281A6B3007B6C10 /* Expenses.storyboard */; };
 		ACED93312281B992007B6C10 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED93302281B992007B6C10 /* BorderView.swift */; };
@@ -195,6 +197,8 @@
 		AC908DDA228C456D00510658 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserPresenter.swift; sourceTree = "<group>"; };
 		AC908DDE228C556300510658 /* MoreAboutUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserView.swift; sourceTree = "<group>"; };
+		ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParseError.swift; sourceTree = "<group>"; };
+		ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExsistError.swift; sourceTree = "<group>"; };
 		ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddExpensesModel.swift; sourceTree = "<group>"; };
 		ACED932E2281A6B3007B6C10 /* Expenses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Expenses.storyboard; sourceTree = "<group>"; };
 		ACED93302281B992007B6C10 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
@@ -353,12 +357,13 @@
 		2B770D60223803C60066A72C /* spendsterIOS */ = {
 			isa = PBXGroup;
 			children = (
-				2B1ABAEA228D6D9600F4C9F6 /* ResponseEntities */,
+				ACB2E54B228EEF8A0017B093 /* Errors */,
 				2B770D6D223803C80066A72C /* Info.plist */,
 				2B770D61223803C60066A72C /* AppDelegate.swift */,
+				2B7A0A60223F91E300D12DA6 /* Data */,
+				2B1ABAEA228D6D9600F4C9F6 /* ResponseEntities */,
 				AC908DD5228C3CF600510658 /* REST */,
 				AC8C4D5D228B05DF007889F8 /* UserDefaults */,
-				2B7A0A60223F91E300D12DA6 /* Data */,
 				2B4A06F02254EE95007B914B /* Validation */,
 				AC8C4D58228AEF4A007889F8 /* ControllersProtocols */,
 				2BBB79B122536670006ABC2A /* Presentation */,
@@ -512,6 +517,15 @@
 				2B1ABAFB228DB34500F4C9F6 /* SignUpRequest.swift */,
 			);
 			path = REST;
+			sourceTree = "<group>";
+		};
+		ACB2E54B228EEF8A0017B093 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */,
+				ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		ACED932D2281A676007B6C10 /* Expenses */ = {
@@ -791,6 +805,7 @@
 				2B60289C2285C3DE00F1E159 /* CategoryPresenter.swift in Sources */,
 				2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */,
 				2BCFE6EB22887A9F00522DE2 /* AddExpensesPresenter.swift in Sources */,
+				ACB2E54D228EEFCA0017B093 /* ResponseParseError.swift in Sources */,
 				AC8C4D5C228AF54D007889F8 /* ErrorView.swift in Sources */,
 				AC908DD7228C3D1B00510658 /* APIManager.swift in Sources */,
 				2B1ABAF8228DB06700F4C9F6 /* CategoryListRequest.swift in Sources */,
@@ -809,6 +824,7 @@
 				AC908DD9228C449000510658 /* ProfilePresenter.swift in Sources */,
 				ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */,
 				AC8C4D61228B07BD007889F8 /* UserDefaultsStorage.swift in Sources */,
+				ACB2E54F228EEFEF0017B093 /* UserExsistError.swift in Sources */,
 				2B9E77222252580100D7640A /* SignUpPresenter.swift in Sources */,
 				2B248D162265CEF900423FE8 /* AddressScreenViewController.swift in Sources */,
 				2B1ABAF5228DAC6900F4C9F6 /* ExpensesRequest.swift in Sources */,

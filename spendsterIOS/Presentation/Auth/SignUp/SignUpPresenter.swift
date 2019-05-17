@@ -39,9 +39,9 @@ class SignUpPresenter {
                     self.storage.saveUser(user: user)
                     self.view.goToHomeScreen()
                 },
-                    onError: { error in
-                        self.view.hideLoading()
-                        self.view.showError(withMessage: error.localizedDescription)
+                           onError: { error in
+                            self.view.hideLoading()
+                            self.view.showError(withMessage: error.localizedDescription)
                 })
                 .disposed(by: disposeBag)
         }

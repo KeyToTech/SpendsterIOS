@@ -10,16 +10,16 @@ import Foundation
 import Alamofire
 
 class LoginRequest: APIRequest {
+    private let url: String = APIManager.baseURL + "/login"
     private let email: String
     private let password: String
-    
     init(email: String, password: String) {
         self.email = email
         self.password = password
     }
     
-    func request(url: String) -> DataRequest {
-        return Alamofire.request(url,
+    func request() -> DataRequest {
+        return Alamofire.request(self.url,
                                  method: .post,
                                  parameters: self.parameters(),
                                  encoding: JSONEncoding.default)

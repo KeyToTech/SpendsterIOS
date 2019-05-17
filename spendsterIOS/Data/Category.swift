@@ -14,10 +14,8 @@ class Category {
     private let type: String
     private let icon: String
     private let createdDate: String
-    
     var categoryName: String {get {return self.name}}
     var categoryId: String {get {return self.id}}
-    
     init(id: String, name: String, type: String, icon: String, date: String) {
         self.id = id
         self.name = name
