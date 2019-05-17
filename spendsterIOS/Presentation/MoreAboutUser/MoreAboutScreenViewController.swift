@@ -9,6 +9,7 @@
 import UIKit
 
 class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private var presenter: MoreAboutUserPresenter?
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var approvedMessage: UILabel!
     var imagePicker = UIImagePickerController()
@@ -16,6 +17,7 @@ class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.approvedMessage.isHidden = true
+        self.presenter = MoreAboutUserPresenter(view: self, storage: UserDefaultsStorage())
     }
     
     @IBAction func laterButtonPressed(_ sender: UIButton) {
@@ -63,6 +65,7 @@ class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDe
         if let image = info[.editedImage] as? UIImage {
             self.profileImage.image = image
             self.approvedMessage.isHidden = false
+            self.presenter?.saveImage(image: image)
         }
         picker.dismiss(animated: true, completion: nil)
     }

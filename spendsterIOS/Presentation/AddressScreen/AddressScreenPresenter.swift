@@ -21,20 +21,21 @@ class AddressScreenPresenter {
     
     func makeUpdate(name: String, phoneNumber: String) {
         if !TextValidation(text: name, pattern: ValidationPattern.name).validate() {
-            self.view.showError(message: "Invalid name format")
+            self.view.showError(withMessage: "Invalid name format")
         } else if !TextValidation(text: phoneNumber, pattern: ValidationPattern.phone).validate() {
-            self.view.showError(message: "Invalid number format")
+            self.view.showError(withMessage: "Invalid number format")
         } else {
-            self.view.disableUIInteraction()
+            self.view.showLoading()
             self.model.updateUser(name: name, phoneNumber: phoneNumber)
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
                 .subscribe { user in
                     if user != nil {
+                        self.view.hideLoading()
                         self.view.goToHomeScreen()
                     } else {
-                        self.view.enableUIInteraction()
-                        self.view.showError(message: "You can't update your info now")
+                        self.view.hideLoading()
+                        self.view.showError(withMessage: "You can't update your info now")
                     }
                 }
                 .disposed(by: disposeBag)

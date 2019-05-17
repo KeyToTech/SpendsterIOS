@@ -13,4 +13,5 @@ struct ValidationPattern {
     static let name = "[A-Za-z]+\\ [A-Za-z]{1,64}"
     static let phone = "[+][0-9]{10,15}"
     static let username = "[A-Z0-9a-z]{4,16}"
+    static let amount = "[0-9]{1,12}"
 }

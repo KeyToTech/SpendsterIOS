@@ -11,6 +11,7 @@ import Foundation
 import UIKit
 
 @IBDesignable class CornerImage: UIImageView {
+    
     @IBInspectable
     var cornerRadius: CGFloat {
         set {

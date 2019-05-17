@@ -29,8 +29,8 @@ class SignUpScreenViewController: UIViewController, AuthView {
         presenter?.signUp(email: self.email(), username: self.username(), password: self.password(), rePassword: self.rePassword())
     }
     
-    func showError(message: String) {
-        errorMessage.text = message
+    func showError(withMessage: String) {
+        errorMessage.text = withMessage
         errorMessage.isHidden = false
     }
     
@@ -41,7 +41,7 @@ class SignUpScreenViewController: UIViewController, AuthView {
         }
     }
 
-    func initDefaultUI() {
+    private func initDefaultUI() {
         self.emailTextField.text = ""
         self.usernameTextField.text = ""
         self.passwordTextField.text = ""
@@ -54,36 +54,36 @@ class SignUpScreenViewController: UIViewController, AuthView {
     override func viewDidLoad() {
         super.viewDidLoad()
         initDefaultUI()
-        self.presenter = SignUpPresenter(model: SignUpModel(), view: self)
+        self.presenter = SignUpPresenter(model: SimpleSignUpModel(), view: self, storage: UserDefaultsStorage())
     }
     
-    func email() -> String {
+    private func email() -> String {
         return self.emailTextField.text!
     }
     
-    func username() -> String {
+    private func username() -> String {
         return self.usernameTextField.text!
     }
     
-    func password() -> String {
+    private func password() -> String {
         return self.passwordTextField.text!
     }
     
-    func rePassword() -> String {
+    private func rePassword() -> String {
         return self.rePasswordTextField.text!
     }
     
-    func disableUIInteraction() {
+    func showLoading() {
         self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
-    func enableUIInteraction() {
+    func hideLoading() {
         self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
     }
     
-    func interactions(enabled: Bool) {
+    private func interactions(enabled: Bool) {
         self.emailTextField.isUserInteractionEnabled = enabled
         self.usernameTextField.isUserInteractionEnabled = enabled
         self.passwordTextField.isUserInteractionEnabled = enabled

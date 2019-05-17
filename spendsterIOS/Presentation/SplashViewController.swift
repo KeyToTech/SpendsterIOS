@@ -9,6 +9,7 @@
 import UIKit
 
 class SplashViewController: UIViewController {
+    private let storage = UserDefaultsStorage()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadingIndecator.startAnimating()
@@ -23,6 +24,7 @@ class SplashViewController: UIViewController {
         } else {
             self.presentHomeScreen()
         }
+
     }
     
     func presentNavigationController(with controller: UIViewController,
@@ -34,7 +36,7 @@ class SplashViewController: UIViewController {
     }
     
     func shouldShowOnboarding() -> Bool {
-        return !UserDefaults.standard.bool(forKey: "alreadyLoggedIn")
+        return !storage.isUserExist()
     }
     
     func presentHomeScreen() {

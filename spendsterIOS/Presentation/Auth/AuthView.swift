@@ -8,9 +8,6 @@
 
 import Foundation
 
-protocol AuthView {
-    func disableUIInteraction()
-    func enableUIInteraction()
-    func showError(message: String)
+protocol AuthView: ErrorView, LoadingView {
     func goToHomeScreen()
 }
