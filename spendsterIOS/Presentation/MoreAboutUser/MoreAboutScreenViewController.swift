@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MoreAboutUserView {
+class MoreAboutScreenViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     private var presenter: MoreAboutUserPresenter?
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var approvedMessage: UILabel!

@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class MoreAboutUserPresenter {
-    private let view: MoreAboutUserView
+    private let view: MoreAboutScreenViewController
     private let storage: UserStorage
-    init(view: MoreAboutUserView, storage: UserStorage) {
+    init(view: MoreAboutScreenViewController, storage: UserStorage) {
         self.view = view
         self.storage = storage
     }

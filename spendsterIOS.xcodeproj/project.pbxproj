@@ -86,7 +86,6 @@
 		AC908DD9228C449000510658 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DD8228C449000510658 /* ProfilePresenter.swift */; };
 		AC908DDB228C456D00510658 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDA228C456D00510658 /* ProfileView.swift */; };
 		AC908DDD228C551400510658 /* MoreAboutUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */; };
-		AC908DDF228C556300510658 /* MoreAboutUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDE228C556300510658 /* MoreAboutUserView.swift */; };
 		ACB2E54D228EEFCA0017B093 /* ResponseParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */; };
 		ACB2E54F228EEFEF0017B093 /* UserExsistError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */; };
 		ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */; };
@@ -196,7 +195,6 @@
 		AC908DD8228C449000510658 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		AC908DDA228C456D00510658 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserPresenter.swift; sourceTree = "<group>"; };
-		AC908DDE228C556300510658 /* MoreAboutUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserView.swift; sourceTree = "<group>"; };
 		ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParseError.swift; sourceTree = "<group>"; };
 		ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExsistError.swift; sourceTree = "<group>"; };
 		ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddExpensesModel.swift; sourceTree = "<group>"; };
@@ -294,7 +292,6 @@
 				2B4A06F22254F7BC007B914B /* MoreAbout.storyboard */,
 				2BCBC3FF225608B300135AEB /* MoreAboutScreenViewController.swift */,
 				AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */,
-				AC908DDE228C556300510658 /* MoreAboutUserView.swift */,
 			);
 			path = MoreAboutUser;
 			sourceTree = "<group>";
@@ -785,7 +782,6 @@
 				ACED93312281B992007B6C10 /* BorderView.swift in Sources */,
 				2B9E77242252591E00D7640A /* AuthView.swift in Sources */,
 				2BCBC400225608B300135AEB /* MoreAboutScreenViewController.swift in Sources */,
-				AC908DDF228C556300510658 /* MoreAboutUserView.swift in Sources */,
 				2B9E771F2252580100D7640A /* SignUpModel.swift in Sources */,
 				AC8C4D5F228B06DC007889F8 /* UserStorage.swift in Sources */,
 				ACF2A9462283197300CCDF1F /* CollectionViewCell.swift in Sources */,
