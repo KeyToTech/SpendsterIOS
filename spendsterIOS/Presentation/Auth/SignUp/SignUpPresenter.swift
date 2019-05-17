@@ -10,10 +10,10 @@ import Foundation
 import RxSwift
 
 class SignUpPresenter {
-    let disposeBag = DisposeBag()
-    let model: SignUpModel
-    let view: AuthView
-    let storage: UserStorage
+    private let disposeBag = DisposeBag()
+    private let model: SignUpModel
+    private let view: AuthView
+    private let storage: UserStorage
     init(model: SignUpModel, view: AuthView, storage: UserStorage) {
         self.model = model
         self.view = view

@@ -10,12 +10,10 @@ import Foundation
 import RxSwift
 
 class LoginPresenter {
-    
-    let view: AuthView
-    let model: LoginModel
-    let storage: UserStorage
-    let disposeBag = DisposeBag()
-    
+    private let view: AuthView
+    private let model: LoginModel
+    private let storage: UserStorage
+    private let disposeBag = DisposeBag()
     init(model: LoginModel, view: AuthView, storage: UserStorage) {
         self.view = view
         self.model = model
@@ -40,7 +38,6 @@ class LoginPresenter {
                     self.view.hideLoading()
                     self.storage.saveUser(user: user)
                     self.view.goToHomeScreen()
-                    
                 },
                            onError: { error in
                             self.view.hideLoading()
