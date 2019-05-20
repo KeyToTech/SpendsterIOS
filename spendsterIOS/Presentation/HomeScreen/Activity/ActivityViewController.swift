@@ -13,11 +13,17 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
+        //TODO
+        // real number of rows in server impl.
+        // https://trello.com/c/uDMhmjnS/154-connect-expenses-to-the-server
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.expensesTableView.dequeueReusableCell(withIdentifier: "ExpenseItem", for: indexPath)
         return cell
+        //TODO
+        //real data binding in server impl.
+        // https://trello.com/c/uDMhmjnS/154-connect-expenses-to-the-server
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
