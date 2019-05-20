@@ -8,35 +8,25 @@
 import UIKit
 import Parchment
 
-class ActivityViewController: UIViewController {
+class ActivityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var expensesTableView: UITableView!
     
-    let pagingViewController = CustomPagingViewController(viewControllers: [IndexViewController(index: 0),
-                                                                           IndexViewController(index: 1),
-                                                                           IndexViewController(index: 2),
-                                                                           IndexViewController(index: 3),
-                                                                           IndexViewController(index: 4)])
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.expensesTableView.dequeueReusableCell(withIdentifier: "ExpenseItem", for: indexPath)
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pagingViewController.borderOptions = .hidden
-        pagingViewController.menuBackgroundColor = .clear
-        pagingViewController.indicatorColor = UIColor(red: 49/255, green: 209/255, blue: 158/255, alpha: 1)
-        pagingViewController.textColor = .lightGray
-        pagingViewController.selectedTextColor = UIColor.black
-        pagingViewController.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.thin)
-        pagingViewController.selectedFont = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.semibold)
-        addChild(pagingViewController)
-        view.addSubview(pagingViewController.view)
-        view.constrainToEdges(pagingViewController.view)
-        pagingViewController.didMove(toParent: self)
-        navigationItem.titleView = pagingViewController.collectionView
+        self.expensesTableView.delegate = self
+        self.expensesTableView.dataSource = self
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        guard let navigationBar = navigationController?.navigationBar else { return }
-        navigationItem.titleView?.frame = CGRect(origin: .zero, size: navigationBar.bounds.size)
-        pagingViewController.menuItemSize = .fixed(width: 150, height: navigationBar.bounds.height)
-    }
-    
 }
