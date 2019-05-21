@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddressScreenViewController: UIViewController, AuthView {
+class AddressScreenViewController: UIViewController, AuthView, UITextFieldDelegate {
 
     private var presenter: AddressScreenPresenter?
     @IBOutlet weak var nameTextField: UITextField!
@@ -29,10 +29,18 @@ class AddressScreenViewController: UIViewController, AuthView {
 
     func initDefaultUI() {
         self.errorMessage.isHidden = true
-        self.nameTextField.text = ""
-        self.phoneNumberTextField.text = ""
         self.veil.isHidden = true
         self.whileIndicator.isHidden = true
+        self.nameTextField.text = ""
+        self.nameTextField.delegate = self
+        self.phoneNumberTextField.text = ""
+        self.phoneNumberTextField.delegate = self
+        self.phoneNumberTextField.keyboardType = UIKeyboardType.phonePad
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.nameTextField.becomeFirstResponder()
     }
     
     override func viewDidLoad() {
@@ -75,5 +83,14 @@ class AddressScreenViewController: UIViewController, AuthView {
         self.getStartedButton.isUserInteractionEnabled = enabled
         self.veil.isHidden = enabled
         self.whileIndicator.isHidden = enabled
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
