@@ -379,7 +379,7 @@
 		2BBB79B122536670006ABC2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				ACED932D2281A676007B6C10 /* Expenses */,
+				ACED932D2281A676007B6C10 /* AddExpenses */,
 				2B248D2422661D8A00423FE8 /* HomeScreen */,
 				2B248D102265CE2F00423FE8 /* AddressScreen */,
 				2B4A06F12254F6B4007B914B /* MoreAboutUser */,
@@ -513,14 +513,14 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		ACED932D2281A676007B6C10 /* Expenses */ = {
+		ACED932D2281A676007B6C10 /* AddExpenses */ = {
 			isa = PBXGroup;
 			children = (
 				2B60289A2285C3A300F1E159 /* CategorySelect */,
 				2B6028992285C39700F1E159 /* AddExpenses */,
 				ACED932E2281A6B3007B6C10 /* Expenses.storyboard */,
 			);
-			path = Expenses;
+			path = AddExpenses;
 			sourceTree = "<group>";
 		};
 		CA17EA1B7E7594EEF898E5F9 /* Frameworks */ = {
