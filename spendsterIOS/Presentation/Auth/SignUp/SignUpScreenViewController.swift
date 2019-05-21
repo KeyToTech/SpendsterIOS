@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpScreenViewController: UIViewController, AuthView {
+class SignUpScreenViewController: UIViewController, AuthView, UITextFieldDelegate {
     var presenter: SignUpPresenter?
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -42,13 +42,23 @@ class SignUpScreenViewController: UIViewController, AuthView {
     }
 
     private func initDefaultUI() {
-        self.emailTextField.text = ""
-        self.usernameTextField.text = ""
-        self.passwordTextField.text = ""
-        self.rePasswordTextField.text = ""
         self.veil.isHidden = true
         self.errorMessage.isHidden = true
         self.whileIndicator.isHidden = true
+        self.emailTextField.text = ""
+        self.emailTextField.delegate = self
+        self.emailTextField.keyboardType = UIKeyboardType.emailAddress
+        self.usernameTextField.text = ""
+        self.usernameTextField.delegate = self
+        self.passwordTextField.text = ""
+        self.passwordTextField.delegate = self
+        self.rePasswordTextField.text = ""
+        self.rePasswordTextField.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.emailTextField.becomeFirstResponder()
     }
     
     override func viewDidLoad() {
@@ -92,5 +102,14 @@ class SignUpScreenViewController: UIViewController, AuthView {
         self.backButton.isUserInteractionEnabled = enabled
         self.veil.isHidden = enabled
         self.whileIndicator.isHidden = enabled
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

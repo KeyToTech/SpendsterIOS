@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddExpensesViewController: UIViewController, CategorySelectViewControllelDelegate, AddExpensesView {
+class AddExpensesViewController: UIViewController, CategorySelectViewControllelDelegate, AddExpensesView, UITextFieldDelegate {
     var choosenCategory: String?
     var currencyType = "UAH"
     var choosenDate = ""
@@ -39,7 +39,16 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
         self.whileIndicator.isHidden = true
         self.whileIndicator.stopAnimating()
         self.priceTextField.text = ""
+        self.priceTextField.delegate = self
+        self.priceTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
         self.noteTextField.text = ""
+        self.noteTextField.delegate = self
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.priceTextField.becomeFirstResponder()
     }
     
     override func viewDidLoad() {
@@ -113,5 +122,14 @@ class AddExpensesViewController: UIViewController, CategorySelectViewControllelD
     
     private func note() -> String {
         return self.noteTextField.text!
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
