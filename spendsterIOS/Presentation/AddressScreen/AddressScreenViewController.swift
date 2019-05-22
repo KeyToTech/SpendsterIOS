@@ -8,7 +8,8 @@
 
 import UIKit
 
-class AddressScreenViewController: UIViewController, AuthView {
+class AddressScreenViewController: UIViewController, AuthView, UITextFieldDelegate {
+
     private var presenter: AddressScreenPresenter?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -28,10 +29,18 @@ class AddressScreenViewController: UIViewController, AuthView {
 
     func initDefaultUI() {
         self.errorMessage.isHidden = true
-        self.nameTextField.text = ""
-        self.phoneNumberTextField.text = ""
         self.veil.isHidden = true
         self.whileIndicator.isHidden = true
+        self.nameTextField.text = ""
+        self.nameTextField.delegate = self
+        self.phoneNumberTextField.text = ""
+        self.phoneNumberTextField.delegate = self
+        self.phoneNumberTextField.keyboardType = UIKeyboardType.phonePad
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.nameTextField.becomeFirstResponder()
     }
     
     override func viewDidLoad() {
@@ -40,8 +49,8 @@ class AddressScreenViewController: UIViewController, AuthView {
         self.presenter = AddressScreenPresenter(view: self, model: MockAddrModel())
     }
     
-    func showError(message: String) {
-        self.errorMessage.text = message
+    func showError(withMessage: String) {
+        self.errorMessage.text = withMessage
         self.errorMessage.isHidden = false
     }
     
@@ -49,30 +58,39 @@ class AddressScreenViewController: UIViewController, AuthView {
         dismiss(animated: true, completion: nil)
     }
     
-    func name() -> String {
+    private func name() -> String {
         return self.nameTextField.text!
     }
     
-    func phone() -> String {
+    private func phone() -> String {
         return self.phoneNumberTextField.text!
     }
     
-    func disableUIInteraction() {
+    func showLoading() {
         self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
-    func enableUIInteraction() {
+    func hideLoading() {
         self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
     }
     
-    func interactions(enabled: Bool) {
+    private func interactions(enabled: Bool) {
         self.nameTextField.isUserInteractionEnabled = enabled
         self.phoneNumberTextField.isUserInteractionEnabled = enabled
         self.backButton.isUserInteractionEnabled = enabled
         self.getStartedButton.isUserInteractionEnabled = enabled
         self.veil.isHidden = enabled
         self.whileIndicator.isHidden = enabled
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

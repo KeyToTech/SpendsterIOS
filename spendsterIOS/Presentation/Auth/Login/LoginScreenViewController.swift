@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginScreenViewController: UIViewController, AuthView {
+class LoginScreenViewController: UIViewController, AuthView, UITextFieldDelegate {
     var presenter: LoginPresenter?
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,22 +27,30 @@ class LoginScreenViewController: UIViewController, AuthView {
         presenter?.login(email: self.email(), password: self.password())
     }
     
-    func initDefaultUI() {
-        self.emailTextField.text = ""
-        self.passwordTextField.text = ""
+    private func initDefaultUI() {
         self.errorMessage.isHidden = true
         self.veil.isHidden = true
         self.whileIndicator.isHidden = true
+        self.emailTextField.text = ""
+        self.emailTextField.delegate = self
+        self.emailTextField.keyboardType = UIKeyboardType.emailAddress
+        self.passwordTextField.text = ""
+        self.passwordTextField.delegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initDefaultUI()
-        self.presenter = LoginPresenter(model: LoginModel(), view: self)
+        self.presenter = LoginPresenter(model: SimpleLoginModel(), view: self, storage: UserDefaultsStorage())
     }
     
-    func showError(message: String) {
-        errorMessage.text = message
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.emailTextField.becomeFirstResponder()
+    }
+    
+    func showError(withMessage: String) {
+        errorMessage.text = withMessage
         errorMessage.isHidden = false
     }
     
@@ -53,30 +61,39 @@ class LoginScreenViewController: UIViewController, AuthView {
         }
     }
     
-    func email() -> String {
+    private func email() -> String {
         return self.emailTextField.text!
     }
     
-    func password() -> String {
+    private func password() -> String {
         return self.passwordTextField.text!
     }
     
-    func disableUIInteraction() {
+    func showLoading() {
         self.interactions(enabled: false)
         self.whileIndicator.startAnimating()
     }
     
-    func enableUIInteraction() {
+    func hideLoading() {
         self.interactions(enabled: true)
         self.whileIndicator.stopAnimating()
     }
     
-    func interactions(enabled: Bool) {
+    private func interactions(enabled: Bool) {
         self.emailTextField.isUserInteractionEnabled = enabled
         self.passwordTextField.isUserInteractionEnabled = enabled
         self.continueButton.isUserInteractionEnabled = enabled
         self.backButton.isUserInteractionEnabled = enabled
         self.veil.isHidden = enabled
         self.whileIndicator.isHidden = enabled
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
