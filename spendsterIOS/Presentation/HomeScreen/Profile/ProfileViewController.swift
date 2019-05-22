@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, ProfileView {
+protocol ProfileViewControllerDelegate: class {
+    func changeHeader(header: String)
+}
 
+class ProfileViewController: UIViewController, ProfileView {
+    weak var delegate: ProfileViewControllerDelegate?
     private var presenter: ProfilePresenter?
     @IBOutlet weak var scroller: UIScrollView!
     @IBOutlet weak var profileImage: CornerImage!
@@ -23,6 +27,7 @@ class ProfileViewController: UIViewController, ProfileView {
     override func viewDidLoad() {
         self.presenter = ProfilePresenter.init(view: self, storage: UserDefaultsStorage())
         self.presenter?.updeteProfile()
+        self.delegate?.changeHeader(header: "Profile")
     }
     
     override func viewDidLayoutSubviews() {

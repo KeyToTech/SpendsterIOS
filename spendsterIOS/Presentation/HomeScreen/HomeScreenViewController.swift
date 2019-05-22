@@ -8,7 +8,12 @@
 
 import UIKit
 
-class HomeScreenViewController: UIViewController {
+class HomeScreenViewController: UIViewController, ProfileViewControllerDelegate {
+    
+    func changeHeader(header: String) {
+        self.headerLabel.text = header
+    }
+    @IBOutlet weak var headerLabel: UILabel!
     @IBAction func logOutButtonPressed(_ sender: Any) {
         // TODO remove loguot button from main screen and add it to profile screen
         // ticket: https://trello.com/c/ck0DDnn8/127-profile-screen
@@ -25,6 +30,9 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let profileViewController = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
+            profileViewController.delegate = self
         
+        }
     }
 }
