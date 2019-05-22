@@ -14,6 +14,15 @@ class Expense {
     private let createdDate: String
     private let categoryId: String
     private let note: String
+    
+    func expenseAmount() -> Float {
+        return self.amount
+    }
+    
+    func expenseNote() -> String {
+        return self.note
+    }
+    
     init(id: String?, amount: Float, date: String, categoryId: String, note: String) {
         self.id = id
         self.amount = amount
