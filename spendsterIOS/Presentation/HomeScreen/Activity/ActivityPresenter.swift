@@ -27,6 +27,9 @@ class ActivityPresenter {
             .subscribe(onSuccess: {expenses in
                 self.repository.applyExpenses(expenses: expenses)
                 self.view.reloadData()
+            },
+                       onError: { error in
+                        print(error.localizedDescription)
             })
             .disposed(by: bag)
     }

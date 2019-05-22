@@ -92,7 +92,7 @@
 		ACF1BDC922943A1F00CBF114 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF1BDC822943A1F00CBF114 /* ActivityView.swift */; };
 		ACF1BDCB22943A8A00CBF114 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF1BDCA22943A8A00CBF114 /* ActivityModel.swift */; };
 		ACF1BDCD22943B8A00CBF114 /* MockActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF1BDCC22943B8A00CBF114 /* MockActivityModel.swift */; };
-		ACF1BDCF22943D6000CBF114 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF1BDCE22943D6000CBF114 /* TableViewCell.swift */; };
+		ACF1BDCF22943D6000CBF114 /* ExpenseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF1BDCE22943D6000CBF114 /* ExpenseViewCell.swift */; };
 		ACF1BDD122944EE700CBF114 /* ActivityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF1BDD022944EE700CBF114 /* ActivityRepository.swift */; };
 		ACF2A942228303A500CCDF1F /* CategorySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2A941228303A500CCDF1F /* CategorySelectViewController.swift */; };
 		ACF2A9462283197300CCDF1F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF2A9452283197300CCDF1F /* CollectionViewCell.swift */; };
@@ -203,7 +203,7 @@
 		ACF1BDC822943A1F00CBF114 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		ACF1BDCA22943A8A00CBF114 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		ACF1BDCC22943B8A00CBF114 /* MockActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockActivityModel.swift; sourceTree = "<group>"; };
-		ACF1BDCE22943D6000CBF114 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		ACF1BDCE22943D6000CBF114 /* ExpenseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewCell.swift; sourceTree = "<group>"; };
 		ACF1BDD022944EE700CBF114 /* ActivityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRepository.swift; sourceTree = "<group>"; };
 		ACF2A941228303A500CCDF1F /* CategorySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectViewController.swift; sourceTree = "<group>"; };
 		ACF2A9452283197300CCDF1F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 		2B56003022675C3F00020FCE /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				ACF1BDCE22943D6000CBF114 /* TableViewCell.swift */,
+				ACF1BDCE22943D6000CBF114 /* ExpenseViewCell.swift */,
 				2BF40B1222674A660076D50B /* ActivityViewController.swift */,
 				ACF1BDC822943A1F00CBF114 /* ActivityView.swift */,
 				ACF1BDC6229439EA00CBF114 /* ActivityPresenter.swift */,
@@ -805,7 +805,7 @@
 				2BF40B1322674A660076D50B /* ActivityViewController.swift in Sources */,
 				2B1ABAFC228DB34500F4C9F6 /* SignUpRequest.swift in Sources */,
 				2B60289C2285C3DE00F1E159 /* CategoryPresenter.swift in Sources */,
-				ACF1BDCF22943D6000CBF114 /* TableViewCell.swift in Sources */,
+				ACF1BDCF22943D6000CBF114 /* ExpenseViewCell.swift in Sources */,
 				2B8DF28022450A0F007C395E /* WalkthroughContentViewController.swift in Sources */,
 				2BCFE6EB22887A9F00522DE2 /* AddExpensesPresenter.swift in Sources */,
 				ACB2E54D228EEFCA0017B093 /* ResponseParseError.swift in Sources */,

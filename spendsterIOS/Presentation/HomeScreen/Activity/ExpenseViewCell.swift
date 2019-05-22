@@ -9,15 +9,16 @@
 import Foundation
 import UIKit
 
-class TableViewCell: UITableViewCell {
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var categoryImage: UIImageView!
+class ExpenseViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var categoryImage: UIImageView!
+
     func bind(category: String, image: String, price: String, note: String) {
         self.categoryLabel.text = category
         self.categoryImage.image = UIImage(named: image)
         self.noteLabel.text = note
-        self.priceLabel.text = price
+        self.priceLabel.text = "-\(price)$"
     }
 }
