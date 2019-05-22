@@ -33,50 +33,6 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         // https://trello.com/c/uDMhmjnS/154-connect-expenses-to-the-server
     }
     
-    
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        if cell.responds(to: #selector(getter: UIView.tintColor)){
-            if tableView == self.expensesTableView {
-                let cornerRadius: CGFloat = 12.0
-                cell.backgroundColor = .clear
-                let layer: CAShapeLayer = CAShapeLayer()
-                let path: CGMutablePath = CGMutablePath()
-                let bounds: CGRect = cell.bounds
-                bounds.insetBy(dx: 25.0, dy: 0.0)
-                
-                if indexPath.row == 0 && indexPath.row == ( tableView.numberOfRows(inSection: indexPath.section) - 1) {
-                    path.addRoundedRect(in: bounds, cornerWidth: cornerRadius, cornerHeight: cornerRadius)
-                    
-                } else if indexPath.row == 0 {
-                    path.move(to: CGPoint(x: bounds.minX, y: bounds.maxY))
-                    path.addArc(tangent1End: CGPoint(x: bounds.minX, y: bounds.minY), tangent2End: CGPoint(x: bounds.midX, y: bounds.minY), radius: cornerRadius)
-                    path.addArc(tangent1End: CGPoint(x: bounds.maxX, y: bounds.minY), tangent2End: CGPoint(x: bounds.maxX, y: bounds.midY), radius: cornerRadius)
-                    path.addLine(to: CGPoint(x: bounds.maxX, y: bounds.maxY))
-                    
-                } else if indexPath.row == (tableView.numberOfRows(inSection: indexPath.section) - 1) {
-                    path.move(to: CGPoint(x: bounds.minX, y: bounds.minY))
-                    path.addArc(tangent1End: CGPoint(x: bounds.minX, y: bounds.maxY), tangent2End: CGPoint(x: bounds.midX, y: bounds.maxY), radius: cornerRadius)
-                    path.addArc(tangent1End: CGPoint(x: bounds.maxX, y: bounds.maxY), tangent2End: CGPoint(x: bounds.maxX, y: bounds.midY), radius: cornerRadius)
-                    path.addLine(to: CGPoint(x: bounds.maxX, y: bounds.minY))
-                    
-                } else {
-                    path.addRect(bounds)
-
-                }
-                
-                layer.path = path
-                layer.fillColor = UIColor.white.cgColor
-                let testView: UIView = UIView(frame: bounds)
-                
-                testView.layer.insertSublayer(layer, at: 0)
-                testView.backgroundColor = .clear
-                cell.backgroundView = testView
-            }
-        }
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell")
         return cell
