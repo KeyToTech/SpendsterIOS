@@ -8,23 +8,35 @@
 
 import UIKit
 
-class EditExpenseViewController: UIViewController {
-
+class EditExpenseViewController: UIViewController, ExpenseButtonDelegate {
+    func didDeleteButtonPressed() {
+        print("delete")
+        // TODO in mvp implementation
+        // https://trello.com/c/5i6aaZ1r/187-editexpense-mvp-implementation
+    }
+    
+    func didCalcelButtonPressed() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func didAddButtonPressed() {
+        print("Add")
+        // TODO in mvp implementation
+        // https://trello.com/c/5i6aaZ1r/187-editexpense-mvp-implementation
+    }
+    
+    @IBOutlet weak var expenseView: ExpenseView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.initDefaultUI()
+        self.expenseView.delegate = self
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func initDefaultUI() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.expenseView.veil.isHidden = true
+        self.expenseView.whileIndicator.isHidden = true
+        self.expenseView.errorLabel.isHidden = true
     }
-    */
-
 }

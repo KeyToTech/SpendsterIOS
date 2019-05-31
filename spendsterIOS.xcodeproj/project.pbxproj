@@ -84,6 +84,8 @@
 		AC908DDD228C551400510658 /* MoreAboutUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */; };
 		ACA52AAE22A1577700720024 /* EditExpense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA52AAD22A1577700720024 /* EditExpense.storyboard */; };
 		ACA52AB222A1582800720024 /* EditExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA52AB122A1582800720024 /* EditExpenseViewController.swift */; };
+		ACA52AB522A1609400720024 /* ExpenseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA52AB422A1609400720024 /* ExpenseView.xib */; };
+		ACA52AB722A160D400720024 /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA52AB622A160D400720024 /* ExpenseView.swift */; };
 		ACB2E54D228EEFCA0017B093 /* ResponseParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */; };
 		ACB2E54F228EEFEF0017B093 /* UserExsistError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */; };
 		ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */; };
@@ -197,6 +199,8 @@
 		AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserPresenter.swift; sourceTree = "<group>"; };
 		ACA52AAD22A1577700720024 /* EditExpense.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditExpense.storyboard; sourceTree = "<group>"; };
 		ACA52AB122A1582800720024 /* EditExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExpenseViewController.swift; sourceTree = "<group>"; };
+		ACA52AB422A1609400720024 /* ExpenseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseView.xib; sourceTree = "<group>"; };
+		ACA52AB622A160D400720024 /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 		ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParseError.swift; sourceTree = "<group>"; };
 		ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExsistError.swift; sourceTree = "<group>"; };
 		ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddExpensesModel.swift; sourceTree = "<group>"; };
@@ -401,6 +405,7 @@
 		2BBB79B122536670006ABC2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				ACA52AB322A1604800720024 /* ExpenseView */,
 				ACA52AAC22A1574D00720024 /* EditExpenses */,
 				ACED932D2281A676007B6C10 /* AddExpenses */,
 				2B248D2422661D8A00423FE8 /* HomeScreen */,
@@ -536,6 +541,15 @@
 			path = EditExpenses;
 			sourceTree = "<group>";
 		};
+		ACA52AB322A1604800720024 /* ExpenseView */ = {
+			isa = PBXGroup;
+			children = (
+				ACA52AB422A1609400720024 /* ExpenseView.xib */,
+				ACA52AB622A160D400720024 /* ExpenseView.swift */,
+			);
+			path = ExpenseView;
+			sourceTree = "<group>";
+		};
 		ACB2E54B228EEF8A0017B093 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +667,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA52AB522A1609400720024 /* ExpenseView.xib in Resources */,
 				2B09A13C224D1A1400F7A042 /* Auth.storyboard in Resources */,
 				2B770D6C223803C80066A72C /* LaunchScreen.storyboard in Resources */,
 				2B35ACEC2243F04700BEC2E5 /* WelcomeScreen.storyboard in Resources */,
@@ -779,6 +794,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF1BDD122944EE700CBF114 /* ActivityRepository.swift in Sources */,
+				ACA52AB722A160D400720024 /* ExpenseView.swift in Sources */,
 				2B248D282266295500423FE8 /* HomeScreenViewController.swift in Sources */,
 				2B248D1F2265D81D00423FE8 /* TextValidation.swift in Sources */,
 				2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */,
