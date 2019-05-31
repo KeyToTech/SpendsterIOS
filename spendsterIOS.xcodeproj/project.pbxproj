@@ -82,6 +82,8 @@
 		AC908DD9228C449000510658 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DD8228C449000510658 /* ProfilePresenter.swift */; };
 		AC908DDB228C456D00510658 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDA228C456D00510658 /* ProfileView.swift */; };
 		AC908DDD228C551400510658 /* MoreAboutUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */; };
+		ACA52AAE22A1577700720024 /* EditExpense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA52AAD22A1577700720024 /* EditExpense.storyboard */; };
+		ACA52AB222A1582800720024 /* EditExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA52AB122A1582800720024 /* EditExpenseViewController.swift */; };
 		ACB2E54D228EEFCA0017B093 /* ResponseParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */; };
 		ACB2E54F228EEFEF0017B093 /* UserExsistError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */; };
 		ACC353B222899F08005433FD /* SimpleAddExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */; };
@@ -193,6 +195,8 @@
 		AC908DD8228C449000510658 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		AC908DDA228C456D00510658 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AC908DDC228C551400510658 /* MoreAboutUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAboutUserPresenter.swift; sourceTree = "<group>"; };
+		ACA52AAD22A1577700720024 /* EditExpense.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditExpense.storyboard; sourceTree = "<group>"; };
+		ACA52AB122A1582800720024 /* EditExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExpenseViewController.swift; sourceTree = "<group>"; };
 		ACB2E54C228EEFCA0017B093 /* ResponseParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParseError.swift; sourceTree = "<group>"; };
 		ACB2E54E228EEFEF0017B093 /* UserExsistError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExsistError.swift; sourceTree = "<group>"; };
 		ACC353B122899F08005433FD /* SimpleAddExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddExpensesModel.swift; sourceTree = "<group>"; };
@@ -397,6 +401,7 @@
 		2BBB79B122536670006ABC2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				ACA52AAC22A1574D00720024 /* EditExpenses */,
 				ACED932D2281A676007B6C10 /* AddExpenses */,
 				2B248D2422661D8A00423FE8 /* HomeScreen */,
 				2B248D102265CE2F00423FE8 /* AddressScreen */,
@@ -520,6 +525,15 @@
 				2B1ABAFB228DB34500F4C9F6 /* SignUpRequest.swift */,
 			);
 			path = REST;
+			sourceTree = "<group>";
+		};
+		ACA52AAC22A1574D00720024 /* EditExpenses */ = {
+			isa = PBXGroup;
+			children = (
+				ACA52AAD22A1577700720024 /* EditExpense.storyboard */,
+				ACA52AB122A1582800720024 /* EditExpenseViewController.swift */,
+			);
+			path = EditExpenses;
 			sourceTree = "<group>";
 		};
 		ACB2E54B228EEF8A0017B093 /* Errors */ = {
@@ -648,6 +662,7 @@
 				2B26C3F12247DE9C00EF86DA /* Karla-BoldItalic.ttf in Resources */,
 				2B26C3F32247DE9C00EF86DA /* Karla-Regular.ttf in Resources */,
 				2B770D69223803C80066A72C /* Assets.xcassets in Resources */,
+				ACA52AAE22A1577700720024 /* EditExpense.storyboard in Resources */,
 				2B770D67223803C60066A72C /* Main.storyboard in Resources */,
 				2B248D2622661DCA00423FE8 /* HomeScreen.storyboard in Resources */,
 				2B248D142265CEBA00423FE8 /* AddressScreen.storyboard in Resources */,
@@ -768,6 +783,7 @@
 				2B248D1F2265D81D00423FE8 /* TextValidation.swift in Sources */,
 				2B4A06F52254FC38007B914B /* CornerImage.swift in Sources */,
 				ACF1BDC7229439EA00CBF114 /* ActivityPresenter.swift in Sources */,
+				ACA52AB222A1582800720024 /* EditExpenseViewController.swift in Sources */,
 				AC8C4D5A228AF47B007889F8 /* LoadingView.swift in Sources */,
 				2BE5B9BC227DE3940012C1E2 /* GradientView.swift in Sources */,
 				2BB8F96A223BF63A00671465 /* SplashViewController.swift in Sources */,

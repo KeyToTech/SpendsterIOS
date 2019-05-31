@@ -38,6 +38,16 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tepped")
+        
+        let storyboard = UIStoryboard(name: "EditExpense", bundle: nil)
+        if let editExpenseViewController = storyboard.instantiateViewController(withIdentifier: "EditExpenseViewController") as? EditExpenseViewController {
+            self.present(editExpenseViewController, animated: true, completion: nil)
+        }
+
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
