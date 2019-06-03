@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Expense View Controller-->
+        <scene sceneID="qtJ-Gm-n3i">
+            <objects>
+                <viewController storyboardIdentifier="EditExpenseViewController" id="wVN-dx-sRb" customClass="EditExpenseViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Tt-U0-Arx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0M-7Y-Uc2" customClass="ExpenseView" customModule="spendsterIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M0M-7Y-Uc2" firstAttribute="leading" secondItem="IGj-gm-vFN" secondAttribute="leading" id="Ad1-RD-R9n"/>
+                            <constraint firstItem="IGj-gm-vFN" firstAttribute="trailing" secondItem="M0M-7Y-Uc2" secondAttribute="trailing" id="CSo-cs-3PQ"/>
+                            <constraint firstItem="M0M-7Y-Uc2" firstAttribute="top" secondItem="7Tt-U0-Arx" secondAttribute="top" id="SnO-l3-hVN"/>
+                            <constraint firstItem="IGj-gm-vFN" firstAttribute="bottom" secondItem="M0M-7Y-Uc2" secondAttribute="bottom" id="UYu-7B-GEn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IGj-gm-vFN"/>
+                    </view>
+                    <connections>
+                        <outlet property="expenseView" destination="M0M-7Y-Uc2" id="2N9-wJ-LQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gC-Tt-EKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183.19999999999999" y="49.925037481259373"/>
+        </scene>
+    </scenes>
+</document>

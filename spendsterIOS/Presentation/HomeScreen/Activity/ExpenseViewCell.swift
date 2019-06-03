@@ -19,6 +19,6 @@ class ExpenseViewCell: UITableViewCell {
         self.categoryLabel.text = category
         self.categoryImage.image = UIImage(named: image)
         self.noteLabel.text = note
-        self.priceLabel.text = "-\(price)$"
+        self.priceLabel.text = "-$\(price)"
     }
 }

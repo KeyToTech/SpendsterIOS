@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,11 +23,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddExpensesViewController" id="km2-Dx-dg6" customClass="AddExpensesViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XJa-NM-0AK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPL-tY-Iaq" customClass="ShadowView" customModule="spendsterIOS" customModuleProvider="target">
-                                <rect key="frame" x="39.5" y="127" width="335" height="392"/>
+                                <rect key="frame" x="20" y="127" width="335" height="392"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5A-G5-v7P" customClass="CornerButton" customModule="spendsterIOS" customModuleProvider="target">
                                         <rect key="frame" x="16" y="318" width="303" height="50"/>
@@ -291,10 +291,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fak-ik-ZvO" customClass="GradientView" customModule="spendsterIOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEs-Rp-ISE">
-                                        <rect key="frame" x="20" y="44" width="38" height="27"/>
+                                        <rect key="frame" x="20" y="20" width="38" height="27"/>
                                         <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="12"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -304,7 +304,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmQ-uI-ndN">
-                                        <rect key="frame" x="294" y="72" width="100" height="24"/>
+                                        <rect key="frame" x="255" y="72" width="100" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="R4y-q7-c1x"/>
                                         </constraints>
@@ -339,16 +339,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9be-2h-C4P">
-                                <rect key="frame" x="164.5" y="539" width="85.5" height="15.5"/>
+                                <rect key="frame" x="145" y="539" width="85.5" height="15.5"/>
                                 <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="13"/>
                                 <color key="textColor" red="0.84815834580000005" green="0.036098073119999997" blue="0.02372018175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDo-5d-fs4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="JL9-op-DcQ">
-                                        <rect key="frame" x="197" y="421" width="20" height="20"/>
+                                        <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                                         <color key="color" red="0.19215686269999999" green="0.81960784310000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                     </activityIndicatorView>
                                 </subviews>
@@ -398,11 +398,11 @@
             <objects>
                 <viewController storyboardIdentifier="CategorySelectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IxU-8K-lar" customClass="CategorySelectViewController" customModule="spendsterIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bv3-9h-zSU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUq-D4-sK1" customClass="GradientView" customModule="spendsterIOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXK-R0-osg">
                                         <rect key="frame" x="20" y="68" width="195" height="28"/>
@@ -411,7 +411,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB1-br-jWO">
-                                        <rect key="frame" x="20" y="52" width="38" height="27"/>
+                                        <rect key="frame" x="20" y="28" width="38" height="27"/>
                                         <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="12"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -451,10 +451,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrh-Ug-hzU" customClass="ShadowView" customModule="spendsterIOS" customModuleProvider="target">
-                                <rect key="frame" x="39.5" y="127" width="335" height="715"/>
+                                <rect key="frame" x="20" y="127" width="335" height="520"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7w8-hx-b1W">
-                                        <rect key="frame" x="18" y="0.0" width="299" height="715"/>
+                                        <rect key="frame" x="18" y="0.0" width="299" height="520"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9hE-hn-kMj">
                                             <size key="itemSize" width="88" height="88"/>
@@ -505,10 +505,10 @@
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jF5-Tf-0TB">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="715"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="520"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Jva-Vy-OwS">
-                                                <rect key="frame" x="157.5" y="347.5" width="20" height="20"/>
+                                                <rect key="frame" x="157.5" y="250" width="20" height="20"/>
                                                 <color key="color" red="0.19215686269999999" green="0.81960784310000001" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                             </activityIndicatorView>
                                         </subviews>
